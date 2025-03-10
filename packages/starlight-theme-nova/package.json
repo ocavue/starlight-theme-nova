@@ -21,6 +21,7 @@
     "./styles.css": "./lib/styles.css"
   },
   "scripts": {
+    "dev": "unocss -w -o lib/styles.css ./src/**/*.astro",
     "build": "unocss -o lib/styles.css ./src/**/*"
   },
   "devDependencies": {

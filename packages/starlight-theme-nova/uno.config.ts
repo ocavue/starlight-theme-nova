@@ -8,7 +8,7 @@ const config: UserConfig = defineConfig({
   ],
   shortcuts: [
     {
-      'sl-nova-header': 'bg-blue-500 text-white px-4 py-2 rounded-md',
+      'sl-nova-header': 'bg-red-500 text-white px-4 py-2 rounded-md',
     },
   ],
 })

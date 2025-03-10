@@ -5,6 +5,7 @@
   "packageManager": "pnpm@9.15.4",
   "description": "",
   "scripts": {
+    "dev": "pnpm --parallel -r run dev",
     "build": "pnpm -r run build",
     "lint": "eslint .",
     "fix": "eslint --fix . && prettier --write .",
