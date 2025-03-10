@@ -17,9 +17,8 @@
   "main": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./components/*": "./src/components/*",
-    "./shiki.css": "./lib/shiki.css",
-    "./styles.css": "./lib/styles.css"
+    "./*.css": "./lib/*.css",
+    "./components/*.astro": "./src/components/*.astro"
   },
   "scripts": {
     "dev": "unocss -w",

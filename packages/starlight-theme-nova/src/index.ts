@@ -26,7 +26,7 @@ export default function starlightThemeNova(): StarlightPlugin {
         const newConfig = {
           customCss: [
             // Including any user CSS *after* our own.
-            'starlight-theme-nova/styles.css',
+            'starlight-theme-nova/styles.gen.css',
             'starlight-theme-nova/shiki.css',
             ...(config.customCss || []),
           ],
