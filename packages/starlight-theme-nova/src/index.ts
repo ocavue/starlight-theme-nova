@@ -1,5 +1,3 @@
-import { fileURLToPath } from 'node:url'
-
 import type {
   StarlightPlugin,
   StarlightUserConfig,
@@ -12,6 +10,10 @@ export default function starlightThemeNova(): StarlightPlugin {
       setup({ config, updateConfig }) {
         // Register the theme’s custom CSS, including any user CSS *after* our own.
         const newConfig = {
+          customCss: [
+            ...(config.customCss || []),
+            'starlight-theme-nova/styles.css',
+          ],
           components: {
             ...config.components,
           },
@@ -19,9 +21,8 @@ export default function starlightThemeNova(): StarlightPlugin {
         } satisfies Partial<StarlightUserConfig>
 
         if (!config.components?.Header) {
-          newConfig.components.Header = fileURLToPath(
-            new URL('./components/Header.astro', import.meta.url),
-          )
+          newConfig.components.Header =
+            'starlight-theme-nova/components/Header.astro'
         }
         updateConfig(newConfig)
       },

@@ -15,12 +15,21 @@
   "keywords": [],
   "sideEffects": false,
   "main": "./src/index.ts",
-  "scripts": {},
+  "exports": {
+    ".": "./src/index.ts",
+    "./components/*": "./src/components/*",
+    "./styles.css": "./lib/styles.css"
+  },
+  "scripts": {
+    "build": "unocss -o lib/styles.css ./src/**/*"
+  },
   "devDependencies": {
     "@astrojs/starlight": "^0.32.2",
     "@ocavue/tsconfig": "^0.2.0",
     "@types/node": "^20.0.0",
+    "@unocss/cli": "^66.0.0",
     "astro": "^5.1.5",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "unocss": "^66.0.0"
   }
 }
