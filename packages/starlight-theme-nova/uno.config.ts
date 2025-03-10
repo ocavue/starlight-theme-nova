@@ -54,12 +54,27 @@ const shortcut = {
 const css = String.raw
 
 const preflight = css`
-  :root:root {
+  :root {
     --sl-content-width: 50rem;
   }
 
-  :root[data-theme='light']:root {
-    /* Light mode Starlight theme variables */
+  /* Dark mode Starlight theme variables. */
+  :root {
+    --sl-color-white: white;
+    --sl-color-gray-1: ${colors.gray[200]};
+    --sl-color-gray-2: ${colors.gray[300]};
+    --sl-color-gray-3: ${colors.gray[400]};
+    --sl-color-gray-4: ${colors.gray[600]};
+    --sl-color-gray-5: ${colors.gray[700]};
+    --sl-color-gray-6: ${colors.gray[800]};
+    --sl-color-black: ${colors.gray[950]};
+    --sl-color-accent-low: ${colors.gray[950]};
+    --sl-color-accent: ${colors.gray[600]};
+    --sl-color-accent-high: ${colors.gray[100]};
+  }
+
+  /* Light mode Starlight theme variables */
+  :root[data-theme='light'] {
     --sl-color-white: ${colors.gray[900]};
     --sl-color-gray-1: ${colors.gray[800]};
     --sl-color-gray-2: ${colors.gray[700]};
@@ -74,20 +89,7 @@ const preflight = css`
     --sl-color-accent-high: ${colors.gray[900]};
   }
 
-  :root[data-theme='dark']:root {
-    /* Dark mode Starlight theme variables. */
-    --sl-color-white: white;
-    --sl-color-gray-1: ${colors.gray[200]};
-    --sl-color-gray-2: ${colors.gray[300]};
-    --sl-color-gray-3: ${colors.gray[400]};
-    --sl-color-gray-4: ${colors.gray[600]};
-    --sl-color-gray-5: ${colors.gray[700]};
-    --sl-color-gray-6: ${colors.gray[800]};
-    --sl-color-black: ${colors.gray[950]};
-    --sl-color-accent-low: ${colors.gray[950]};
-    --sl-color-accent: ${colors.gray[600]};
-    --sl-color-accent-high: ${colors.gray[100]};
-  }
+
 `
 
 const config: UserConfig = defineConfig({

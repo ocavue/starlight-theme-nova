@@ -1,12 +1,27 @@
 /* layer: preflights */
 *,::before,::after{--nova-rotate:0;--nova-rotate-x:0;--nova-rotate-y:0;--nova-rotate-z:0;--nova-scale-x:1;--nova-scale-y:1;--nova-scale-z:1;--nova-skew-x:0;--nova-skew-y:0;--nova-translate-x:0;--nova-translate-y:0;--nova-translate-z:0;--nova-pan-x: ;--nova-pan-y: ;--nova-pinch-zoom: ;--nova-scroll-snap-strictness:proximity;--nova-ordinal: ;--nova-slashed-zero: ;--nova-numeric-figure: ;--nova-numeric-spacing: ;--nova-numeric-fraction: ;--nova-border-spacing-x:0;--nova-border-spacing-y:0;--nova-ring-offset-shadow:0 0 rgb(0 0 0 / 0);--nova-ring-shadow:0 0 rgb(0 0 0 / 0);--nova-shadow-inset: ;--nova-shadow:0 0 rgb(0 0 0 / 0);--nova-ring-inset: ;--nova-ring-offset-width:0px;--nova-ring-offset-color:#fff;--nova-ring-width:0px;--nova-ring-color:rgb(147 197 253 / 0.5);--nova-blur: ;--nova-brightness: ;--nova-contrast: ;--nova-drop-shadow: ;--nova-grayscale: ;--nova-hue-rotate: ;--nova-invert: ;--nova-saturate: ;--nova-sepia: ;--nova-backdrop-blur: ;--nova-backdrop-brightness: ;--nova-backdrop-contrast: ;--nova-backdrop-grayscale: ;--nova-backdrop-hue-rotate: ;--nova-backdrop-invert: ;--nova-backdrop-opacity: ;--nova-backdrop-saturate: ;--nova-backdrop-sepia: ;}::backdrop{--nova-rotate:0;--nova-rotate-x:0;--nova-rotate-y:0;--nova-rotate-z:0;--nova-scale-x:1;--nova-scale-y:1;--nova-scale-z:1;--nova-skew-x:0;--nova-skew-y:0;--nova-translate-x:0;--nova-translate-y:0;--nova-translate-z:0;--nova-pan-x: ;--nova-pan-y: ;--nova-pinch-zoom: ;--nova-scroll-snap-strictness:proximity;--nova-ordinal: ;--nova-slashed-zero: ;--nova-numeric-figure: ;--nova-numeric-spacing: ;--nova-numeric-fraction: ;--nova-border-spacing-x:0;--nova-border-spacing-y:0;--nova-ring-offset-shadow:0 0 rgb(0 0 0 / 0);--nova-ring-shadow:0 0 rgb(0 0 0 / 0);--nova-shadow-inset: ;--nova-shadow:0 0 rgb(0 0 0 / 0);--nova-ring-inset: ;--nova-ring-offset-width:0px;--nova-ring-offset-color:#fff;--nova-ring-width:0px;--nova-ring-color:rgb(147 197 253 / 0.5);--nova-blur: ;--nova-brightness: ;--nova-contrast: ;--nova-drop-shadow: ;--nova-grayscale: ;--nova-hue-rotate: ;--nova-invert: ;--nova-saturate: ;--nova-sepia: ;--nova-backdrop-blur: ;--nova-backdrop-brightness: ;--nova-backdrop-contrast: ;--nova-backdrop-grayscale: ;--nova-backdrop-hue-rotate: ;--nova-backdrop-invert: ;--nova-backdrop-opacity: ;--nova-backdrop-saturate: ;--nova-backdrop-sepia: ;}
 
-  :root:root {
+  :root {
     --sl-content-width: 50rem;
   }
 
-  :root[data-theme='light']:root {
-    /* Light mode Starlight theme variables */
+  /* Dark mode Starlight theme variables. */
+  :root {
+    --sl-color-white: white;
+    --sl-color-gray-1: #e5e7eb;
+    --sl-color-gray-2: #d1d5db;
+    --sl-color-gray-3: #9ca3af;
+    --sl-color-gray-4: #4b5563;
+    --sl-color-gray-5: #374151;
+    --sl-color-gray-6: #1f2937;
+    --sl-color-black: #030712;
+    --sl-color-accent-low: #030712;
+    --sl-color-accent: #4b5563;
+    --sl-color-accent-high: #f3f4f6;
+  }
+
+  /* Light mode Starlight theme variables */
+  :root[data-theme='light'] {
     --sl-color-white: #111827;
     --sl-color-gray-1: #1f2937;
     --sl-color-gray-2: #374151;
@@ -21,20 +36,7 @@
     --sl-color-accent-high: #111827;
   }
 
-  :root[data-theme='dark']:root {
-    /* Dark mode Starlight theme variables. */
-    --sl-color-white: white;
-    --sl-color-gray-1: #e5e7eb;
-    --sl-color-gray-2: #d1d5db;
-    --sl-color-gray-3: #9ca3af;
-    --sl-color-gray-4: #4b5563;
-    --sl-color-gray-5: #374151;
-    --sl-color-gray-6: #1f2937;
-    --sl-color-black: #030712;
-    --sl-color-accent-low: #030712;
-    --sl-color-accent: #4b5563;
-    --sl-color-accent-high: #f3f4f6;
-  }
+
 
 /* layer: shortcuts */
 .nova-code-copy-button-icon-check{--nova-icon:url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1em' height='1em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");-webkit-mask:var(--nova-icon) no-repeat;mask:var(--nova-icon) no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;background-color:currentColor;color:inherit;width:1em;height:1em;display:block;width:100%;height:100%;}
