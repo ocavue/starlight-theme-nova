@@ -1,0 +1,24 @@
+{
+  "name": "starlight-theme-nova",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "",
+  "author": "ocavue <ocavue@gmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/ocavue",
+  "homepage": "https://github.com/ocavue/starlight-theme-nova#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ocavue/starlight-theme-nova.git"
+  },
+  "bugs": "https://github.com/ocavue/starlight-theme-nova/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "scripts": {},
+  "devDependencies": {
+    "@astrojs/starlight": "^0.32.2",
+    "@ocavue/tsconfig": "^0.2.0",
+    "typescript": "^5.7.2"
+  }
+}
