@@ -36,7 +36,17 @@
     --sl-color-accent-high: #111827;
   }
 
+  /* Style the Markdown heading links. */
+  .sl-markdown-content
+    :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *))
+    > a {
+    color: var(--sl-color-white);
+    text-decoration: none;
 
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
 /* layer: shortcuts */
 .nova-code-copy-button-icon-check{--nova-icon:url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1em' height='1em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");-webkit-mask:var(--nova-icon) no-repeat;mask:var(--nova-icon) no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;background-color:currentColor;color:inherit;width:1em;height:1em;display:block;width:100%;height:100%;}
