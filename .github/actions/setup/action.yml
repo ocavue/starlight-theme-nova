@@ -1,0 +1,26 @@
+name: Setup
+description: Setup the environment
+
+inputs:
+  node-version:
+    description: The version of node.js
+    required: false
+    default: '20'
+
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm
+      run: corepack enable
+      shell: bash
+
+    - name: Setup node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: pnpm
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Install
+      run: pnpm install
+      shell: bash
