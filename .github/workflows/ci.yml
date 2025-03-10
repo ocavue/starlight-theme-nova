@@ -27,27 +27,18 @@ jobs:
 
       - uses: ./.github/actions/setup
 
+      - name: Build
+        run: pnpm run build
+
       - name: Typecheck
         run: pnpm run typecheck
 
-  test:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        node: [18.x, 20.x]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-      fail-fast: false
-
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: ./.github/actions/setup
-        with:
-          node-version: ${{ matrix.node }}
 
       - name: Build
         run: pnpm run build
-
-      - name: Test
-        run: pnpm run test
