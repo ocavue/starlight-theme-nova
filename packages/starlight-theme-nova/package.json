@@ -19,6 +19,8 @@
   "devDependencies": {
     "@astrojs/starlight": "^0.32.2",
     "@ocavue/tsconfig": "^0.2.0",
+    "@types/node": "^20.0.0",
+    "astro": "^5.1.5",
     "typescript": "^5.7.2"
   }
 }
