@@ -34,6 +34,7 @@ const shortcut = {
     'p-1 -m-1',
     'min-w-0',
     'flex',
+    'flex-1'
   ],
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
@@ -56,7 +57,7 @@ const shortcut = {
   'nova-social-icons-link':
     'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 color-[var(--sl-color-text)]',
 
-  'nova-page-frame-sidebar-pane': 'md:border-r border-hairline',
+  'nova-page-frame-sidebar-pane': 'md:border-r border-0 border-solid border-hairline',
 }
 
 const css = String.raw
@@ -123,7 +124,7 @@ const config: UserConfig = defineConfig({
   cli: {
     entry: [
       {
-        patterns: [''],
+        patterns: ["this_file_does_not_exist"],
         outFile: './lib/styles.gen.css',
       },
     ],
