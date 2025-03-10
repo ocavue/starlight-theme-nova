@@ -38,9 +38,6 @@ importers:
       hast-util-is-element:
         specifier: ^3.0.0
         version: 3.0.0
-      unocss-preset-animations:
-        specifier: ^1.1.1
-        version: 1.1.1(@unocss/preset-wind@66.0.0)(unocss@66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3)))
     devDependencies:
       '@astrojs/starlight':
         specifier: ^0.32.2
@@ -75,6 +72,9 @@ importers:
       unocss:
         specifier: ^66.0.0
         version: 66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3))
+      unocss-preset-animations:
+        specifier: ^1.1.1
+        version: 1.1.1(@unocss/preset-wind@66.0.0)(unocss@66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3)))
 
   website:
     dependencies:

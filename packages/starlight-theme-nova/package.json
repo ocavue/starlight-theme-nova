@@ -1,7 +1,7 @@
 {
   "name": "starlight-theme-nova",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "author": "ocavue <ocavue@gmail.com>",
   "license": "MIT",
@@ -20,6 +20,10 @@
     "./*.css": "./lib/*.css",
     "./components/*.astro": "./src/components/*.astro"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
     "dev": "unocss -w",
     "build": "unocss"
@@ -27,8 +31,7 @@
   "dependencies": {
     "@shikijs/transformers": "^1.29.0",
     "astro-theme-toggle": "^0.5.1",
-    "hast-util-is-element": "^3.0.0",
-    "unocss-preset-animations": "^1.1.1"
+    "hast-util-is-element": "^3.0.0"
   },
   "devDependencies": {
     "@astrojs/starlight": "^0.32.2",
@@ -41,6 +44,7 @@
     "@unocss/cli": "^66.0.0",
     "astro": "^5.1.5",
     "typescript": "^5.7.2",
-    "unocss": "^66.0.0"
+    "unocss": "^66.0.0",
+    "unocss-preset-animations": "^1.1.1"
   }
 }
