@@ -1,4 +1,4 @@
 {
   "extends": "@ocavue/tsconfig/dom/app.json",
-  "include": ["**/*.ts", "**/*.tsx", "**/*.astro", ".astro/**/*.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.astro", ".astro/**/*.ts", "./*.mjs"]
 }

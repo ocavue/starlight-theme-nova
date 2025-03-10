@@ -28,10 +28,35 @@ importers:
         version: 5.7.3
 
   packages/starlight-theme-nova:
+    dependencies:
+      '@shikijs/transformers':
+        specifier: ^1.29.0
+        version: 1.29.2
+      astro-theme-toggle:
+        specifier: ^0.5.1
+        version: 0.5.1
+      hast-util-is-element:
+        specifier: ^3.0.0
+        version: 3.0.0
+      unocss-preset-animations:
+        specifier: ^1.1.1
+        version: 1.1.1(@unocss/preset-wind@66.0.0)(unocss@66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3)))
     devDependencies:
       '@astrojs/starlight':
         specifier: ^0.32.2
         version: 0.32.2(astro@5.4.2(@types/node@20.17.16)(jiti@2.4.2)(rollup@4.32.0)(typescript@5.7.3))
+      '@iconify-json/bxl':
+        specifier: ^1.0.0
+        version: 1.2.2
+      '@iconify-json/logos':
+        specifier: ^1.2.4
+        version: 1.2.4
+      '@iconify-json/lucide':
+        specifier: ^1.2.22
+        version: 1.2.28
+      '@iconify-json/tabler':
+        specifier: ^1.0.0
+        version: 1.2.17
       '@ocavue/tsconfig':
         specifier: ^0.2.0
         version: 0.2.0
@@ -49,7 +74,7 @@ importers:
         version: 5.7.3
       unocss:
         specifier: ^66.0.0
-        version: 66.0.0(postcss@8.5.3)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3))
+        version: 66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3))
 
   website:
     dependencies:
@@ -379,6 +404,18 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
+  '@iconify-json/bxl@1.2.2':
+    resolution: {integrity: sha512-+cSX1abFQ2Q8jK9IdLHC05luZYq3zgNFqXsiEcKyigUdIEmGQNQp4xjnsCUmOYFvHrV7C1/D0wr/Lm/stAD3tw==}
+
+  '@iconify-json/logos@1.2.4':
+    resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
+
+  '@iconify-json/lucide@1.2.28':
+    resolution: {integrity: sha512-SPeAoh1YKhALpNSto/FBspf3GZ0eAr3ka/OI7cJJ5HljLzycIITv0s4Rd2+sRVzFtD1I991mJJmYohQeOSZ+Og==}
+
+  '@iconify-json/tabler@1.2.17':
+    resolution: {integrity: sha512-Jfk20IC/n7UOQQSXM600BUhAwEfg8KU1dNUF+kg4eRhbET5w1Ktyax7CDx8Z8y0H6+J/8//AXpJOEgG8YoP8rw==}
+
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
@@ -685,6 +722,9 @@ packages:
 
   '@shikijs/themes@1.29.2':
     resolution: {integrity: sha512-i9TNZlsq4uoyqSbluIcZkmPL9Bfi3djVxRnofUHwvx/h6SRW3cwgBC5SML7vsDcWyukY0eCzVN980rqP6qNl9g==}
+
+  '@shikijs/transformers@1.29.2':
+    resolution: {integrity: sha512-NHQuA+gM7zGuxGWP9/Ub4vpbwrYCrho9nQCLcCPfOe3Yc7LOYwmSuhElI688oiqIXk9dlZwDiyAG9vPBTuPJMA==}
 
   '@shikijs/types@1.29.2':
     resolution: {integrity: sha512-VJjK0eIijTZf0QSTODEXCqinjBn0joAHQ+aPSBzrv4O2d/QSbsMw+ZeSRx03kV34Hy7NzUvV/7NqfYGRLrASmw==}
@@ -999,6 +1039,9 @@ packages:
     resolution: {integrity: sha512-yJMQId0yXSAbW9I6yqvJ3FcjKzJ8zRL7elbJbllkv1ZJPlsI0NI83Pxn1YL1IapEM347EvOOkSW2GL+2+NO61w==}
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
+
+  astro-theme-toggle@0.5.1:
+    resolution: {integrity: sha512-KTKGHFsZf4jyGat/2oSQ6sJobsTT/Xh3LTBzHu4x4rY7vL45HYF709BFAM2i0AscHNcJxFX88+pu4S4ZyUTWVw==}
 
   astro@5.4.2:
     resolution: {integrity: sha512-9Z3fAniIRJaK/o43OroZA1wHUIU+qHiOR9ovlVT/2XQaN25QRXScIsKWlFp0G/zrx5OuuoJ+QnaoHHW061u26A==}
@@ -3216,6 +3259,12 @@ packages:
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
 
+  unocss-preset-animations@1.1.1:
+    resolution: {integrity: sha512-YBttRSHWH0r8OABPzXNcxDhRV67LNIsA0ZrWoYTMHUc/SzVYZBU79IXLtOneLk1NCpzlfkyxm+8DWLJnmG1R6g==}
+    peerDependencies:
+      '@unocss/preset-wind': '>=0.56.0 < 101'
+      unocss: '>=0.56.0 < 101'
+
   unocss@66.0.0:
     resolution: {integrity: sha512-SHstiv1s7zGPSjzOsADzlwRhQM+6817+OqQE3Fv+N/nn2QLNx1bi3WXybFfz5tWkzBtyTZlwdPmeecsIs1yOCA==}
     engines: {node: '>=14'}
@@ -3810,6 +3859,22 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
+  '@iconify-json/bxl@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/logos@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/lucide@1.2.28':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/tabler@1.2.17':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify/types@2.0.0': {}
 
   '@iconify/utils@2.3.0':
@@ -4101,6 +4166,11 @@ snapshots:
     dependencies:
       '@shikijs/types': 1.29.2
 
+  '@shikijs/transformers@1.29.2':
+    dependencies:
+      '@shikijs/core': 1.29.2
+      '@shikijs/types': 1.29.2
+
   '@shikijs/types@1.29.2':
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
@@ -4289,13 +4359,13 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@unocss/postcss@66.0.0(postcss@8.5.3)':
+  '@unocss/postcss@66.0.0(postcss@8.5.1)':
     dependencies:
       '@unocss/config': 66.0.0
       '@unocss/core': 66.0.0
       '@unocss/rule-utils': 66.0.0
       css-tree: 3.1.0
-      postcss: 8.5.3
+      postcss: 8.5.1
       tinyglobby: 0.2.12
 
   '@unocss/preset-attributify@66.0.0':
@@ -4545,6 +4615,8 @@ snapshots:
     dependencies:
       astro: 5.4.2(@types/node@20.17.16)(jiti@2.4.2)(rollup@4.32.0)(typescript@5.7.3)
       rehype-expressive-code: 0.40.2
+
+  astro-theme-toggle@0.5.1: {}
 
   astro@5.4.2(@types/node@20.17.16)(jiti@2.4.2)(rollup@4.32.0)(typescript@5.7.3):
     dependencies:
@@ -7682,12 +7754,17 @@ snapshots:
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
 
-  unocss@66.0.0(postcss@8.5.3)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3)):
+  unocss-preset-animations@1.1.1(@unocss/preset-wind@66.0.0)(unocss@66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3))):
+    dependencies:
+      '@unocss/preset-wind': 66.0.0
+      unocss: 66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3))
+
+  unocss@66.0.0(postcss@8.5.1)(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       '@unocss/astro': 66.0.0(vite@6.2.1(@types/node@20.17.16)(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3))
       '@unocss/cli': 66.0.0
       '@unocss/core': 66.0.0
-      '@unocss/postcss': 66.0.0(postcss@8.5.3)
+      '@unocss/postcss': 66.0.0(postcss@8.5.1)
       '@unocss/preset-attributify': 66.0.0
       '@unocss/preset-icons': 66.0.0
       '@unocss/preset-mini': 66.0.0
