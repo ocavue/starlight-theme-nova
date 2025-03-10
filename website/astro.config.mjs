@@ -40,7 +40,10 @@ export default defineConfig({
             },
           ],
         },
-        { label: 'Playground', link: '#' },
+        {
+          label: 'Components',
+          autogenerate: { directory: 'components' },
+        },
         {
           label: 'Blog',
           link: '#',
