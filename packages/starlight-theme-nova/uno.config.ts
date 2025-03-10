@@ -50,9 +50,13 @@ const shortcut = {
   'nova-code-container':
     'relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100',
 
-    'nova-theme-select': "size-8 p-2 rounded-md color-[var(--sl-color-text)] hover:bg-gray-400/30 transition-colors",
+  'nova-theme-select':
+    'size-8 p-2 rounded-md color-[var(--sl-color-text)] hover:bg-gray-400/30 transition-colors',
 
-    "nova-social-icons-link": "flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 color-[var(--sl-color-text)]", 
+  'nova-social-icons-link':
+    'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 color-[var(--sl-color-text)]',
+
+  'nova-page-frame-sidebar-pane': 'md:border-r border-hairline',
 }
 
 const css = String.raw
@@ -119,11 +123,12 @@ const config: UserConfig = defineConfig({
   cli: {
     entry: [
       {
-        patterns: ['./src/**/*.{astro,ts}'],
+        patterns: [''],
         outFile: './lib/styles.gen.css',
       },
     ],
   },
+  safelist: Object.keys(shortcut),
   theme: {
     breakpoints: {
       // Match Starlight breakpoints
