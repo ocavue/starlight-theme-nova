@@ -7,7 +7,20 @@ import starlightThemeNova from 'starlight-theme-nova'
 export default defineConfig({
   integrations: [
     starlight({
-      plugins: [starlightThemeNova()],
+      plugins: [
+        starlightThemeNova({
+          nav: [
+            {
+              label: 'Home',
+              href: '/',
+            },
+            {
+              label: 'About',
+              href: '/about',
+            },
+          ],
+        }),
+      ],
 
       title: 'Demo Docs',
       social: {

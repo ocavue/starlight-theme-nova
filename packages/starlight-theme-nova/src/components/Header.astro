@@ -4,12 +4,24 @@ import Search from './Search.astro'
 import SiteTitle from './SiteTitle.astro'
 import SocialIcons from './SocialIcons.astro'
 import ThemeSelect from './ThemeSelect.astro'
+
+import options from 'virtual:starlight-theme-nova/user-config'
+const nav = options.nav ?? []
 ---
 
 <div class="nova-header">
   <div class="nova-header-title">
     <SiteTitle />
   </div>
+  <nav class="nova-header-nav">
+    {
+      nav.map((item) => (
+        <a class="nova-header-nav-link" href={item.href}>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
   <div class="nova-header-search">
     <Search />
   </div>

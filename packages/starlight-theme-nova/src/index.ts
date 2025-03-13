@@ -4,6 +4,8 @@ import type {
 } from '@astrojs/starlight/types'
 
 import { shikiConfig } from './shiki-config'
+import type { ThemeNovaOptions } from './user-options'
+import { vitePluginUserConfig } from './virtual-user-config'
 
 const components = {
   Header: 'starlight-theme-nova/components/Header.astro',
@@ -19,7 +21,11 @@ const components = {
   MarkdownContent: 'starlight-theme-nova/components/MarkdownContent.astro',
 } as const
 
-export default function starlightThemeNova(): StarlightPlugin {
+export type { ThemeNovaOptions }
+
+export default function starlightThemeNova(
+  options: ThemeNovaOptions = {},
+): StarlightPlugin {
   return {
     name: 'starlight-theme-nova',
     hooks: {
@@ -39,6 +45,7 @@ export default function starlightThemeNova(): StarlightPlugin {
           },
           expressiveCode: config.expressiveCode ?? false,
         } satisfies Partial<StarlightUserConfig>
+
         updateConfig(newConfig)
 
         addIntegration({
@@ -48,6 +55,9 @@ export default function starlightThemeNova(): StarlightPlugin {
               updateConfig({
                 markdown: {
                   shikiConfig,
+                },
+                vite: {
+                  plugins: [vitePluginUserConfig(options)],
                 },
               })
             },

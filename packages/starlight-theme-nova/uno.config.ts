@@ -22,7 +22,7 @@ const shortcut = {
     'backdrop-blur bg-white/80 dark:bg-gray-950/50',
     'w-full fixed inset-0',
     'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
-    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[data-has-sidebar_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
+    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
   ], 
 
   'nova-header': 'flex items-center gap-2 h-full box-border',
@@ -34,8 +34,12 @@ const shortcut = {
     'p-1 -m-1',
     'min-w-0',
     'flex',
-    'flex-1',
   ],
+
+  'nova-header-nav': 'flex flex-row flex-1 gap-4 p-4 text-sm font-medium max-md:[&_*]:hidden overflow-x-auto',
+
+  'nova-header-nav-link':
+    'no-underline text-sl-gray-3 hover:text-sl-white',
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
 
