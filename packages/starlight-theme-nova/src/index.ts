@@ -13,6 +13,7 @@ const components = {
   SocialIcons: 'starlight-theme-nova/components/SocialIcons.astro',
   SiteTitle: 'starlight-theme-nova/components/SiteTitle.astro',
   PageFrame: 'starlight-theme-nova/components/PageFrame.astro',
+  Pagination: 'starlight-theme-nova/components/Pagination.astro',
   MobileMenuToggle: 'starlight-theme-nova/components/MobileMenuToggle.astro',
   TwoColumnContent: 'starlight-theme-nova/components/TwoColumnContent.astro',
   MarkdownContent: 'starlight-theme-nova/components/MarkdownContent.astro',
