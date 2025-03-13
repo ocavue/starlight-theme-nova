@@ -9,7 +9,7 @@ interface Props {
 const { label, href, rel, side } = Astro.props
 ---
 
-<a href={href} rel={rel} class:list={['nova-pagination-link']}>
+<a href={href} rel={rel} data-side={side} class:list={['nova-pagination-link']}>
   <span>{label}</span>
   <span
     class:list={[

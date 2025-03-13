@@ -107,6 +107,10 @@ const shortcut = {
     'flex items-center justify-end p-2 rounded-xl m-0 gap-2 text-nowrap flex-1',
     'font-medium text-sl-gray-2 hover:text-sl-white no-underline text-lg',
 
+    'transition',
+    'data-[side="left"]:active:-translate-x-1',
+    'data-[side="right"]:active:translate-x-1',
+
     '[&[rel="prev"]]:flex-row-reverse',
     '[&[rel="next"]]:flex-row',
   ],
