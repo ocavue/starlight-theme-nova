@@ -1,21 +1,18 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from 'astro/types'
 
 interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
-	title: string;
-	description?: string;
+  title: string
+  description?: string
 }
 
-const { title, description, class: className, ...attributes } = Astro.props;
+const { title, description, class: className, ...attributes } = Astro.props
 ---
 
 <div class:list={['nova-link-card not-content', className]}>
-<a
-class="nova-link-card-link"
-{...attributes}
->
-  <span set:html={title} />
-  <div class="nova-link-card-icon"></div>
-</a>
-{description && <span set:html={description} />}
+  <a class="nova-link-card-link" {...attributes}>
+    <span set:html={title} />
+    <div class="nova-link-card-icon"></div>
+  </a>
+  {description && <span set:html={description} />}
 </div>

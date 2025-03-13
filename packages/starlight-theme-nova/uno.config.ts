@@ -69,7 +69,7 @@ const shortcut = {
   ],
 
   'nova-link-card-link': [
-    'inline-flex items-center justify-between no-underline font-semibold text-lg',
+    'inline-flex items-center justify-between no-underline font-semibold text-lg text-gray-700 dark:text-gray-200',
 
     /* a11y fix for https://github.com/withastro/starlight/issues/487 */
     "before:content-[''] before:absolute before:inset-0",
