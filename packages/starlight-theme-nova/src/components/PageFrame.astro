@@ -66,9 +66,6 @@ const { hasSidebar } = Astro.locals.starlightRoute
   }
 
   @media (min-width: 50rem) {
-    :global([data-has-sidebar]) .header {
-      padding-inline-end: var(--sl-nav-pad-x);
-    }
     .sidebar-pane {
       --sl-sidebar-visibility: visible;
       width: var(--sl-sidebar-width);

@@ -22,8 +22,8 @@ const shortcut = {
     'backdrop-blur bg-white/80 dark:bg-gray-950/50',
     'w-full fixed inset-0',
     'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
-    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] pe-[--sl-nav-pad-x] [[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
-  ],
+    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[data-has-sidebar_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
+  ], 
 
   'nova-header': 'flex items-center gap-2 h-full box-border',
 
