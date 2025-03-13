@@ -142,7 +142,7 @@ const preflight = css`
     --sl-color-accent: ${colors.gray[600]};
     --sl-color-accent-high: ${colors.gray[100]};
 
-    --sl-color-bg-inline-code: ${colors.gray[900]};
+    --sl-color-bg-inline-code: ${colors.gray[800]};
     --sl-color-border-inline-code: ${colors.gray[700]};
   }
 
