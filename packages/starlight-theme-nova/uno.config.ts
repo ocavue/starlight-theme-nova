@@ -77,6 +77,26 @@ const shortcut = {
 
   'nova-link-card-icon':
     'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-card:hover_&]:translate-x-1',
+
+  'nova-link-button': [
+    'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2',
+    'transition duration-200 shadow-sm hover:shadow-md no-underline border-1 border-solid border-transparent',
+    'font-medium',
+  ],
+
+  'nova-link-button-primary': [
+    'bg-black hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-gray-300',
+    'text-white dark:text-gray-900',    
+  ],
+  
+  'nova-link-button-secondary': [
+    'border-sl-gray-5',
+    'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
+    'text-gray-700 dark:text-gray-200',
+  ],
+
+  'nova-link-button-icon':
+    'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
 }
 
 const css = String.raw
