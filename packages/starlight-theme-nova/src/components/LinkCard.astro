@@ -1,15 +1,15 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 
-interface Props extends Omit<HTMLAttributes<'a'>, 'title' | 'class'> {
+interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
 	title: string;
 	description?: string;
 }
 
-const { title, description, ...attributes } = Astro.props;
+const { title, description, class: className, ...attributes } = Astro.props;
 ---
 
-<div class="nova-link-card">
+<div class:list={['nova-link-card not-content', className]}>
 <a
 class="nova-link-card-link"
 {...attributes}
