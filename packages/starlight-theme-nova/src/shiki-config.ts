@@ -10,7 +10,7 @@ import { transformerCopyButton } from './shiki-transformer-copy-button'
 export const shikiConfig: ShikiConfig = {
   themes: {
     light: 'one-light',
-    dark: 'one-dark-pro',
+    dark: 'github-dark-dimmed',
   },
   defaultColor: false,
   transformers: [
