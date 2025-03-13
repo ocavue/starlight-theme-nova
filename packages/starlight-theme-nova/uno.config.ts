@@ -66,6 +66,7 @@ const shortcut = {
     'border-1 border-solid border-sl-gray-5',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
     'text-gray-700 dark:text-gray-200',
+    'active:translate-x-1',
   ],
 
   'nova-link-card-link': [
@@ -82,6 +83,7 @@ const shortcut = {
     'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2',
     'transition duration-200 shadow-sm hover:shadow-md no-underline border-1 border-solid border-transparent',
     'font-medium',
+    'active:translate-x-1',
   ],
 
   'nova-link-button-primary': [
