@@ -34,7 +34,7 @@ const shortcut = {
     'p-1 -m-1',
     'min-w-0',
     'flex',
-    'flex-1'
+    'flex-1',
   ],
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
@@ -57,7 +57,26 @@ const shortcut = {
   'nova-social-icons-link':
     'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 color-[var(--sl-color-text)]',
 
-  'nova-page-frame-sidebar-pane': 'md:border-r border-0 border-solid border-hairline',
+  'nova-page-frame-sidebar-pane':
+    'md:border-r border-0 border-solid border-hairline',
+
+  'nova-link-card': [
+    'flex flex-col px-5 py-4 rounded-xl relative gap-2',
+    'transition duration-200 shadow-sm hover:shadow-md',
+    'border-1 border-solid border-sl-gray-5',
+    'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
+    'text-gray-700 dark:text-gray-200',
+  ],
+
+  'nova-link-card-link': [
+    'inline-flex items-center justify-between no-underline font-semibold text-lg',
+
+    /* a11y fix for https://github.com/withastro/starlight/issues/487 */
+    "before:content-[''] before:absolute before:inset-0",
+  ],
+
+  'nova-link-card-icon':
+    'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-card:hover_&]:translate-x-1',
 }
 
 const css = String.raw
@@ -124,7 +143,7 @@ const config: UserConfig = defineConfig({
   cli: {
     entry: [
       {
-        patterns: ["this_file_does_not_exist"],
+        patterns: ['this_file_does_not_exist'],
         outFile: './lib/styles.gen.css',
       },
     ],
