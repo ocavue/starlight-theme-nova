@@ -17,7 +17,7 @@ const { hasSidebar } = Astro.locals.starlightRoute
         <MobileMenuToggle />
         <div
           id="starlight__sidebar"
-          class:list={['sidebar-pane', 'md:border-r border-border']}
+          class:list={['sidebar-pane', 'nova-page-frame-sidebar-pane']}
         >
           <div class="sidebar-content sl-flex">
             <slot name="sidebar" />
@@ -66,9 +66,6 @@ const { hasSidebar } = Astro.locals.starlightRoute
   }
 
   @media (min-width: 50rem) {
-    :global([data-has-sidebar]) .header {
-      padding-inline-end: var(--sl-nav-pad-x);
-    }
     .sidebar-pane {
       --sl-sidebar-visibility: visible;
       width: var(--sl-sidebar-width);

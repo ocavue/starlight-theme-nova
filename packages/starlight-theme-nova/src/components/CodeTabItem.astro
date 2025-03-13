@@ -1,0 +1,13 @@
+---
+import { TabItem } from '@astrojs/starlight/components'
+import Code from './Code.astro'
+import type { ComponentProps } from 'astro/types'
+
+type Props = { label: string } & ComponentProps<typeof Code>
+
+const { label, ...codeProps } = Astro.props
+---
+
+<TabItem label={label}>
+  <Code {...codeProps} />
+</TabItem>

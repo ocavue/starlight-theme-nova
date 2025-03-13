@@ -4,6 +4,8 @@ import type {
 } from '@astrojs/starlight/types'
 
 import { shikiConfig } from './shiki-config'
+import type { ThemeNovaOptions } from './user-options'
+import { vitePluginUserConfig } from './virtual-user-config'
 
 const components = {
   Header: 'starlight-theme-nova/components/Header.astro',
@@ -13,12 +15,17 @@ const components = {
   SocialIcons: 'starlight-theme-nova/components/SocialIcons.astro',
   SiteTitle: 'starlight-theme-nova/components/SiteTitle.astro',
   PageFrame: 'starlight-theme-nova/components/PageFrame.astro',
+  Pagination: 'starlight-theme-nova/components/Pagination.astro',
   MobileMenuToggle: 'starlight-theme-nova/components/MobileMenuToggle.astro',
   TwoColumnContent: 'starlight-theme-nova/components/TwoColumnContent.astro',
   MarkdownContent: 'starlight-theme-nova/components/MarkdownContent.astro',
 } as const
 
-export default function starlightThemeNova(): StarlightPlugin {
+export type { ThemeNovaOptions }
+
+export default function starlightThemeNova(
+  options: ThemeNovaOptions = {},
+): StarlightPlugin {
   return {
     name: 'starlight-theme-nova',
     hooks: {
@@ -28,6 +35,7 @@ export default function starlightThemeNova(): StarlightPlugin {
             // Including any user CSS *after* our own.
             'starlight-theme-nova/styles.gen.css',
             'starlight-theme-nova/shiki.css',
+            'starlight-theme-nova/markdown.css',
             ...(config.customCss || []),
           ],
           components: {
@@ -37,6 +45,7 @@ export default function starlightThemeNova(): StarlightPlugin {
           },
           expressiveCode: config.expressiveCode ?? false,
         } satisfies Partial<StarlightUserConfig>
+
         updateConfig(newConfig)
 
         addIntegration({
@@ -46,6 +55,9 @@ export default function starlightThemeNova(): StarlightPlugin {
               updateConfig({
                 markdown: {
                   shikiConfig,
+                },
+                vite: {
+                  plugins: [vitePluginUserConfig(options)],
                 },
               })
             },

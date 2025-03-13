@@ -22,8 +22,10 @@ const shortcut = {
     'backdrop-blur bg-white/80 dark:bg-gray-950/50',
     'w-full fixed inset-0',
     'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
-    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] pe-[--sl-nav-pad-x] [[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
-  ],
+    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
+  ], 
+
+  'nova-site-title': '[&_*]:text-sl-text [&_*]:font-semibold [&_*]:text-lg',
 
   'nova-header': 'flex items-center gap-2 h-full box-border',
 
@@ -35,6 +37,11 @@ const shortcut = {
     'min-w-0',
     'flex',
   ],
+
+  'nova-header-nav': 'flex flex-row flex-1 gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 text-sm font-medium max-md:[&_*]:hidden overflow-x-auto',
+
+  'nova-header-nav-link':
+    'no-underline text-sl-gray-3 hover:text-sl-white',
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
 
@@ -49,6 +56,74 @@ const shortcut = {
 
   'nova-code-container':
     'relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100',
+
+  'nova-theme-select':
+    'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition-colors',
+
+  'nova-social-icons-link':
+    'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
+
+  'nova-page-frame-sidebar-pane':
+    'md:border-r border-0 border-solid border-hairline',
+
+  'nova-link-card': [
+    'flex flex-col px-5 py-4 rounded-xl relative gap-2',
+    'transition duration-200 shadow-sm hover:shadow-md',
+    'border-1 border-solid border-sl-gray-5',
+    'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
+    'text-gray-700 dark:text-gray-200',
+    'active:translate-x-1',
+  ],
+
+  'nova-link-card-link': [
+    'inline-flex items-center justify-between no-underline font-semibold text-lg text-gray-700 dark:text-gray-200',
+
+    /* a11y fix for https://github.com/withastro/starlight/issues/487 */
+    "before:content-[''] before:absolute before:inset-0",
+  ],
+
+  'nova-link-card-icon':
+    'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-card:hover_&]:translate-x-1',
+
+  'nova-link-button': [
+    'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2',
+    'transition duration-200 shadow-sm hover:shadow-md no-underline border-1 border-solid border-transparent',
+    'font-medium',
+    'active:translate-x-1',
+  ],
+
+  'nova-link-button-primary': [
+    'bg-black hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-gray-300',
+    'text-white dark:text-gray-900',
+  ],
+
+  'nova-link-button-secondary': [
+    'border-sl-gray-5',
+    'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
+    'text-gray-700 dark:text-gray-200',
+  ],
+
+  'nova-link-button-icon':
+    'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
+
+  'nova-pagination':
+    'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',
+
+  'nova-pagination-link': [
+    'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
+    'text-sl-gray-2 hover:text-sl-white no-underline text-md md:text-lg font-medium',
+
+    'transition duration-100',
+    'data-[side="left"]:active:-translate-x-1',
+    'data-[side="right"]:active:translate-x-1',
+
+    '[&[rel="prev"]]:flex-row-reverse',
+    '[&[rel="next"]]:flex-row',
+  ],
+  'nova-pagination-link-icon-right':
+    'min-w-5 min-h-5 transition block i-lucide-chevron-right',
+  'nova-pagination-link-icon-left':
+    'min-w-5 min-h-5 transition block i-lucide-chevron-left',
 }
 
 const css = String.raw
@@ -68,9 +143,13 @@ const preflight = css`
     --sl-color-gray-5: ${colors.gray[700]};
     --sl-color-gray-6: ${colors.gray[800]};
     --sl-color-black: ${colors.gray[950]};
+
     --sl-color-accent-low: ${colors.gray[950]};
     --sl-color-accent: ${colors.gray[600]};
     --sl-color-accent-high: ${colors.gray[100]};
+
+    --sl-color-bg-inline-code: ${colors.gray[800]};
+    --sl-color-border-inline-code: ${colors.gray[700]};
   }
 
   /* Light mode Starlight theme variables */
@@ -84,21 +163,13 @@ const preflight = css`
     --sl-color-gray-6: ${colors.gray[200]};
     --sl-color-gray-7: ${colors.gray[100]};
     --sl-color-black: white;
+
     --sl-color-accent-low: ${colors.gray[200]};
     --sl-color-accent: ${colors.gray[800]};
     --sl-color-accent-high: ${colors.gray[900]};
-  }
 
-  /* Style the Markdown heading links. */
-  .sl-markdown-content
-    :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *))
-    > a {
-    color: var(--sl-color-white);
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    --sl-color-bg-inline-code: ${colors.gray[100]};
+    --sl-color-border-inline-code: ${colors.gray[300]};
   }
 `
 
@@ -115,11 +186,12 @@ const config: UserConfig = defineConfig({
   cli: {
     entry: [
       {
-        patterns: ['./src/**/*.{astro,ts}'],
+        patterns: ['this_file_does_not_exist'],
         outFile: './lib/styles.gen.css',
       },
     ],
   },
+  safelist: Object.keys(shortcut),
   theme: {
     breakpoints: {
       // Match Starlight breakpoints
@@ -129,6 +201,17 @@ const config: UserConfig = defineConfig({
       lg: '72rem',
       xl: '90rem',
       '2xl': '120rem',
+    },
+    colors: {
+      'sl-text': 'var(--sl-color-text)',
+      'sl-white': 'var(--sl-color-white)',
+      'sl-gray-1': 'var(--sl-color-gray-1)',
+      'sl-gray-2': 'var(--sl-color-gray-2)',
+      'sl-gray-3': 'var(--sl-color-gray-3)',
+      'sl-gray-4': 'var(--sl-color-gray-4)',
+      'sl-gray-5': 'var(--sl-color-gray-5)',
+      'sl-gray-6': 'var(--sl-color-gray-6)',
+      'sl-black': 'var(--sl-color-black)',
     },
   },
   preflights: [{ getCSS: () => preflight }],

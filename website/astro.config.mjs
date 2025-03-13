@@ -7,11 +7,24 @@ import starlightThemeNova from 'starlight-theme-nova'
 export default defineConfig({
   integrations: [
     starlight({
-      plugins: [starlightThemeNova()],
+      plugins: [
+        starlightThemeNova({
+          nav: [
+            {
+              label: 'Home',
+              href: '/',
+            },
+            {
+              label: 'About',
+              href: '/about',
+            },
+          ],
+        }),
+      ],
 
       title: 'Demo Docs',
       social: {
-        github: 'https://github.com/withastro/starlight',
+        github: 'https://github.com/ocavue/starlight-theme-nova',
       },
 
       // Sidebar — mostly dummy links just to demonstrate some structure
@@ -40,7 +53,10 @@ export default defineConfig({
             },
           ],
         },
-        { label: 'Playground', link: '#' },
+        {
+          label: 'Components',
+          autogenerate: { directory: 'components' },
+        },
         {
           label: 'Blog',
           link: '#',

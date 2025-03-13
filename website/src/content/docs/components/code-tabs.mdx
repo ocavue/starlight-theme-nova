@@ -1,0 +1,37 @@
+---
+title: Code Tabs
+---
+
+```jsx
+import CodeTabs from 'starlight-theme-nova/components/CodeTabs.astro'
+import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
+
+<CodeTabs>
+  <CodeTabItem
+    label="index.js"
+    lang="js"
+    code={`function () {\n  console.log('Hello, JS!')\n}`}
+  />
+  <CodeTabItem
+    label="index.ts"
+    lang="ts"
+    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
+  />
+</CodeTabs>
+```
+
+import CodeTabs from 'starlight-theme-nova/components/CodeTabs.astro'
+import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
+
+<CodeTabs>
+  <CodeTabItem
+    label="index.js"
+    lang="js"
+    code={`function () {\n  console.log('Hello, JS!')\n}`}
+  />
+  <CodeTabItem
+    label="index.ts"
+    lang="ts"
+    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
+  />
+</CodeTabs>

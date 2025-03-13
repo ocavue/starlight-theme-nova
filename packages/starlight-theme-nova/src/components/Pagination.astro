@@ -1,0 +1,30 @@
+---
+import PaginationLink from './PaginationLink.astro'
+
+const { dir, pagination } = Astro.locals.starlightRoute
+const { prev, next } = pagination
+const isRtl = dir === 'rtl'
+---
+
+<div class="print:hidden nova-pagination" dir={dir}>
+  {
+    prev && (
+      <PaginationLink
+        label={prev.label}
+        href={prev.href}
+        rel="prev"
+        side={isRtl ? 'right' : 'left'}
+      />
+    )
+  }
+  {
+    next && (
+      <PaginationLink
+        label={next.label}
+        href={next.href}
+        rel="next"
+        side={isRtl ? 'left' : 'right'}
+      />
+    )
+  }
+</div>
