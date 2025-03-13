@@ -18,3 +18,10 @@
     padding: 0.125rem 0.25rem;
   }
 }
+
+/* <code> inside asides */
+@supports (border-color: color-mix(in srgb, var(--sl-color-asides-text-accent) 12%, transparent)) {
+	.sl-markdown-content .starlight-aside code:not(:where(.not-content *)) {
+		border-color: color-mix(in srgb, var(--sl-color-asides-text-accent) 12%, transparent);
+	}
+}
