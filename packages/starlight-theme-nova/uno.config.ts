@@ -88,9 +88,9 @@ const shortcut = {
 
   'nova-link-button-primary': [
     'bg-black hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-gray-300',
-    'text-white dark:text-gray-900',    
+    'text-white dark:text-gray-900',
   ],
-  
+
   'nova-link-button-secondary': [
     'border-sl-gray-5',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
@@ -99,6 +99,21 @@ const shortcut = {
 
   'nova-link-button-icon':
     'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
+
+  'nova-pagination':
+    'flex gap-2 justify-between flex-row flex-wrap items-stretch pt-0 pb-6 px-1 min-w-full',
+
+  'nova-pagination-link': [
+    'flex items-center justify-end p-2 rounded-xl m-0 gap-2 text-nowrap flex-1',
+    'font-medium text-sl-gray-2 hover:text-sl-white no-underline text-lg',
+
+    '[&[rel="prev"]]:flex-row-reverse',
+    '[&[rel="next"]]:flex-row',
+  ],
+  'nova-pagination-link-icon-right':
+    'min-w-7 min-h-7 transition block i-lucide-chevron-right [.nova-pagination-link:hover_&]:translate-x-1',
+  'nova-pagination-link-icon-left':
+    'min-w-7 min-h-7 transition block i-lucide-chevron-left [.nova-pagination-link:hover_&]:-translate-x-1',
 }
 
 const css = String.raw
@@ -180,6 +195,16 @@ const config: UserConfig = defineConfig({
       lg: '72rem',
       xl: '90rem',
       '2xl': '120rem',
+    },
+    colors: {
+      'sl-white': 'var(--sl-color-white)',
+      'sl-gray-1': 'var(--sl-color-gray-1)',
+      'sl-gray-2': 'var(--sl-color-gray-2)',
+      'sl-gray-3': 'var(--sl-color-gray-3)',
+      'sl-gray-4': 'var(--sl-color-gray-4)',
+      'sl-gray-5': 'var(--sl-color-gray-5)',
+      'sl-gray-6': 'var(--sl-color-gray-6)',
+      'sl-black': 'var(--sl-color-black)',
     },
   },
   preflights: [{ getCSS: () => preflight }],

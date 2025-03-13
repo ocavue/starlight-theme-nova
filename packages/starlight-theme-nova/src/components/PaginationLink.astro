@@ -1,0 +1,20 @@
+---
+interface Props {
+  label: string
+  href: string
+  rel: 'next' | 'prev'
+  side: 'left' | 'right'
+}
+
+const { label, href, rel, side } = Astro.props
+---
+
+<a href={href} rel={rel} class:list={['nova-pagination-link']}>
+  <span>{label}</span>
+  <span
+    class:list={[
+      side === 'right'
+        ? 'nova-pagination-link-icon-right'
+        : 'nova-pagination-link-icon-left',
+    ]}></span>
+</a>
