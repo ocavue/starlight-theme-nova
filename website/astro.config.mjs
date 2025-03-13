@@ -11,7 +11,7 @@ export default defineConfig({
 
       title: 'Demo Docs',
       social: {
-        github: 'https://github.com/withastro/starlight',
+        github: 'https://github.com/ocavue/starlight-theme-nova',
       },
 
       // Sidebar — mostly dummy links just to demonstrate some structure
