@@ -25,7 +25,7 @@ const shortcut = {
     'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
   ], 
 
-  'nova-site-title': '[&_*]:text-sl-text [&_*]:font-bold [&_*]:text-lg',
+  'nova-site-title': '[&_*]:text-sl-text [&_*]:font-semibold [&_*]:text-lg',
 
   'nova-header': 'flex items-center gap-2 h-full box-border',
 

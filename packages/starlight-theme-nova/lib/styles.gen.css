@@ -95,7 +95,7 @@
 .nova-link-card:hover{--nova-bg-opacity:1;background-color:rgb(249 250 251 / var(--nova-bg-opacity)) /* #f9fafb */;--nova-shadow:var(--nova-shadow-inset) 0 4px 6px -1px var(--nova-shadow-color, rgb(0 0 0 / 0.1)),var(--nova-shadow-inset) 0 2px 4px -2px var(--nova-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--nova-ring-offset-shadow), var(--nova-ring-shadow), var(--nova-shadow);}
 .nova-social-icons-link:hover{background-color:rgb(156 163 175 / 0.3) /* #9ca3af */;}
 .nova-theme-select:hover{background-color:rgb(156 163 175 / 0.3) /* #9ca3af */;}
-.nova-site-title *{font-size:1.125rem;line-height:1.75rem;color:var(--sl-color-text) /* var(--sl-color-text) */;font-weight:700;}
+.nova-site-title *{font-size:1.125rem;line-height:1.75rem;color:var(--sl-color-text) /* var(--sl-color-text) */;font-weight:600;}
 .nova-header-nav-link{color:var(--sl-color-gray-3) /* var(--sl-color-gray-3) */;text-decoration:none;}
 .dark .nova-link-card-link{--nova-text-opacity:1;color:rgb(229 231 235 / var(--nova-text-opacity)) /* #e5e7eb */;}
 .nova-header-nav-link:hover{color:var(--sl-color-white) /* var(--sl-color-white) */;}
