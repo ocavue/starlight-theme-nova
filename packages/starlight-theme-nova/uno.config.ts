@@ -101,13 +101,13 @@ const shortcut = {
     'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
 
   'nova-pagination':
-    'flex gap-2 justify-between flex-row flex-wrap items-stretch pt-0 pb-6 px-1 min-w-full',
+    'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',
 
   'nova-pagination-link': [
-    'flex items-center justify-end p-2 rounded-xl m-0 gap-2 text-nowrap flex-1',
-    'font-medium text-sl-gray-2 hover:text-sl-white no-underline text-lg',
+    'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
+    'text-sl-gray-2 hover:text-sl-white no-underline text-md md:text-lg font-medium',
 
-    'transition',
+    'transition duration-100',
     'data-[side="left"]:active:-translate-x-1',
     'data-[side="right"]:active:translate-x-1',
 
@@ -115,9 +115,9 @@ const shortcut = {
     '[&[rel="next"]]:flex-row',
   ],
   'nova-pagination-link-icon-right':
-    'min-w-7 min-h-7 transition block i-lucide-chevron-right [.nova-pagination-link:hover_&]:translate-x-1',
+    'min-w-5 min-h-5 transition block i-lucide-chevron-right',
   'nova-pagination-link-icon-left':
-    'min-w-7 min-h-7 transition block i-lucide-chevron-left [.nova-pagination-link:hover_&]:-translate-x-1',
+    'min-w-5 min-h-5 transition block i-lucide-chevron-left',
 }
 
 const css = String.raw
