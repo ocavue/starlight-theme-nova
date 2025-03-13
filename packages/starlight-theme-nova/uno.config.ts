@@ -25,6 +25,8 @@ const shortcut = {
     'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
   ], 
 
+  'nova-site-title': '[&_*]:text-sl-text [&_*]:font-bold [&_*]:text-lg',
+
   'nova-header': 'flex items-center gap-2 h-full box-border',
 
   'nova-header-title': [
@@ -36,7 +38,7 @@ const shortcut = {
     'flex',
   ],
 
-  'nova-header-nav': 'flex flex-row flex-1 gap-4 p-4 text-sm font-medium max-md:[&_*]:hidden overflow-x-auto',
+  'nova-header-nav': 'flex flex-row flex-1 gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 text-sm font-medium max-md:[&_*]:hidden overflow-x-auto',
 
   'nova-header-nav-link':
     'no-underline text-sl-gray-3 hover:text-sl-white',
@@ -56,10 +58,10 @@ const shortcut = {
     'relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100',
 
   'nova-theme-select':
-    'size-8 p-2 rounded-md color-[var(--sl-color-text)] hover:bg-gray-400/30 transition-colors',
+    'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition-colors',
 
   'nova-social-icons-link':
-    'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 color-[var(--sl-color-text)]',
+    'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
 
   'nova-page-frame-sidebar-pane':
     'md:border-r border-0 border-solid border-hairline',
@@ -201,6 +203,7 @@ const config: UserConfig = defineConfig({
       '2xl': '120rem',
     },
     colors: {
+      'sl-text': 'var(--sl-color-text)',
       'sl-white': 'var(--sl-color-white)',
       'sl-gray-1': 'var(--sl-color-gray-1)',
       'sl-gray-2': 'var(--sl-color-gray-2)',
