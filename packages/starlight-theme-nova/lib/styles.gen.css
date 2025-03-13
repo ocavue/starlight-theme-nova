@@ -15,9 +15,13 @@
     --sl-color-gray-5: #374151;
     --sl-color-gray-6: #1f2937;
     --sl-color-black: #030712;
+
     --sl-color-accent-low: #030712;
     --sl-color-accent: #4b5563;
     --sl-color-accent-high: #f3f4f6;
+
+    --sl-color-bg-inline-code: #111827;
+    --sl-color-border-inline-code: #374151;
   }
 
   /* Light mode Starlight theme variables */
@@ -31,21 +35,13 @@
     --sl-color-gray-6: #e5e7eb;
     --sl-color-gray-7: #f3f4f6;
     --sl-color-black: white;
+
     --sl-color-accent-low: #e5e7eb;
     --sl-color-accent: #1f2937;
     --sl-color-accent-high: #111827;
-  }
 
-  /* Style the Markdown heading links. */
-  .sl-markdown-content
-    :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *))
-    > a {
-    color: var(--sl-color-white);
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    --sl-color-bg-inline-code: #f3f4f6;
+    --sl-color-border-inline-code: #d1d5db;
   }
 
 /* layer: shortcuts */

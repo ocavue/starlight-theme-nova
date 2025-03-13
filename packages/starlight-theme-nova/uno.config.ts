@@ -137,9 +137,13 @@ const preflight = css`
     --sl-color-gray-5: ${colors.gray[700]};
     --sl-color-gray-6: ${colors.gray[800]};
     --sl-color-black: ${colors.gray[950]};
+
     --sl-color-accent-low: ${colors.gray[950]};
     --sl-color-accent: ${colors.gray[600]};
     --sl-color-accent-high: ${colors.gray[100]};
+
+    --sl-color-bg-inline-code: ${colors.gray[900]};
+    --sl-color-border-inline-code: ${colors.gray[700]};
   }
 
   /* Light mode Starlight theme variables */
@@ -153,21 +157,13 @@ const preflight = css`
     --sl-color-gray-6: ${colors.gray[200]};
     --sl-color-gray-7: ${colors.gray[100]};
     --sl-color-black: white;
+
     --sl-color-accent-low: ${colors.gray[200]};
     --sl-color-accent: ${colors.gray[800]};
     --sl-color-accent-high: ${colors.gray[900]};
-  }
 
-  /* Style the Markdown heading links. */
-  .sl-markdown-content
-    :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *))
-    > a {
-    color: var(--sl-color-white);
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    --sl-color-bg-inline-code: ${colors.gray[100]};
+    --sl-color-border-inline-code: ${colors.gray[300]};
   }
 `
 
