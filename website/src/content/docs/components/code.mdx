@@ -2,20 +2,19 @@
 title: Code
 ---
 
+import CodePreview from '../../snippets/code.mdx'
+import CodeContent from '../../snippets/code.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
 A wrapper around Astro's [`<Code>` component](https://docs.astro.build/en/guides/syntax-highlighting/#code-) with custom Shiki configuration.
 
 ## Preview
 
-import Code from 'starlight-theme-nova/components/Code.astro'
-
-<Code lang="js" code={`console.log('Hello, world!')`} />
+<CodePreview />
 
 ## Usage
 
-```jsx
-import Code from 'starlight-theme-nova/components/Code.astro'
-;<Code lang="js" code={`console.log('Hello, world!')`} />
-```
+<Code code={CodeContent} lang="jsx" />
 
 ## `<Code>` Props
 

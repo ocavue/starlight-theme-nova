@@ -2,44 +2,19 @@
 title: Code Tabs
 ---
 
+import CodeTabsPreview from '../../snippets/code-tabs.mdx'
+import CodeTabsContent from '../../snippets/code-tabs.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
 Displays a list of code blocks with tabs.
 
 ## Preview
 
-import CodeTabs from 'starlight-theme-nova/components/CodeTabs.astro'
-import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
-
-<CodeTabs>
-  <CodeTabItem
-    label="index.js"
-    lang="js"
-    code={`function () {\n  console.log('Hello, JS!')\n}`}
-  />
-  <CodeTabItem
-    label="index.ts"
-    lang="ts"
-    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
-  />
-</CodeTabs>
+<CodeTabsPreview />
 
 ## Usage
 
-```jsx
-import CodeTabs from 'starlight-theme-nova/components/CodeTabs.astro'
-import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
-;<CodeTabs>
-  <CodeTabItem
-    label="index.js"
-    lang="js"
-    code={`function () {\n  console.log('Hello, JS!')\n}`}
-  />
-  <CodeTabItem
-    label="index.ts"
-    lang="ts"
-    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
-  />
-</CodeTabs>
-```
+<Code code={CodeTabsContent} lang="jsx" />
 
 ## `<CodeTabs>` Props
 

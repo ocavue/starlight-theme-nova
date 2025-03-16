@@ -2,36 +2,19 @@
 title: Link Card
 ---
 
+import LinkCardPreview from '../../snippets/link-card.mdx'
+import LinkCardContent from '../../snippets/link-card.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
 To display links to different pages prominently, use the `<LinkCard>` component.
 
 ## Preview
 
-import LinkCard from 'starlight-theme-nova/components/LinkCard.astro'
-
-<LinkCard title="Authoring Markdown" href="/guides/authoring-content/" />
-
-<LinkCard
-  title="Internationalization"
-  href="/guides/i18n/"
-  description="Configure Starlight to support multiple languages."
-/>
+<LinkCardPreview />
 
 ## Usage
 
-```jsx
-import LinkCard from 'starlight-theme-nova/components/LinkCard.astro'
-
-<LinkCard
-  title="Authoring Markdown"
-  href="/guides/authoring-content/"
-/>
-
-<LinkCard
-  title="Internationalization"
-  href="/guides/i18n/"
-  description="Configure Starlight to support multiple languages."
-/>
-```
+<Code code={LinkCardContent} lang="jsx" />
 
 ## `<LinkCard>` Props
 

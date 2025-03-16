@@ -18,6 +18,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./*.css": "./lib/*.css",
+    "./components": "./src/components/index.ts",
     "./components/*.astro": "./src/components/*.astro"
   },
   "files": [

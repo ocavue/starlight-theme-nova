@@ -2,26 +2,19 @@
 title: Code Package Managers
 ---
 
+import CodePackageManagersPreview from '../../snippets/code-package-managers.mdx'
+import CodePackageManagersContent from '../../snippets/code-package-managers.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
 Displays a list of install commands for different package managers.
 
 ## Preview
 
-import CodePackageManagers from 'starlight-theme-nova/components/CodePackageManagers.astro'
-
-<CodePackageManagers
-  packages="starlight-theme-nova @astrojs/starlight"
-  dev={true}
-/>
+<CodePackageManagersPreview />
 
 ## Usage
 
-```jsx
-import CodePackageManagers from 'starlight-theme-nova/components/CodePackageManagers.astro'
-;<CodePackageManagers
-  packages="starlight-theme-nova @astrojs/starlight"
-  dev={true}
-/>
-```
+<Code code={CodePackageManagersContent} lang="jsx" />
 
 ## `<CodePackageManagers>` Props
 

@@ -1,0 +1,14 @@
+import { CodeTabItem, CodeTabs } from 'starlight-theme-nova/components'
+
+<CodeTabs>
+  <CodeTabItem
+    label="index.js"
+    lang="js"
+    code={`function () {\n  console.log('Hello, JS!')\n}`}
+  />
+  <CodeTabItem
+    label="index.ts"
+    lang="ts"
+    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
+  />
+</CodeTabs>

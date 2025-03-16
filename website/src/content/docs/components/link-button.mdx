@@ -2,27 +2,19 @@
 title: Link Button
 ---
 
+import LinkButtonPreview from '../../snippets/link-button.mdx'
+import LinkButtonContent from '../../snippets/link-button.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
 To display visually distinct call-to-action links, use the `<LinkButton>` component.
 
 ## Preview
 
-import LinkButton from 'starlight-theme-nova/components/LinkButton.astro'
-
-<LinkButton href="/getting-started/">Get started</LinkButton>
-<LinkButton href="/reference/configuration/" variant="secondary">
-  Configuration Reference
-</LinkButton>
+<LinkButtonPreview />
 
 ## Usage
 
-```jsx
-import LinkButton from 'starlight-theme-nova/components/LinkButton.astro'
-
-<LinkButton href="/getting-started/">Get started</LinkButton>
-<LinkButton href="/reference/configuration/" variant="secondary">
-  Configuration Reference
-</LinkButton>
-```
+<Code code={LinkButtonContent} lang="jsx" />
 
 ## `<LinkButton>` Props
 

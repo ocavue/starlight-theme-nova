@@ -15,7 +15,7 @@ If you don't have one yet, you can follow the ["Getting Started"](https://starli
 ## Installation
 
 import { Steps } from '@astrojs/starlight/components'
-import CodePackageManagers from 'starlight-theme-nova/components/CodePackageManagers.astro'
+import { CodePackageManagers } from 'starlight-theme-nova/components'
 
 <Steps>
 
