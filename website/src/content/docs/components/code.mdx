@@ -2,12 +2,21 @@
 title: Code
 ---
 
+A wrapper around Astro's [`<Code>` component](https://docs.astro.build/en/guides/syntax-highlighting/#code-) with custom Shiki configuration.
+
+## Preview
+
+import Code from 'starlight-theme-nova/components/Code.astro'
+
+<Code lang="js" code={`console.log('Hello, world!')`} />
+
+## Usage
+
 ```jsx
 import Code from 'starlight-theme-nova/components/Code.astro'
-
-<Code lang="js" code={`console.log('Hello, world!')`} />
+;<Code lang="js" code={`console.log('Hello, world!')`} />
 ```
 
-import Code from 'starlight-theme-nova/components/Code.astro'
+## `<Code>` Props
 
-<Code lang="js" code={`console.log('Hello, world!')`} />
+The `<Code>` component accepts the same props in Astro's [`<Code>` component](https://docs.astro.build/en/guides/syntax-highlighting/#code-).

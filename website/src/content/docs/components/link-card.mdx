@@ -1,0 +1,58 @@
+---
+title: Link Card
+---
+
+To display links to different pages prominently, use the `<LinkCard>` component.
+
+## Preview
+
+import LinkCard from 'starlight-theme-nova/components/LinkCard.astro'
+
+<LinkCard title="Authoring Markdown" href="/guides/authoring-content/" />
+
+<LinkCard
+  title="Internationalization"
+  href="/guides/i18n/"
+  description="Configure Starlight to support multiple languages."
+/>
+
+## Usage
+
+```jsx
+import LinkCard from 'starlight-theme-nova/components/LinkCard.astro'
+
+<LinkCard
+  title="Authoring Markdown"
+  href="/guides/authoring-content/"
+/>
+
+<LinkCard
+  title="Internationalization"
+  href="/guides/i18n/"
+  description="Configure Starlight to support multiple languages."
+/>
+```
+
+## `<LinkCard>` Props
+
+The `<LinkCard>` component accepts the following props, as well as all other [`<a>` element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a):
+
+### `title`
+
+**required**  
+**type:** `string`
+
+The title of the link card to display.
+
+### `href`
+
+**required**  
+**type:** `string`
+
+The URL to link to when the card is interacted with.
+
+### `description`
+
+**type:** `string`
+
+An optional description to display below the title.

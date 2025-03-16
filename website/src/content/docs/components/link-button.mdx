@@ -1,8 +1,19 @@
 ---
-title: Link Buttons
+title: Link Button
 ---
 
 To display visually distinct call-to-action links, use the `<LinkButton>` component.
+
+## Preview
+
+import LinkButton from 'starlight-theme-nova/components/LinkButton.astro'
+
+<LinkButton href="/getting-started/">Get started</LinkButton>
+<LinkButton href="/reference/configuration/" variant="secondary">
+  Configuration Reference
+</LinkButton>
+
+## Usage
 
 ```jsx
 import LinkButton from 'starlight-theme-nova/components/LinkButton.astro'
@@ -13,9 +24,21 @@ import LinkButton from 'starlight-theme-nova/components/LinkButton.astro'
 </LinkButton>
 ```
 
-import LinkButton from 'starlight-theme-nova/components/LinkButton.astro'
+## `<LinkButton>` Props
 
-<LinkButton href="/getting-started/">Get started</LinkButton>
-<LinkButton href="/reference/configuration/" variant="secondary">
-  Configuration Reference
-</LinkButton>
+The `<LinkButton>` component accepts the following props and also any [other `<a>` attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a):
+
+### `href`
+
+**required**  
+**type:** `string`
+
+The URL that the link button points to.
+
+### `variant`
+
+**type:** `'primary' | 'secondary'`  
+**default:** `'primary'`
+
+The appearance of the link button.
+Set to `primary` for a prominent call-to-action link using the theme’s accent color, `secondary` for a less prominent link.

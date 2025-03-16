@@ -1,0 +1,50 @@
+---
+title: Code Package Managers
+---
+
+Displays a list of install commands for different package managers.
+
+## Preview
+
+import CodePackageManagers from 'starlight-theme-nova/components/CodePackageManagers.astro'
+
+<CodePackageManagers
+  packages="starlight-theme-nova @astrojs/starlight"
+  dev={true}
+/>
+
+## Usage
+
+```jsx
+import CodePackageManagers from 'starlight-theme-nova/components/CodePackageManagers.astro'
+;<CodePackageManagers
+  packages="starlight-theme-nova @astrojs/starlight"
+  dev={true}
+/>
+```
+
+## `<CodePackageManagers>` Props
+
+The `<CodePackageManagers>` component accepts the following props:
+
+### `packageManagers`
+
+**type:** `PackageManager[]`
+
+**default:** `['pnpm', 'npm', 'yarn', 'bun']`
+
+The package managers to use.
+
+### `packages`
+
+**type:** `string`
+
+The packages to install. If you want to install multiple packages, you can pass a space-separated string.
+
+### `dev`
+
+**type:** `boolean`
+
+**default:** `false`
+
+Whether to install the packages as dev dependencies.

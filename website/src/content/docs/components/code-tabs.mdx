@@ -2,11 +2,32 @@
 title: Code Tabs
 ---
 
-```jsx
+Displays a list of code blocks with tabs.
+
+## Preview
+
 import CodeTabs from 'starlight-theme-nova/components/CodeTabs.astro'
 import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
 
 <CodeTabs>
+  <CodeTabItem
+    label="index.js"
+    lang="js"
+    code={`function () {\n  console.log('Hello, JS!')\n}`}
+  />
+  <CodeTabItem
+    label="index.ts"
+    lang="ts"
+    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
+  />
+</CodeTabs>
+
+## Usage
+
+```jsx
+import CodeTabs from 'starlight-theme-nova/components/CodeTabs.astro'
+import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
+;<CodeTabs>
   <CodeTabItem
     label="index.js"
     lang="js"
@@ -20,18 +41,22 @@ import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
 </CodeTabs>
 ```
 
-import CodeTabs from 'starlight-theme-nova/components/CodeTabs.astro'
-import CodeTabItem from 'starlight-theme-nova/components/CodeTabItem.astro'
+## `<CodeTabs>` Props
 
-<CodeTabs>
-  <CodeTabItem
-    label="index.js"
-    lang="js"
-    code={`function () {\n  console.log('Hello, JS!')\n}`}
-  />
-  <CodeTabItem
-    label="index.ts"
-    lang="ts"
-    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
-  />
-</CodeTabs>
+### `syncKey`
+
+**type:** `string`
+
+A key used to keep multiple tab groups synchronized across multiple pages.
+
+## `<CodeTabItem>` Props
+
+The `<CodeTabItem>` component accepts the following props, as well as all other [`<Code>` component props](/components/code):
+
+### `label`
+
+**required**
+
+**type:** `string`
+
+The label to display in the tab.

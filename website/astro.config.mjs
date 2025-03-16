@@ -22,45 +22,26 @@ export default defineConfig({
         }),
       ],
 
-      title: 'Demo Docs',
+      title: 'Starlight Nova',
       social: {
+        blueSky: 'https://bsky.app/profile/ocavue',
         github: 'https://github.com/ocavue/starlight-theme-nova',
       },
 
       // Sidebar — mostly dummy links just to demonstrate some structure
       sidebar: [
-        { slug: 'splash', label: 'Home' },
         {
-          label: 'Guides',
-          items: [
-            { label: 'Example Guide', slug: 'index' },
-            { label: 'Installation', link: '#' },
-            { label: 'Testing', link: '#', badge: 'New' },
-          ],
-        },
-        {
-          label: 'Constellations',
-          items: [
-            { label: 'Carina', link: '#' },
-            { label: 'Centaurus', link: '#' },
-            {
-              label: 'Seasonal',
-              items: [
-                { label: 'Andromeda', link: '#' },
-                { label: 'Orion', link: '#' },
-                { label: 'Ursa Minor', link: '#' },
-              ],
-            },
-          ],
+          label: 'Start Here',
+          items: [{ label: 'Getting Started', link: '/getting-started/' }],
         },
         {
           label: 'Components',
           autogenerate: { directory: 'components' },
         },
+
         {
-          label: 'Blog',
-          link: '#',
-          badge: { text: 'WIP', variant: 'caution' },
+          label: 'Examples',
+          autogenerate: { directory: 'examples' },
         },
       ],
     }),
