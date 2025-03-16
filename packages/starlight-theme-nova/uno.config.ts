@@ -23,7 +23,7 @@ const shortcut = {
     'w-full fixed inset-0',
     'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
     'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
-  ], 
+  ],
 
   'nova-site-title': '[&_*]:text-sl-text [&_*]:font-semibold [&_*]:text-lg',
 
@@ -38,10 +38,10 @@ const shortcut = {
     'flex',
   ],
 
-  'nova-header-nav': 'flex flex-row flex-1 gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 text-sm font-medium max-md:[&_*]:hidden overflow-x-auto',
+  'nova-header-nav':
+    'flex flex-row flex-1 gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 text-sm font-medium max-md:[&_*]:hidden overflow-x-auto',
 
-  'nova-header-nav-link':
-    'no-underline text-sl-gray-3 hover:text-sl-white',
+  'nova-header-nav-link': 'no-underline text-sl-gray-3 hover:text-sl-white',
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
 
