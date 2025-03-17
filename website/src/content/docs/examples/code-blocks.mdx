@@ -53,9 +53,18 @@ pnpm run thing
 ## Twoslash
 
 ```ts twoslash
-const foo = { foo: 'foo' }
+interface Foo {
+  foo: string
+}
 
-const bar = { bar: 'bar' }
+type Bar = {
+  bar: string
+}
+
+// ---cut---
+const foo: Foo = { foo: 'foo' }
+
+const bar: Bar = { bar: 'bar' }
 
 const baz = { ...foo, ...bar }
     // ^?
