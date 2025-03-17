@@ -1,0 +1,77 @@
+{
+  "name": "shiki-twoslash-renderer",
+  "type": "module",
+  "version": "0.0.0",
+  "private": false,
+  "author": {
+    "name": "ocavue",
+    "email": "ocavue@gmail.com"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/ocavue",
+  "homepage": "https://github.com/ocavue/starlight-theme-nova#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ocavue/starlight-theme-nova.git",
+    "directory": "packages/shiki-twoslash-renderer"
+  },
+  "bugs": "https://github.com/ocavue/starlight-theme-nova/issues",
+  "keywords": [
+    "Shiki",
+    "Twoslash",
+    "TypeScript"
+  ],
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./elements": "./src/elements.ts",
+    "./style.css": "./src/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc -b tsconfig.json && tsup"
+  },
+  "dependencies": {
+    "@aria-ui/core": "^0.0.21",
+    "@aria-ui/tooltip": "^0.0.29",
+    "@shikijs/twoslash": "^3.2.1",
+    "@shikijs/types": "^3.2.1",
+    "@types/hast": "^3.0.4",
+    "mdast-util-from-markdown": "^2.0.2",
+    "mdast-util-gfm": "^3.1.0",
+    "mdast-util-to-hast": "^13.2.0"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.52.1",
+    "@ocavue/tsconfig": "^0.2.0",
+    "shiki": "^3.2.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.9"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "default": "./dist/index.js"
+      },
+      "./elements": {
+        "types": "./dist/elements.d.ts",
+        "import": "./dist/elements.js",
+        "default": "./dist/elements.js"
+      },
+      "./style.css": {
+        "default": "./dist/style.css"
+      }
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  }
+}
