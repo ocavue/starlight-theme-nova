@@ -20,7 +20,11 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
       transformerNotationHighlight(),
       transformerMetaHighlight(),
       transformerCopyButton(),
-      options.twoslash ? transformerTwoslash() : undefined,
+      options.twoslash
+        ? transformerTwoslash({
+            explicitTrigger: true,
+          })
+        : undefined,
     ].filter((x) => !!x),
   }
 }
