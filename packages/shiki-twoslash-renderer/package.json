@@ -1,7 +1,7 @@
 {
   "name": "shiki-twoslash-renderer",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "author": {
     "name": "ocavue",
@@ -41,10 +41,7 @@
     "@aria-ui/tooltip": "^0.0.29",
     "@shikijs/twoslash": "^3.2.1",
     "@shikijs/types": "^3.2.1",
-    "@types/hast": "^3.0.4",
-    "mdast-util-from-markdown": "^2.0.2",
-    "mdast-util-gfm": "^3.1.0",
-    "mdast-util-to-hast": "^13.2.0"
+    "@types/hast": "^3.0.4"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.52.1",
