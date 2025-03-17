@@ -8,17 +8,19 @@ import type { ShikiConfig } from 'astro'
 
 import { transformerCopyButton } from './shiki-transformer-copy-button'
 
-export const shikiConfig: ShikiConfig = {
-  themes: {
-    light: 'one-light',
-    dark: 'github-dark-dimmed',
-  },
-  defaultColor: false,
-  transformers: [
-    transformerNotationDiff(),
-    transformerNotationHighlight(),
-    transformerMetaHighlight(),
-    transformerCopyButton(),
-    transformerTwoslash(),
-  ],
+export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
+  return {
+    themes: {
+      light: 'one-light',
+      dark: 'github-dark-dimmed',
+    },
+    defaultColor: false,
+    transformers: [
+      transformerNotationDiff(),
+      transformerNotationHighlight(),
+      transformerMetaHighlight(),
+      transformerCopyButton(),
+      options.twoslash ? transformerTwoslash() : undefined,
+    ].filter((x) => !!x),
+  }
 }

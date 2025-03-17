@@ -1,9 +1,12 @@
 ---
 import type { ComponentProps } from 'astro/types'
 import { Code as CodeComponent } from 'astro:components'
-import { shikiConfig } from '../shiki-config'
+import { createShikiConfig } from '../shiki-config'
 
 type Props = ComponentProps<typeof CodeComponent>
+
+// For unknown reasons, enabling twoslash breaks the build, thus twoslash is disabled here.
+const shikiConfig = createShikiConfig({ twoslash: false })
 ---
 
 <CodeComponent {...shikiConfig} {...Astro.props} />

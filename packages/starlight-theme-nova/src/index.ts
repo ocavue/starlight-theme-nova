@@ -3,7 +3,7 @@ import type {
   StarlightUserConfig,
 } from '@astrojs/starlight/types'
 
-import { shikiConfig } from './shiki-config'
+import { createShikiConfig } from './shiki-config'
 import type { ThemeNovaOptions } from './user-options'
 import { vitePluginUserConfig } from './virtual-user-config'
 
@@ -54,7 +54,7 @@ export default function starlightThemeNova(
             'astro:config:setup': ({ updateConfig }) => {
               updateConfig({
                 markdown: {
-                  shikiConfig,
+                  shikiConfig: createShikiConfig({ twoslash: true }),
                 },
                 vite: {
                   plugins: [vitePluginUserConfig(options)],
