@@ -49,3 +49,28 @@ const foo = 'bar'
 ```bash title="Doing something…"
 pnpm run thing
 ```
+
+## Twoslash
+
+```ts twoslash
+interface Foo {
+  foo: string
+}
+
+type Bar = {
+  bar: string
+}
+
+// ---cut---
+const foo: Foo = { foo: 'foo' }
+
+const bar: Bar = { bar: 'bar' }
+
+const baz = { ...foo, ...bar }
+    // ^?
+
+
+
+
+
+```

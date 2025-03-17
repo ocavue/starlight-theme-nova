@@ -1,3 +1,5 @@
+@import '@shikijs/twoslash/style-rich.css';
+
 .sl-markdown-content .astro-code {
   padding: 0;
   font-size: 0.875rem;
@@ -11,7 +13,7 @@
   border-style: solid;
   border-color: var(--sl-color-gray-5);
 
-  code {
+  & > code {
     display: grid;
     align-items: stretch;
     overflow-x: hidden;
@@ -53,10 +55,12 @@
 }
 
 .astro-code {
+  --twoslash-popup-bg: var(--shiki-light-bg);
   background-color: var(--shiki-light-bg);
 }
 
 html.dark .astro-code {
+  --twoslash-popup-bg: var(--shiki-dark-bg);
   background-color: var(--shiki-dark-bg);
 }
 
@@ -74,4 +78,16 @@ html.dark .astro-code span {
   font-style: var(--shiki-dark-font-style);
   font-weight: var(--shiki-dark-font-weight);
   text-decoration: var(--shiki-dark-text-decoration);
+}
+
+.astro-code.twoslash .twoslash-popup-container {
+  transform: translateY(1.8em);
+}
+
+.astro-code.twoslash .twoslash-query-presisted .twoslash-popup-container {
+  transform: translateY(2.2em);
+}
+
+.astro-code.twoslash .twoslash-query-line .twoslash-popup-container {
+  transform: translateY(1.3em);
 }
