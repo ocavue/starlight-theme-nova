@@ -3,7 +3,6 @@ import {
   transformerNotationDiff,
   transformerNotationHighlight,
 } from '@shikijs/transformers'
-import { transformerTwoslash } from '@shikijs/twoslash'
 import type { ShikiConfig } from 'astro'
 
 import { transformerCopyButton } from './shiki-transformer-copy-button'
@@ -19,6 +18,5 @@ export const shikiConfig: ShikiConfig = {
     transformerNotationHighlight(),
     transformerMetaHighlight(),
     transformerCopyButton(),
-    transformerTwoslash(),
   ],
 }
