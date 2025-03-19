@@ -4,4 +4,10 @@ import Default from '@astrojs/starlight/components/MobileTableOfContents.astro'
 const { toc } = Astro.locals.starlightRoute
 ---
 
-{toc && <Default />}
+{
+  toc && (
+    <div class="nova-mobile-table-of-contents">
+      <Default />
+    </div>
+  )
+}
