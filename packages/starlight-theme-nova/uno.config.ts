@@ -2,24 +2,12 @@ import { presetWind3, defineConfig, type UserConfig, presetIcons } from 'unocss'
 import { colors } from 'unocss/preset-mini'
 import { presetAnimations } from 'unocss-preset-animations'
 
-const internalShortcut = {
-  'border-hairline': 'border-[var(--sl-color-hairline)]',
-
-  'border-sl-gray-1': 'border-[var(--sl-color-gray-1)]',
-  'border-sl-gray-2': 'border-[var(--sl-color-gray-2)]',
-  'border-sl-gray-3': 'border-[var(--sl-color-gray-3)]',
-  'border-sl-gray-4': 'border-[var(--sl-color-gray-4)]',
-  'border-sl-gray-5': 'border-[var(--sl-color-gray-5)]',
-  'border-sl-gray-6': 'border-[var(--sl-color-gray-6)]',
-  'border-sl-gray-7': 'border-[var(--sl-color-gray-7)]',
-}
-
 const shortcut = {
   'nova-page-frame': 'flex flex-col min-h-screen',
 
   'nova-page-frame-header': [
-    'box-border border-b-1 border-solid border-0 border-hairline',
-    'backdrop-blur bg-white/80 dark:bg-gray-950/50',
+    'box-border border-b-1 border-solid border-0 border-sl-hairline',
+    'backdrop-blur bg-sl-bg-nav',
     'w-full fixed inset-0',
     'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
     'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
@@ -64,7 +52,7 @@ const shortcut = {
     'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
 
   'nova-page-frame-sidebar-pane':
-    'md:border-r border-0 border-solid border-hairline',
+    'md:border-r border-0 border-solid border-sl-hairline',
 
   'nova-link-card': [
     'flex flex-col px-5 py-4 rounded-xl relative gap-2',
@@ -86,28 +74,34 @@ const shortcut = {
     'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-card:hover_&]:translate-x-1',
 
   'nova-link-button': [
-    'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2',
-    'transition duration-200 shadow-sm hover:shadow-md no-underline border-1 border-solid border-transparent',
+    'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2 gap-2',
+    'transition duration-200 no-underline border-1 border-solid border-transparent',
     'font-medium',
     'active:translate-x-1',
   ],
 
   'nova-link-button-primary': [
     'bg-black hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-gray-300',
+    'shadow-sm hover:shadow-md',
     'text-white dark:text-gray-900',
   ],
 
   'nova-link-button-secondary': [
     'border-sl-gray-5',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
+    'shadow-sm hover:shadow-md',
     'text-gray-700 dark:text-gray-200',
   ],
 
+  'nova-link-button-minimal': ['text-gray-700 dark:text-gray-200'],
+
   'nova-link-button-icon':
-    'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
+    'i-lucide-arrow-right size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
 
   'nova-pagination':
     'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',
+
+  'nova-pagination-divider': 'flex-1',
 
   'nova-pagination-link': [
     'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
@@ -124,6 +118,9 @@ const shortcut = {
     'min-w-5 min-h-5 transition block i-lucide-chevron-right',
   'nova-pagination-link-icon-left':
     'min-w-5 min-h-5 transition block i-lucide-chevron-left',
+
+  'nova-mobile-table-of-contents':
+    '[&_nav]:backdrop-blur [&_summary]:border-b-sl-hairline',
 }
 
 const css = String.raw
@@ -150,6 +147,7 @@ const preflight = css`
 
     --sl-color-bg-inline-code: ${colors.gray[800]};
     --sl-color-border-inline-code: ${colors.gray[700]};
+    --sl-color-bg-nav: color-mix(in srgb, ${colors.gray[950]} 50%, transparent);
   }
 
   /* Light mode Starlight theme variables */
@@ -170,6 +168,7 @@ const preflight = css`
 
     --sl-color-bg-inline-code: ${colors.gray[100]};
     --sl-color-border-inline-code: ${colors.gray[300]};
+    --sl-color-bg-nav: color-mix(in srgb, ${colors.white} 80%, transparent);
   }
 `
 
@@ -182,7 +181,7 @@ const config: UserConfig = defineConfig({
     presetIcons(),
     presetAnimations(),
   ],
-  shortcuts: [internalShortcut, shortcut],
+  shortcuts: [shortcut],
   cli: {
     entry: [
       {
@@ -212,6 +211,8 @@ const config: UserConfig = defineConfig({
       'sl-gray-5': 'var(--sl-color-gray-5)',
       'sl-gray-6': 'var(--sl-color-gray-6)',
       'sl-black': 'var(--sl-color-black)',
+      'sl-bg-nav': 'var(--sl-color-bg-nav)',
+      'sl-hairline': 'var(--sl-color-hairline)',
     },
   },
   preflights: [{ getCSS: () => preflight }],
