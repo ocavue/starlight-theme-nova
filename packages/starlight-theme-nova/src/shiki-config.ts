@@ -30,7 +30,6 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
       dark: 'github-dark-dimmed',
     },
     defaultColor: false,
-    // @ts-expect-error: Astro is using outdated Shiki v1
     transformers: transformers,
   }
 }
