@@ -68,6 +68,7 @@
 .nova-header-nav{display:flex;flex:1 1 0%;flex-direction:row;gap:1rem;overflow-x:auto;padding-left:1rem;padding-right:1rem;font-size:0.875rem;line-height:1.25rem;font-weight:500;}
 .nova-header-search{display:flex;}
 .nova-link-card-link{display:inline-flex;align-items:center;justify-content:space-between;font-size:1.125rem;line-height:1.75rem;--nova-text-opacity:1;color:rgb(55 65 81 / var(--nova-text-opacity)) /* #374151 */;font-weight:600;text-decoration:none;}
+.nova-pagination-divider{flex:1 1 0%;}
 .nova-pagination-link[rel="next"]{flex-direction:row;}
 .nova-pagination-link[rel="prev"]{flex-direction:row-reverse;}
 .nova-link-button:hover .nova-link-button-icon,

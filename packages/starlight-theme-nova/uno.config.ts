@@ -115,6 +115,8 @@ const shortcut = {
   'nova-pagination':
     'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',
 
+  'nova-pagination-divider': 'flex-1',
+
   'nova-pagination-link': [
     'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
     'text-sl-gray-2 hover:text-sl-white no-underline text-md md:text-lg font-medium',
