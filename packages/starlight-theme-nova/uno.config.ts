@@ -86,25 +86,31 @@ const shortcut = {
     'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-card:hover_&]:translate-x-1',
 
   'nova-link-button': [
-    'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2',
-    'transition duration-200 shadow-sm hover:shadow-md no-underline border-1 border-solid border-transparent',
+    'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2 gap-2',
+    'transition duration-200 no-underline border-1 border-solid border-transparent',
     'font-medium',
     'active:translate-x-1',
   ],
 
   'nova-link-button-primary': [
     'bg-black hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-gray-300',
+    'shadow-sm hover:shadow-md',
     'text-white dark:text-gray-900',
   ],
 
   'nova-link-button-secondary': [
     'border-sl-gray-5',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
+    'shadow-sm hover:shadow-md',
+    'text-gray-700 dark:text-gray-200',
+  ],
+
+  'nova-link-button-minimal': [
     'text-gray-700 dark:text-gray-200',
   ],
 
   'nova-link-button-icon':
-    'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
+    'i-lucide-arrow-right size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
 
   'nova-pagination':
     'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',

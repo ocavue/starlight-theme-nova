@@ -3,7 +3,7 @@ import type { HTMLAttributes } from 'astro/types'
 
 interface Props extends Omit<HTMLAttributes<'a'>, 'href'> {
   href: string | URL
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'minimal'
 }
 
 const { class: className, variant = 'primary', ...attrs } = Astro.props
@@ -13,14 +13,16 @@ const { class: className, variant = 'primary', ...attrs } = Astro.props
   <a
     class:list={[
       'nova-link-button not-content',
-      variant === 'primary'
-        ? 'nova-link-button-primary'
-        : 'nova-link-button-secondary',
+      {
+        'nova-link-button-primary': variant === 'primary',
+        'nova-link-button-secondary': variant === 'secondary',
+        'nova-link-button-minimal': variant === 'minimal',
+      },
       className,
     ]}
     {...attrs}
   >
-    <slot />
+    <span><slot /></span>
     <div class="nova-link-button-icon"></div>
   </a>
 </span>
