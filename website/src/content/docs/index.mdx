@@ -1,38 +1,36 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Welcome to Starlight
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  tagline: Congrats on setting up a new Starlight project!
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Getting Started
+      link: /getting-started/
+      icon: right-arrow
+    - text: Read the Starlight docs
+      link: https://starlight.astro.build
+      icon: external
+      variant: minimal
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
-
-## Syntax highlighting
-
-Code examples can help illustrate your text.
-
-```js {4}
-// astro.config.mjs
-import { defineConfig } from 'astro/config'
-
-export default defineConfig({})
-```
-
-### Subheadings
-
-- And bullet points [containing links](#).
-- Or not, plain text is fine too.
-
-:::note
-Each theme has unique quirks and styles. You could make one too!
-:::
-
-### Keeping Houston happy
-
-```sh
-pnpm create astro@latest
-```
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Next steps
 
-1. Take screenshots for the different themes
-2. Make a PR!
+<CardGrid stagger>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid>
