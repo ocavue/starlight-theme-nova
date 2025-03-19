@@ -15,8 +15,8 @@ export default defineConfig({
               href: '/',
             },
             {
-              label: 'About',
-              href: '/about',
+              label: 'Starlight Docs',
+              href: 'https://starlight.astro.build',
             },
           ],
         }),
