@@ -11,9 +11,13 @@
     "lint": "eslint .",
     "fix": "eslint --fix . && prettier --write .",
     "prepublishOnly": "pnpm run build",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "change": "changeset",
+    "ci:publish": "pnpm run build && pnpm publish --access public -r --no-git-checks --tag latest",
+    "ci:version": "changeset version && pnpm install --no-frozen-lockfile"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.28.1",
     "@ocavue/eslint-config": "^2.12.2",
     "@ocavue/tsconfig": "^0.2.0",
     "@types/node": "^20.17.24",
