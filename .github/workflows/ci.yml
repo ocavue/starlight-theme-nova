@@ -45,4 +45,4 @@ jobs:
 
       - name: Publish snapshot packages
         if: ${{ github.event_name == 'pull_request' }}
-        run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova
+        run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova ./packages/shiki-twoslash-renderer

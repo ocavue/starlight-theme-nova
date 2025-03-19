@@ -57,7 +57,7 @@ interface Foo {
   foo: string
 }
 
-type Bar = {
+interface Bar {
   bar: string
 }
 
@@ -67,10 +67,4 @@ const foo: Foo = { foo: 'foo' }
 const bar: Bar = { bar: 'bar' }
 
 const baz = { ...foo, ...bar }
-    // ^?
-
-
-
-
-
 ```
