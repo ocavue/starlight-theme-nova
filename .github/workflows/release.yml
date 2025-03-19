@@ -36,7 +36,7 @@ jobs:
       - uses: ./.github/actions/setup
 
       - name: Build packages
-        run: pnpm build:package
+        run: pnpm build
 
       - name: Publish to NPM
         run: |
