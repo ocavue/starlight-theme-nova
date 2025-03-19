@@ -1,0 +1,7 @@
+---
+import Default from '@astrojs/starlight/components/MobileTableOfContents.astro'
+
+const { toc } = Astro.locals.starlightRoute
+---
+
+{toc && <Default />}

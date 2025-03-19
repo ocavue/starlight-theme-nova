@@ -20,6 +20,8 @@ const components = {
   TwoColumnContent: 'starlight-theme-nova/components/TwoColumnContent.astro',
   MarkdownContent: 'starlight-theme-nova/components/MarkdownContent.astro',
   Hero: 'starlight-theme-nova/components/Hero.astro',
+  MobileTableOfContents:
+    'starlight-theme-nova/components/MobileTableOfContents.astro',
 } as const
 
 export type { ThemeNovaOptions }
