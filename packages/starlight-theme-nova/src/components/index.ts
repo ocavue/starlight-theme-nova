@@ -1,17 +1,16 @@
+export { default as Aside } from '@astrojs/starlight/user-components/Aside.astro'
+export { default as Badge } from '@astrojs/starlight/user-components/Badge.astro'
+export { default as Card } from '@astrojs/starlight/user-components/Card.astro'
+export { default as CardGrid } from '@astrojs/starlight/user-components/CardGrid.astro'
+export { default as FileTree } from '@astrojs/starlight/user-components/FileTree.astro'
+export { default as Icon } from '@astrojs/starlight/user-components/Icon.astro'
+export { default as Steps } from '@astrojs/starlight/user-components/Steps.astro'
+export { default as TabItem } from '@astrojs/starlight/user-components/TabItem.astro'
+export { default as Tabs } from '@astrojs/starlight/user-components/Tabs.astro'
+
 export { default as Code } from './Code.astro'
 export { default as CodePackageManagers } from './CodePackageManagers.astro'
-export { default as CodeTabs } from './CodeTabs.astro'
 export { default as CodeTabItem } from './CodeTabItem.astro'
+export { default as CodeTabs } from './CodeTabs.astro'
 export { default as LinkButton } from './LinkButton.astro'
 export { default as LinkCard } from './LinkCard.astro'
-export {
-  Aside,
-  Badge,
-  Card,
-  CardGrid,
-  Icon,
-  Tabs,
-  TabItem,
-  Steps,
-  FileTree,
-} from '@astrojs/starlight/components'
