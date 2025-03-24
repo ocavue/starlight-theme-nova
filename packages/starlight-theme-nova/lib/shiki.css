@@ -52,6 +52,14 @@
   .line.diff.remove {
     background-color: var(--sl-color-red-low);
   }
+
+  .highlighted-word {
+    border-radius: 0.25rem;
+    border-color: var(--sl-color-gray-5); 
+    border-style: solid ;
+    border-width: 1px;
+    padding: 0 0.125rem;
+  }
 }
 
 .astro-code {

@@ -2,3 +2,35 @@
 title: Markdown
 description: Learn how to use the Starlight Nova theme in your documentation.
 ---
+
+import ShikiHighlightLineCode from '../../snippets/shiki-highlight-line.md?raw'
+import ShikiHighlightLine from '../../snippets/shiki-highlight-line.md'
+import ShikiHighlightWordCode from '../../snippets/shiki-highlight-word.md?raw'
+import ShikiHighlightWord from '../../snippets/shiki-highlight-word.md'
+
+import { Code } from 'starlight-theme-nova/components'
+
+## Line Highlighting in Code Blocks
+
+Input:
+
+
+
+<Code code={ShikiHighlightLineCode} lang="md" />
+
+Output:
+
+
+<ShikiHighlightLine />
+
+
+## Word Highlighting in Code Blocks
+
+Input:
+
+
+<Code code={ShikiHighlightWordCode} lang="md" />
+
+Output:
+
+<ShikiHighlightWord />
