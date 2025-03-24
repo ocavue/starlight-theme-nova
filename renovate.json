@@ -1,0 +1,5 @@
+{
+  "dependencyDashboard": true,
+  "ignoreDeps": [],
+  "extends": ["github>ocavue/config-renovate"]
+}
