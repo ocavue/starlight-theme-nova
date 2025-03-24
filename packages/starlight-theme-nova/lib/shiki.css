@@ -79,15 +79,3 @@ html[data-theme='dark'] .astro-code span {
   font-weight: var(--shiki-dark-font-weight);
   text-decoration: var(--shiki-dark-text-decoration);
 }
-/* 
-.astro-code.twoslash .twoslash-popup-container {
-  transform: translateY(1.8em);
-}
-
-.astro-code.twoslash .twoslash-query-presisted .twoslash-popup-container {
-  transform: translateY(2.2em);
-}
-
-.astro-code.twoslash .twoslash-query-line .twoslash-popup-container {
-  transform: translateY(1.3em);
-} */
