@@ -149,23 +149,23 @@ const preflight = css`
     --sl-color-border-inline-code: ${colors.gray[700]};
     --sl-color-bg-nav: color-mix(in srgb, ${colors.gray[950]} 50%, transparent);
 
-    --sl-color-orange-low: color-mix(in srgb, ${colors.amber[950]} 60%, black);
+    --sl-color-orange-low: ${colors.amber[950]};
     --sl-color-orange: ${colors.amber[900]};
     --sl-color-orange-high: ${colors.amber[200]};
 
-    --sl-color-green-low: color-mix(in srgb, ${colors.green[950]} 60%, black);
+    --sl-color-green-low: ${colors.green[950]};
     --sl-color-green: ${colors.green[900]};
     --sl-color-green-high: ${colors.green[200]};
 
-    --sl-color-blue-low: color-mix(in srgb, ${colors.blue[950]} 60%, black);
+    --sl-color-blue-low: ${colors.blue[950]};
     --sl-color-blue: ${colors.blue[900]};
     --sl-color-blue-high: ${colors.blue[200]};
 
-    --sl-color-purple-low: color-mix(in srgb, ${colors.purple[950]} 60%, black);
+    --sl-color-purple-low: ${colors.purple[950]};
     --sl-color-purple: ${colors.purple[900]};
     --sl-color-purple-high: ${colors.purple[200]};
 
-    --sl-color-red-low: color-mix(in srgb, ${colors.red[950]} 60%, black);
+    --sl-color-red-low: ${colors.red[950]};
     --sl-color-red: ${colors.red[900]};
     --sl-color-red-high: ${colors.red[200]};
   }

@@ -24,23 +24,23 @@
     --sl-color-border-inline-code: #374151;
     --sl-color-bg-nav: color-mix(in srgb, #030712 50%, transparent);
 
-    --sl-color-orange-low: color-mix(in srgb, #451a03 60%, black);
+    --sl-color-orange-low: #451a03;
     --sl-color-orange: #78350f;
     --sl-color-orange-high: #fde68a;
 
-    --sl-color-green-low: color-mix(in srgb, #052e16 60%, black);
+    --sl-color-green-low: #052e16;
     --sl-color-green: #14532d;
     --sl-color-green-high: #bbf7d0;
 
-    --sl-color-blue-low: color-mix(in srgb, #172554 60%, black);
+    --sl-color-blue-low: #172554;
     --sl-color-blue: #1e3a8a;
     --sl-color-blue-high: #bfdbfe;
 
-    --sl-color-purple-low: color-mix(in srgb, #3b0764 60%, black);
+    --sl-color-purple-low: #3b0764;
     --sl-color-purple: #581c87;
     --sl-color-purple-high: #e9d5ff;
 
-    --sl-color-red-low: color-mix(in srgb, #450a0a 60%, black);
+    --sl-color-red-low: #450a0a;
     --sl-color-red: #7f1d1d;
     --sl-color-red-high: #fecaca;
   }
