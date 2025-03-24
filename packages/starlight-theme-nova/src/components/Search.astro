@@ -26,14 +26,14 @@ import Default from '@astrojs/starlight/components/Search.astro'
       }
 
       & dialog {
-        animation-name: sl-ocavue-search-dialog-zoom-out;
+        animation-name: nova-search-dialog-zoom-out;
         animation-duration: 150ms;
         transform: translateZ(0);
       }
 
       & dialog[open] {
         animation-duration: 50ms;
-        animation-name: sl-ocavue-search-dialog-zoom-in;
+        animation-name: nova-search-dialog-zoom-in;
       }
 
       & dialog::backdrop {
@@ -41,17 +41,17 @@ import Default from '@astrojs/starlight/components/Search.astro'
         backdrop-filter: none;
 
         animation-duration: 150ms;
-        animation-name: sl-ocavue-search-backdrop-fade-out;
+        animation-name: nova-search-backdrop-fade-out;
       }
 
       & dialog[open]::backdrop {
         animation-duration: 50ms;
-        animation-name: sl-ocavue-search-backdrop-fade-in;
+        animation-name: nova-search-backdrop-fade-in;
       }
     }
   }
 
-  @keyframes sl-ocavue-search-backdrop-fade-in {
+  @keyframes nova-search-backdrop-fade-in {
     from {
       background-color: transparent;
     }
@@ -60,7 +60,7 @@ import Default from '@astrojs/starlight/components/Search.astro'
     }
   }
 
-  @keyframes sl-ocavue-search-backdrop-fade-out {
+  @keyframes nova-search-backdrop-fade-out {
     from {
       background-color: var(--sl-color-backdrop-overlay);
     }
@@ -69,23 +69,23 @@ import Default from '@astrojs/starlight/components/Search.astro'
     }
   }
 
-  :root {
-    --sl-ocavue-search-dialog-zoom-scale: 1;
-    --sl-ocavue-search-dialog-zoom-translate-y: 0;
+  site-search {
+    --nova-search-dialog-zoom-scale: 1;
+    --nova-search-dialog-zoom-translate-y: 0;
   }
 
   @media (min-width: 72rem) {
-    :root {
-      --sl-ocavue-search-dialog-zoom-scale: 0.95;
-      --sl-ocavue-search-dialog-zoom-translate-y: -1rem;
+    site-search {
+      --nova-search-dialog-zoom-scale: 0.95;
+      --nova-search-dialog-zoom-translate-y: -1rem;
     }
   }
 
-  @keyframes sl-ocavue-search-dialog-zoom-in {
+  @keyframes nova-search-dialog-zoom-in {
     from {
       opacity: 0;
-      transform: scale(var(--sl-ocavue-search-dialog-zoom-scale))
-        translateY(var(--sl-ocavue-search-dialog-zoom-translate-y));
+      transform: scale(var(--nova-search-dialog-zoom-scale))
+        translateY(var(--nova-search-dialog-zoom-translate-y));
     }
     to {
       opacity: 1;
@@ -93,15 +93,15 @@ import Default from '@astrojs/starlight/components/Search.astro'
     }
   }
 
-  @keyframes sl-ocavue-search-dialog-zoom-out {
+  @keyframes nova-search-dialog-zoom-out {
     from {
       opacity: 1;
       transform: scale(1) translateY(0);
     }
     to {
       opacity: 0;
-      transform: scale(var(--sl-ocavue-search-dialog-zoom-scale))
-        translateY(var(--sl-ocavue-search-dialog-zoom-translate-y));
+      transform: scale(var(--nova-search-dialog-zoom-scale))
+        translateY(var(--nova-search-dialog-zoom-translate-y));
     }
   }
 </style>
