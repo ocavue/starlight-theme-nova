@@ -5,6 +5,18 @@ import Default from '@astrojs/starlight/components/Search.astro'
 <Default />
 
 <style is:global>
+  site-search {
+    & dialog {
+      background-color: var(--sl-color-bg);
+    }
+
+    & input:focus-visible {
+      outline-style: solid;
+      outline-width: 1px;
+      outline-color: var(--sl-color-accent);
+    }
+  }
+
   ::backdrop {
     --sl-color-backdrop-overlay: hsl(0 0 0% / 0.9);
   }
