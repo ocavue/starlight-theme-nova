@@ -11,11 +11,11 @@ export default defineConfig({
         starlightThemeNova({
           nav: [
             {
-              label: 'Home',
-              href: '/',
+              label: 'Docs',
+              href: '/getting-started/',
             },
             {
-              label: 'Starlight Docs',
+              label: 'Starlight',
               href: 'https://starlight.astro.build',
             },
           ],
