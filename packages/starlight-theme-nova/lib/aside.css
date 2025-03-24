@@ -3,9 +3,13 @@
   border-radius: 0.5rem;
 }
 
-.starlight-aside, 
+.starlight-aside,
 .starlight-aside a {
-  color: color-mix(in srgb, var(--sl-color-asides-text-accent) 50%, var(--sl-color-white));
+  color: color-mix(
+    in srgb,
+    var(--sl-color-asides-text-accent) 50%,
+    var(--sl-color-white)
+  );
 }
 
 .starlight-aside a:is(:hover, :focus-visible) {
