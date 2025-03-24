@@ -42,7 +42,7 @@
   }
 
   .line.highlighted {
-    background-color: var(--sl-color-gray-5);
+    background-color: var(--nano-color-highlight);
   }
 
   .line.diff.add {

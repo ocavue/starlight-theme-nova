@@ -168,6 +168,8 @@ const preflight = css`
     --sl-color-red-low: ${colors.red[950]};
     --sl-color-red: ${colors.red[900]};
     --sl-color-red-high: ${colors.red[200]};
+
+    --nano-color-highlight: var(--sl-color-gray-5);
   }
 
   /* Light mode Starlight theme variables */
@@ -209,6 +211,8 @@ const preflight = css`
     --sl-color-red-low: ${colors.red[100]};
     --sl-color-red: ${colors.red[400]};
     --sl-color-red-high: ${colors.red[800]};
+
+    --nano-color-highlight: var(--sl-color-gray-6);
   }
 `
 

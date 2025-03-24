@@ -3,6 +3,7 @@ import {
   transformerMetaWordHighlight,
   transformerNotationDiff,
   transformerNotationHighlight,
+  transformerNotationWordHighlight,
 } from '@shikijs/transformers'
 import { transformerTwoslash } from '@shikijs/twoslash'
 import type { ShikiTransformer } from '@shikijs/types'
@@ -17,6 +18,8 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
     transformerMetaWordHighlight(),
     transformerNotationDiff(),
     transformerNotationHighlight(),
+    transformerNotationWordHighlight(),
+
     transformerCopyButton(),
     options.twoslash
       ? transformerTwoslash({

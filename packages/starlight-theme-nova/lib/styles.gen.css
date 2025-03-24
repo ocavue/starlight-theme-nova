@@ -43,6 +43,8 @@
     --sl-color-red-low: #450a0a;
     --sl-color-red: #7f1d1d;
     --sl-color-red-high: #fecaca;
+
+    --nano-color-highlight: var(--sl-color-gray-5);
   }
 
   /* Light mode Starlight theme variables */
@@ -84,6 +86,8 @@
     --sl-color-red-low: #fee2e2;
     --sl-color-red: #f87171;
     --sl-color-red-high: #991b1b;
+
+    --nano-color-highlight: var(--sl-color-gray-6);
   }
 
 /* layer: shortcuts */
