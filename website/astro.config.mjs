@@ -11,11 +11,11 @@ export default defineConfig({
         starlightThemeNova({
           nav: [
             {
-              label: 'Home',
-              href: '/',
+              label: 'Docs',
+              href: '/getting-started/',
             },
             {
-              label: 'Starlight Docs',
+              label: 'Starlight',
               href: 'https://starlight.astro.build',
             },
           ],
@@ -28,7 +28,6 @@ export default defineConfig({
         github: 'https://github.com/ocavue/starlight-theme-nova',
       },
 
-      // Sidebar — mostly dummy links just to demonstrate some structure
       sidebar: [
         {
           label: 'Start Here',
@@ -47,6 +46,5 @@ export default defineConfig({
     }),
   ],
 
-  // Toolbar disabled so it doesn’t appear in screenshots
   devToolbar: { enabled: false },
 })
