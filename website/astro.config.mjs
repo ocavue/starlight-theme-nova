@@ -12,7 +12,7 @@ export default defineConfig({
           nav: [
             {
               label: 'Docs',
-              href: '/getting-started/',
+              href: '/guide/getting-started/',
             },
             {
               label: 'Starlight',
@@ -30,17 +30,12 @@ export default defineConfig({
 
       sidebar: [
         {
-          label: 'Start Here',
-          items: [{ label: 'Getting Started', link: '/getting-started/' }],
+          label: 'Guide',
+          autogenerate: { directory: 'guide' },
         },
         {
           label: 'Components',
           autogenerate: { directory: 'components' },
-        },
-
-        {
-          label: 'Examples',
-          autogenerate: { directory: 'examples' },
         },
       ],
     }),

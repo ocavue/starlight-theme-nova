@@ -1,0 +1,17 @@
+.starlight-aside {
+  border: 1px solid var(--sl-color-asides-border);
+  border-radius: 0.5rem;
+}
+
+.starlight-aside,
+.starlight-aside a {
+  color: color-mix(
+    in srgb,
+    var(--sl-color-asides-text-accent) 50%,
+    var(--sl-color-white)
+  );
+}
+
+.starlight-aside a:is(:hover, :focus-visible) {
+  color: var(--sl-color-asides-text-accent);
+}

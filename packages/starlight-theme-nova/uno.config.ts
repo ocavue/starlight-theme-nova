@@ -105,7 +105,7 @@ const shortcut = {
 
   'nova-pagination-link': [
     'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
-    'text-sl-gray-2 hover:text-sl-white no-underline text-md md:text-lg font-medium',
+    'text-sl-gray-2 hover:text-sl-white no-underline md:text-lg font-medium',
 
     'transition duration-100',
     'data-[side="left"]:active:-translate-x-1',
@@ -148,6 +148,28 @@ const preflight = css`
     --sl-color-bg-inline-code: ${colors.gray[800]};
     --sl-color-border-inline-code: ${colors.gray[700]};
     --sl-color-bg-nav: color-mix(in srgb, ${colors.gray[950]} 50%, transparent);
+
+    --sl-color-orange-low: ${colors.amber[950]};
+    --sl-color-orange: ${colors.amber[900]};
+    --sl-color-orange-high: ${colors.amber[200]};
+
+    --sl-color-green-low: ${colors.green[950]};
+    --sl-color-green: ${colors.green[900]};
+    --sl-color-green-high: ${colors.green[200]};
+
+    --sl-color-blue-low: ${colors.blue[950]};
+    --sl-color-blue: ${colors.blue[900]};
+    --sl-color-blue-high: ${colors.blue[200]};
+
+    --sl-color-purple-low: ${colors.purple[950]};
+    --sl-color-purple: ${colors.purple[900]};
+    --sl-color-purple-high: ${colors.purple[200]};
+
+    --sl-color-red-low: ${colors.red[950]};
+    --sl-color-red: ${colors.red[900]};
+    --sl-color-red-high: ${colors.red[200]};
+
+    --nano-color-highlight: var(--sl-color-gray-5);
   }
 
   /* Light mode Starlight theme variables */
@@ -169,6 +191,28 @@ const preflight = css`
     --sl-color-bg-inline-code: ${colors.gray[100]};
     --sl-color-border-inline-code: ${colors.gray[300]};
     --sl-color-bg-nav: color-mix(in srgb, ${colors.white} 80%, transparent);
+
+    --sl-color-orange-low: ${colors.amber[100]};
+    --sl-color-orange: ${colors.amber[400]};
+    --sl-color-orange-high: ${colors.amber[800]};
+
+    --sl-color-green-low: ${colors.green[100]};
+    --sl-color-green: ${colors.green[400]};
+    --sl-color-green-high: ${colors.green[800]};
+
+    --sl-color-blue-low: ${colors.blue[100]};
+    --sl-color-blue: ${colors.blue[400]};
+    --sl-color-blue-high: ${colors.blue[800]};
+
+    --sl-color-purple-low: ${colors.purple[100]};
+    --sl-color-purple: ${colors.purple[400]};
+    --sl-color-purple-high: ${colors.purple[800]};
+
+    --sl-color-red-low: ${colors.red[100]};
+    --sl-color-red: ${colors.red[400]};
+    --sl-color-red-high: ${colors.red[800]};
+
+    --nano-color-highlight: var(--sl-color-gray-6);
   }
 `
 

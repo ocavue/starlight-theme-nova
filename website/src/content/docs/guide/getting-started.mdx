@@ -3,8 +3,7 @@ title: Getting Started
 description: Learn how to use the Starlight Nova theme in your documentation.
 ---
 
-A [Starlight](https://starlight.astro.build) theme. Check out the various
-[examples](/examples/asides/) to see the theme in action.
+A modern and beautiful theme for [Starlight](https://starlight.astro.build).
 
 ## Prerequisites
 
@@ -25,7 +24,7 @@ import { CodePackageManagers } from 'starlight-theme-nova/components'
 
 2. Configure the plugin in your Starlight [configuration](https://starlight.astro.build/reference/configuration/#plugins) in the `astro.config.mjs` file.
 
-   ```diff lang="js"
+   ```ts
    // astro.config.mjs
    import starlight from '@astrojs/starlight'
    import { defineConfig } from 'astro/config'
@@ -34,7 +33,7 @@ import { CodePackageManagers } from 'starlight-theme-nova/components'
    export default defineConfig({
      integrations: [
        starlight({
-   +     plugins: [starlightThemeNova()],
+         plugins: [starlightThemeNova()], // [!code ++]
          title: 'My Docs',
        }),
      ],
