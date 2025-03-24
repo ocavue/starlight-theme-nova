@@ -7,6 +7,8 @@ import ShikiHighlightLineCode from '../../snippets/shiki-highlight-line.md?raw'
 import ShikiHighlightLine from '../../snippets/shiki-highlight-line.md'
 import ShikiHighlightWordCode from '../../snippets/shiki-highlight-word.md?raw'
 import ShikiHighlightWord from '../../snippets/shiki-highlight-word.md'
+import ShikiDiffCode from '../../snippets/shiki-diff.md?raw'
+import ShikiDiff from '../../snippets/shiki-diff.md'
 
 import { Code } from 'starlight-theme-nova/components'
 
@@ -34,3 +36,15 @@ Input:
 Output:
 
 <ShikiHighlightWord />
+
+
+## Diff Highlighting in Code Blocks
+
+Input:
+
+<Code code={ShikiDiffCode} lang="md" />
+
+Output:
+
+<ShikiDiff />
+
