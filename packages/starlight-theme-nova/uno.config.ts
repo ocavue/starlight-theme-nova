@@ -148,6 +148,26 @@ const preflight = css`
     --sl-color-bg-inline-code: ${colors.gray[800]};
     --sl-color-border-inline-code: ${colors.gray[700]};
     --sl-color-bg-nav: color-mix(in srgb, ${colors.gray[950]} 50%, transparent);
+
+    --sl-color-orange-low: color-mix(in srgb, ${colors.amber[950]} 50%, black);
+    --sl-color-orange: ${colors.amber[700]};
+    --sl-color-orange-high: ${colors.amber[200]};
+
+    --sl-color-green-low: color-mix(in srgb, ${colors.green[950]} 50%, black);
+    --sl-color-green: ${colors.green[700]};
+    --sl-color-green-high: ${colors.green[200]};
+
+    --sl-color-blue-low: color-mix(in srgb, ${colors.blue[950]} 50%, black);
+    --sl-color-blue: ${colors.blue[700]};
+    --sl-color-blue-high: ${colors.blue[200]};
+
+    --sl-color-purple-low: color-mix(in srgb, ${colors.purple[950]} 50%, black);
+    --sl-color-purple: ${colors.purple[700]};
+    --sl-color-purple-high: ${colors.purple[200]};
+
+    --sl-color-red-low: color-mix(in srgb, ${colors.red[950]} 50%, black);
+    --sl-color-red: ${colors.red[700]};
+    --sl-color-red-high: ${colors.red[200]};
   }
 
   /* Light mode Starlight theme variables */
@@ -169,6 +189,26 @@ const preflight = css`
     --sl-color-bg-inline-code: ${colors.gray[100]};
     --sl-color-border-inline-code: ${colors.gray[300]};
     --sl-color-bg-nav: color-mix(in srgb, ${colors.white} 80%, transparent);
+
+    --sl-color-orange-low: ${colors.amber[100]};
+    --sl-color-orange: ${colors.amber[400]};
+    --sl-color-orange-high: ${colors.amber[800]};
+
+    --sl-color-green-low: ${colors.green[100]};
+    --sl-color-green: ${colors.green[400]};
+    --sl-color-green-high: ${colors.green[800]};
+
+    --sl-color-blue-low: ${colors.blue[100]};
+    --sl-color-blue: ${colors.blue[400]};
+    --sl-color-blue-high: ${colors.blue[800]};
+
+    --sl-color-purple-low: ${colors.purple[100]};
+    --sl-color-purple: ${colors.purple[400]};
+    --sl-color-purple-high: ${colors.purple[800]};
+
+    --sl-color-red-low: ${colors.red[100]};
+    --sl-color-red: ${colors.red[400]};
+    --sl-color-red-high: ${colors.red[800]};
   }
 `
 

@@ -23,6 +23,26 @@
     --sl-color-bg-inline-code: #1f2937;
     --sl-color-border-inline-code: #374151;
     --sl-color-bg-nav: color-mix(in srgb, #030712 50%, transparent);
+
+    --sl-color-orange-low: color-mix(in srgb, #451a03 50%, black);
+    --sl-color-orange: #b45309;
+    --sl-color-orange-high: #fde68a;
+
+    --sl-color-green-low: color-mix(in srgb, #052e16 50%, black);
+    --sl-color-green: #15803d;
+    --sl-color-green-high: #bbf7d0;
+
+    --sl-color-blue-low: color-mix(in srgb, #172554 50%, black);
+    --sl-color-blue: #1d4ed8;
+    --sl-color-blue-high: #bfdbfe;
+
+    --sl-color-purple-low: color-mix(in srgb, #3b0764 50%, black);
+    --sl-color-purple: #7e22ce;
+    --sl-color-purple-high: #e9d5ff;
+
+    --sl-color-red-low: color-mix(in srgb, #450a0a 50%, black);
+    --sl-color-red: #b91c1c;
+    --sl-color-red-high: #fecaca;
   }
 
   /* Light mode Starlight theme variables */
@@ -44,6 +64,26 @@
     --sl-color-bg-inline-code: #f3f4f6;
     --sl-color-border-inline-code: #d1d5db;
     --sl-color-bg-nav: color-mix(in srgb, #fff 80%, transparent);
+
+    --sl-color-orange-low: #fef3c7;
+    --sl-color-orange: #fbbf24;
+    --sl-color-orange-high: #92400e;
+
+    --sl-color-green-low: #dcfce7;
+    --sl-color-green: #4ade80;
+    --sl-color-green-high: #166534;
+
+    --sl-color-blue-low: #dbeafe;
+    --sl-color-blue: #60a5fa;
+    --sl-color-blue-high: #1e40af;
+
+    --sl-color-purple-low: #f3e8ff;
+    --sl-color-purple: #c084fc;
+    --sl-color-purple-high: #6b21a8;
+
+    --sl-color-red-low: #fee2e2;
+    --sl-color-red: #f87171;
+    --sl-color-red-high: #991b1b;
   }
 
 /* layer: shortcuts */
