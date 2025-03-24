@@ -105,7 +105,7 @@ const shortcut = {
 
   'nova-pagination-link': [
     'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
-    'text-sl-gray-2 hover:text-sl-white no-underline text-md md:text-lg font-medium',
+    'text-sl-gray-2 hover:text-sl-white no-underline md:text-lg font-medium',
 
     'transition duration-100',
     'data-[side="left"]:active:-translate-x-1',
