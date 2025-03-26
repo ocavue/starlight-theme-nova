@@ -24,7 +24,7 @@ export default defineConfig({
 
       title: 'Starlight Nova',
       social: {
-        blueSky: 'https://bsky.app/profile/ocavue',
+        blueSky: 'https://bsky.app/profile/ocavue.bsky.social',
         github: 'https://github.com/ocavue/starlight-theme-nova',
       },
 
