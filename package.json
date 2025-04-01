@@ -22,9 +22,9 @@
     "@ocavue/tsconfig": "^0.2.0",
     "@types/node": "^20.17.24",
     "eslint": "^9.22.0",
-    "pkg-pr-new": "^0.0.41",
+    "pkg-pr-new": "^0.0.42",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   }
 }
