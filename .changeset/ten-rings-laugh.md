@@ -4,7 +4,7 @@
 
 Add the ability to override some components from the theme.
 
-For example, if you don't like the `<ThemeSelect>` component provided by the theme (perhaps you want to have a "auto" option), you can override it to Starlight's default.
+For example, if you don't like the `<ThemeSelect>` component provided by the theme (perhaps you prefer to have an "auto" option), you can override it to Starlight's default.
 
 ```js
 // astro.config.mjs
