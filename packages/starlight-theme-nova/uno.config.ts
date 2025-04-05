@@ -47,6 +47,8 @@ const shortcut = {
 
   'nova-theme-select':
     'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition-colors',
+  'nova-theme-select-icon-light': 'i-tabler-sun-high-filled',
+  'nova-theme-select-icon-dark': 'i-tabler-moon-filled',
 
   'nova-social-icons-link':
     'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
