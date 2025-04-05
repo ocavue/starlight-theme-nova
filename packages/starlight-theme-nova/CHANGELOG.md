@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.2.1
+
+### Patch Changes
+
+- 0c1d7a0: Update the icons in the theme select button.
+
 ## 0.2.0
 
 ### Minor Changes
