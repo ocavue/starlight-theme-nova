@@ -42,8 +42,17 @@ const shortcut = {
     'w-full h-full block i-lucide-clipboard',
   'nova-code-copy-button-icon-check': 'w-full h-full block i-lucide-check',
 
-  'nova-code-container':
-    'relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100',
+  'nova-code-title':
+    'border-b-1 border-b-solid px-4 py-2 border-b-sl-gray-5 font-mono font-semibold text-sm bg-sl-bg hidden [div[data-nova-code-container][data-nova-code-title]_&]:block',
+
+  'nova-code-container': [
+    'relative [&_pre]:relative overflow-hidden',
+    '[&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100',
+    'border-1 border-solid border-sl-gray-5',
+    '[.sl-markdown-content_&_pre.astro-code]:border-0 [.sl-markdown-content_&_pre.astro-code]:border-transparent',
+    'rounded-md',
+    '[.sl-markdown-content_&_pre.astro-code]:rounded-0',
+  ],
 
   'nova-theme-select':
     'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition-colors',
@@ -259,6 +268,7 @@ const config: UserConfig = defineConfig({
       'sl-black': 'var(--sl-color-black)',
       'sl-bg-nav': 'var(--sl-color-bg-nav)',
       'sl-hairline': 'var(--sl-color-hairline)',
+      'sl-bg': 'var(--sl-color-bg)',
     },
   },
   preflights: [{ getCSS: () => preflight }],

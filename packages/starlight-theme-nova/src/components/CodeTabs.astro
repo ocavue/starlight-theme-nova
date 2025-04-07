@@ -1,5 +1,6 @@
 ---
 import { Tabs } from '@astrojs/starlight/components'
+import { processCodeTabs } from './rehype-code-tabs'
 
 interface Props {
   border?: boolean
@@ -7,11 +8,14 @@ interface Props {
 }
 
 const { border = true, syncKey } = Astro.props
+
+const originalHtml = await Astro.slots.render('default')
+const processedHtml = processCodeTabs(originalHtml)
 ---
 
 <div class:list={['code-tabs', border ? 'code-tabs-border' : undefined]}>
   <Tabs syncKey={syncKey}>
-    <slot />
+    <Fragment set:html={processedHtml} />
   </Tabs>
 </div>
 
@@ -59,12 +63,14 @@ const { border = true, syncKey } = Astro.props
       margin: 0;
     }
 
-    div[role='tabpanel'] pre {
-      border-color: transparent;
-    }
-
     .astro-code {
       border-radius: 0;
+    }
+
+    .nova-code-container {
+      border-radius: 0;
+      border-width: 0;
+      border-color: transparent;
     }
   }
 </style>

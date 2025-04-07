@@ -9,14 +9,39 @@ import ShikiHighlightWordCode from '../../snippets/shiki-highlight-word.md?raw'
 import ShikiHighlightWord from '../../snippets/shiki-highlight-word.md'
 import ShikiDiffCode from '../../snippets/shiki-diff.md?raw'
 import ShikiDiff from '../../snippets/shiki-diff.md'
+import CodeTitleCode from '../../snippets/code-title.md?raw'
+import CodeTitle from '../../snippets/code-title.md'
+import CodeTabsMarkdownCode from '../../snippets/code-tabs-markdown.mdx?raw'
+import CodeTabsMarkdown from '../../snippets/code-tabs-markdown.mdx'
 
-import { Code } from 'starlight-theme-nova/components'
+import { Code, CodeTabs, CodeTabItem } from 'starlight-theme-nova/components'
+
+
+## Code Block with Title
+
+Input:
+
+<Code code={CodeTitleCode} lang="md"  />
+
+Output:
+
+<CodeTitle />
+
+## Code Tabs
+
+Input:
+
+<Code code={CodeTabsMarkdownCode} lang="md"  />
+
+Output:
+
+<CodeTabsMarkdown />
 
 ## Line Highlighting in Code Blocks
 
 Input:
 
-<Code code={ShikiHighlightLineCode} lang="md" transformers={[]} />
+<Code code={ShikiHighlightLineCode} lang="md"  />
 
 Output:
 
@@ -26,7 +51,7 @@ Output:
 
 Input:
 
-<Code code={ShikiHighlightWordCode} lang="md" transformers={[]} />
+<Code code={ShikiHighlightWordCode.replace("[!", "[\\!")} lang="md"  />
 
 Output:
 
@@ -36,7 +61,7 @@ Output:
 
 Input:
 
-<Code code={ShikiDiffCode} lang="md" transformers={[]} />
+<Code code={ShikiDiffCode} lang="md" />
 
 Output:
 
