@@ -46,7 +46,7 @@ const shortcut = {
     'border-b-1 border-b-solid px-4 py-2 border-b-sl-gray-5 font-mono font-semibold text-sm bg-sl-bg hidden [div[data-nova-code-container][data-nova-code-title]_&]:block',
 
   'nova-code-container':
-    'relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100',
+    'relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100 [&_pre]:relative',
 
   'nova-theme-select':
     'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition-colors',
