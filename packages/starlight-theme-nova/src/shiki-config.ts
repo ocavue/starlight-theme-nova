@@ -1,7 +1,7 @@
 import {
   transformerMetaHighlight,
   transformerMetaWordHighlight,
-  transformerNotationDiff,
+  transformerNotationDiff,transformerRemoveNotationEscape,
   transformerNotationHighlight,
   transformerNotationWordHighlight,
 } from '@shikijs/transformers'
@@ -20,6 +20,7 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
     transformerNotationDiff(),
     transformerNotationHighlight(),
     transformerNotationWordHighlight(),
+    transformerRemoveNotationEscape(),
 
     transformerCopyButton(),
     transformerContainer(),
