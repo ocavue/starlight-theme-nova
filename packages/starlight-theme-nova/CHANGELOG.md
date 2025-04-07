@@ -1,5 +1,19 @@
 # starlight-theme-nova
 
+## 0.3.0
+
+### Minor Changes
+
+- effb232: Now you can add a title to your code blocks.
+
+  ````md
+  ```ts title="index.ts"
+  function foo() {
+    console.log('Hello, world!')
+  }
+  ```
+  ````
+
 ## 0.2.1
 
 ### Patch Changes
