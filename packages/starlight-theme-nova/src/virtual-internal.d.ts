@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 
 declare module 'virtual:starlight-theme-nova/user-config' {
-  const options: import('./user-options').ThemeNovaOptions
-  export default options
+  const config: import('./user-options').ConfigSerialized
+  export default config
 }
 declare module 'virtual:starlight/components/Search' {
   const Search: typeof import('./components/Search.astro').default

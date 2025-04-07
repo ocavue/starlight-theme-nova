@@ -1,0 +1,64 @@
+---
+import type { ComponentProps } from 'astro/types'
+import { existsSync } from 'node:fs'
+import fs from 'node:fs/promises'
+import { basename } from 'node:path'
+import Code from './Code.astro'
+import config from 'virtual:starlight-theme-nova/user-config'
+import { fileURLToPath } from 'node:url'
+
+type CodeProps = ComponentProps<typeof Code>
+
+interface Props extends Omit<CodeProps, 'code' | 'lang'> {
+  /**
+   * The file path relative to the project root.
+   */
+  path: string
+
+  /**
+   * The title of the file. If not provided, the file name will be used.
+   */
+  title?: string
+
+  /**
+   * The language of the file. If not provided, the file extension will be used.
+   */
+  lang?: CodeProps['lang']
+}
+
+const { path, title, lang, meta, ...rest } = Astro.props
+
+if (!path) {
+  throw new Error('path is required for <CodeFile> component')
+}
+
+const root = new URL(config.rootHref)
+const url = new URL(path, root)
+const absolutePath = fileURLToPath(url)
+if (!existsSync(absolutePath)) {
+  throw new Error(`Unable to find file ${absolutePath}`)
+}
+
+let code: string
+try {
+  code = await fs.readFile(absolutePath, 'utf-8')
+} catch (error) {
+  throw new Error(`Unable to read file ${absolutePath}: ${error}`, {
+    cause: error,
+  })
+}
+
+let fileName = basename(path)
+let defaultLang = (fileName.split('.').pop() || 'plaintext') as 'plaintext'
+let defaultTitle = fileName
+let titleMeta = `title="${title || defaultTitle}"`
+
+const codeProps: CodeProps = {
+  ...rest,
+  lang: lang ?? defaultLang,
+  meta: meta ? `${meta} ${titleMeta}` : titleMeta,
+  code,
+}
+---
+
+<Code {...codeProps} />

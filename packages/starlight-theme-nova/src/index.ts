@@ -32,7 +32,7 @@ export default function starlightThemeNova(
   return {
     name: 'starlight-theme-nova',
     hooks: {
-      setup({ config, updateConfig, addIntegration }) {
+      setup({ config, updateConfig, addIntegration, astroConfig }) {
         const newConfig = {
           customCss: [
             // Including any user CSS *after* our own.
@@ -58,7 +58,12 @@ export default function starlightThemeNova(
                   shikiConfig: createShikiConfig({ twoslash: true }),
                 },
                 vite: {
-                  plugins: [vitePluginUserConfig(options)],
+                  plugins: [
+                    vitePluginUserConfig({
+                      nav: options.nav,
+                      rootHref: astroConfig.root.toString(),
+                    }),
+                  ],
                 },
               })
             },

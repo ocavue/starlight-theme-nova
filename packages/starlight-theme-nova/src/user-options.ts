@@ -6,3 +6,11 @@ export interface NavItem {
 export interface ThemeNovaOptions {
   nav?: NavItem[]
 }
+
+/**
+ * @internal
+ */
+export interface ConfigSerialized {
+  nav?: NavItem[]
+  rootHref: string
+}
