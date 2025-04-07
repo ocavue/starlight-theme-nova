@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.4.0
+
+### Minor Changes
+
+- 0dd1733: Add `<CodeFile>` component to display code from local files.
+
 ## 0.3.0
 
 ### Minor Changes
