@@ -1,6 +1,6 @@
 import { type ViteUserConfig } from 'astro'
 
-import type { ThemeNovaOptions } from './user-options'
+import type { ConfigSerialized } from './user-options'
 
 function resolveVirtualModuleId<T extends string>(id: T): `\0${T}` {
   return `\0${id}`
@@ -8,11 +8,11 @@ function resolveVirtualModuleId<T extends string>(id: T): `\0${T}` {
 
 /** Vite plugin that exposes user config via virtual modules. */
 export function vitePluginUserConfig(
-  options: ThemeNovaOptions,
+  config: ConfigSerialized,
 ): NonNullable<ViteUserConfig['plugins']>[number] {
   /** Map of virtual module names to their code contents as strings. */
   const modules = {
-    'virtual:starlight-theme-nova/user-config': `export default ${JSON.stringify(options)}`,
+    'virtual:starlight-theme-nova/user-config': `export default ${JSON.stringify(config)}`,
   } satisfies Record<string, string>
 
   /** Mapping names prefixed with `\0` to their original form. */
