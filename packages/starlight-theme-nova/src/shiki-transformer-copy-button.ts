@@ -17,32 +17,23 @@ export function transformerCopyButton(): ShikiTransformer {
       const pre = node.children[0]
       if (!isElement(pre, 'pre')) {
         throw new Error(
-          `[${name}] Expected a <pre> element but got ${JSON.stringify({ ...pre, children: '...' })}`,
+          `[${name}] Expected a <pre> element but got ${JSON.stringify(node)}`,
         )
       }
 
       node.children = [
+        pre,
         {
           type: 'element',
-          tagName: 'div',
+          tagName: 'nova-code-copy-button',
           properties: {
-            class: 'nova-code-container not-content',
+            type: 'button',
+            'data-code': this.source,
+            title: 'Copy code',
+            'aria-label': 'Copy code',
+            class: 'nova-code-copy-button',
           },
-          children: [
-            pre,
-            {
-              type: 'element',
-              tagName: 'nova-code-copy-button',
-              properties: {
-                type: 'button',
-                'data-code': this.source,
-                title: 'Copy code',
-                'aria-label': 'Copy code',
-                class: 'nova-code-copy-button',
-              },
-              children: [],
-            },
-          ],
+          children: [],
         },
       ]
     },

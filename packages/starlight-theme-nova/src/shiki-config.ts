@@ -10,6 +10,8 @@ import type { ShikiTransformer } from '@shikijs/types'
 import type { ShikiConfig } from 'astro'
 import { createRenderer } from 'shiki-twoslash-renderer'
 
+import { transformerMetaTitle } from './shiki-tranformer-meta-title'
+import { transformerContainer } from './shiki-transformer-container'
 import { transformerCopyButton } from './shiki-transformer-copy-button'
 
 export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
@@ -21,6 +23,8 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
     transformerNotationWordHighlight(),
 
     transformerCopyButton(),
+    transformerMetaTitle(),
+    transformerContainer(),
     options.twoslash
       ? transformerTwoslash({
           renderer: createRenderer(),
