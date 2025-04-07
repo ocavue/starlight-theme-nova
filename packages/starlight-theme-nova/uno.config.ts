@@ -43,7 +43,7 @@ const shortcut = {
   'nova-code-copy-button-icon-check': 'w-full h-full block i-lucide-check',
 
   'nova-code-title':
-    'border-b-1 border-b-solid px-4 py-2 border-b-sl-gray-5 font-mono font-semibold text-sm bg-sl-bg hidden [div[data-nova-code-container][data-nova-code-title]_&]:block',
+    'border-b-1 border-b-solid px-4 py-2 border-b-sl-gray-5 font-mono text-sl-gray-3 text-sm bg-sl-bg hidden [div[data-nova-code-container][data-nova-code-title]_&]:block',
 
   'nova-code-container': [
     'relative [&_pre]:relative overflow-hidden',
