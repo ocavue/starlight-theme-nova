@@ -3,6 +3,7 @@ import type { ElementContent, RootContent } from 'hast'
 import { isElement } from 'hast-util-is-element'
 
 import { CODE_PROPERTY_CONTAINER, CODE_PROPERTY_TITLE } from './constants'
+import { parseTitleString } from './shiki-meta-title'
 
 const name = 'starlight-theme-nova-shiki-transformer-container'
 
@@ -25,12 +26,24 @@ export function transformerContainer(): ShikiTransformer {
         )
       }
 
-      const title = pre.properties[CODE_PROPERTY_TITLE]
+      const title = parseTitleString(this.options.meta?.__raw || '')
+
+      const children: ElementContent[] = normalizeContent(node.children)
 
       if (title) {
-        // Remove the property from the <pre> element because
-        // we don't need it anymore
-        pre.properties[CODE_PROPERTY_TITLE] = undefined
+        children.unshift({
+          type: 'element',
+          tagName: 'div',
+          properties: {
+            class: 'nova-code-title',
+          },
+          children: [
+            {
+              type: 'text',
+              value: title,
+            },
+          ],
+        })
       }
 
       node.children = [
@@ -42,7 +55,7 @@ export function transformerContainer(): ShikiTransformer {
             [CODE_PROPERTY_TITLE]: title || undefined,
             class: 'nova-code-container not-content',
           },
-          children: normalizeContent(node.children),
+          children,
         },
       ]
 
