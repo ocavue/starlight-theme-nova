@@ -137,8 +137,15 @@ const shortcut = {
 const css = String.raw
 
 const preflight = css`
-  :root {
+  :root,
+  ::backdrop {
     --sl-content-width: 50rem;
+
+    --sl-text-h1: var(--sl-text-3xl);
+    --sl-text-h2: var(--sl-text-2xl);
+    --sl-text-h3: var(--sl-text-xl);
+    --sl-text-h4: var(--sl-text-lg);
+    --sl-text-h5: unset;
   }
 
   /* Dark mode Starlight theme variables. */
