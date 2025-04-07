@@ -1,5 +1,4 @@
 import type { ShikiTransformer } from '@shikijs/types'
-import { isElement } from 'hast-util-is-element'
 
 const name = 'starlight-theme-nova-shiki-transformer-copy-button'
 
