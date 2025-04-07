@@ -2,4 +2,4 @@
 'starlight-theme-nova': minor
 ---
 
-<!-- TODO -->
+Add `<CodeFile>` component to display code from local files.
