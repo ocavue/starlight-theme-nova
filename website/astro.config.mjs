@@ -23,10 +23,18 @@ export default defineConfig({
       ],
 
       title: 'Starlight Nova',
-      social: {
-        blueSky: 'https://bsky.app/profile/ocavue.bsky.social',
-        github: 'https://github.com/ocavue/starlight-theme-nova',
-      },
+      social: [
+        {
+          icon: 'blueSky',
+          label: 'BlueSky',
+          href: 'https://bsky.app/profile/ocavue.bsky.social',
+        },
+        {
+          icon: 'github',
+          label: 'GitHub',
+          href: 'https://github.com/ocavue/starlight-theme-nova',
+        },
+      ],
 
       sidebar: [
         {
