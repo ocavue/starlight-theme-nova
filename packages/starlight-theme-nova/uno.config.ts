@@ -55,12 +55,12 @@ const shortcut = {
   ],
 
   'nova-theme-select':
-    'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition-colors',
+    'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition active:scale-90',
   'nova-theme-select-icon-light': 'i-tabler-sun-high-filled',
   'nova-theme-select-icon-dark': 'i-tabler-moon-filled',
 
   'nova-social-icons-link':
-    'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
+    'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 text-sl-text active:scale-90',
 
   'nova-page-frame-sidebar-pane':
     'md:border-r border-0 border-solid border-sl-hairline',
@@ -71,7 +71,7 @@ const shortcut = {
     'border-1 border-solid border-sl-gray-5',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
     'text-gray-700 dark:text-gray-200',
-    'active:translate-x-1',
+    'active:scale-99',
   ],
 
   'nova-link-card-link': [
@@ -88,7 +88,7 @@ const shortcut = {
     'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2 gap-2',
     'transition duration-200 no-underline border-1 border-solid border-transparent',
     'font-medium',
-    'active:translate-x-1',
+    'active:scale-97',
   ],
 
   'nova-link-button-primary': [
@@ -107,7 +107,7 @@ const shortcut = {
   'nova-link-button-minimal': ['text-gray-700 dark:text-gray-200'],
 
   'nova-link-button-icon':
-    'i-lucide-arrow-right size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
+    'i-lucide-arrow-right size-5 transition [.nova-link-button:hover_&]:translate-x-1',
 
   'nova-pagination':
     'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',
@@ -119,16 +119,20 @@ const shortcut = {
     'text-sl-gray-2 hover:text-sl-white no-underline md:text-lg font-medium',
 
     'transition duration-100',
-    'data-[side="left"]:active:-translate-x-1',
-    'data-[side="right"]:active:translate-x-1',
 
     '[&[rel="prev"]]:flex-row-reverse',
     '[&[rel="next"]]:flex-row',
   ],
-  'nova-pagination-link-icon-right':
-    'min-w-5 min-h-5 transition block i-lucide-chevron-right',
-  'nova-pagination-link-icon-left':
-    'min-w-5 min-h-5 transition block i-lucide-chevron-left',
+  'nova-pagination-link-icon': 'min-w-5 min-h-5 transition block duration-100',
+
+  'nova-pagination-link-icon-right': [
+    'i-lucide-chevron-right',
+    '[.nova-pagination-link:hover_&]:translate-x-1',
+  ],
+  'nova-pagination-link-icon-left': [
+    'i-lucide-chevron-left',
+    '[.nova-pagination-link:hover_&]:-translate-x-1',
+  ],
 
   'nova-mobile-table-of-contents':
     '[&_nav]:backdrop-blur [&_summary]:border-b-sl-hairline',

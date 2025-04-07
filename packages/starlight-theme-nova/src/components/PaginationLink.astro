@@ -13,6 +13,7 @@ const { label, href, rel, side } = Astro.props
   <span>{label}</span>
   <span
     class:list={[
+      'nova-pagination-link-icon',
       side === 'right'
         ? 'nova-pagination-link-icon-right'
         : 'nova-pagination-link-icon-left',
