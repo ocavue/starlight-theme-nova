@@ -17,6 +17,10 @@
     background-color: var(--sl-color-bg-inline-code);
     padding: 0.125rem 0.25rem;
   }
+
+  a:not(:where(.not-content *)) {
+    text-underline-offset: 0.25em;
+  }
 }
 
 /* <code> inside asides */

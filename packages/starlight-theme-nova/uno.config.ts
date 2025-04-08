@@ -35,8 +35,10 @@ const shortcut = {
 
   'nova-header-actions': 'hidden md:flex print:hidden items-center gap-2',
 
-  'nova-code-copy-button':
-    'size-6 absolute right-2 top-2 m-0 p-1 transition rounded border-1 border-solid border-sl-gray-5 backdrop-blur-sm text-black dark:text-white active:scale-90 bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50',
+  'nova-code-copy-button': [
+    'size-6 absolute right-2 top-2 m-0 p-1 rounded border-1 border-solid border-sl-gray-5 backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50',
+    'transition active:scale-90',
+  ],
 
   'nova-code-copy-button-icon-clipboard':
     'w-full h-full block i-lucide-clipboard',
@@ -54,24 +56,28 @@ const shortcut = {
     '[.sl-markdown-content_&_pre.astro-code]:rounded-0',
   ],
 
-  'nova-theme-select':
-    'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30 transition-colors',
+  'nova-theme-select': [
+    'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30',
+    'transition active:scale-90',
+  ],
   'nova-theme-select-icon-light': 'i-tabler-sun-high-filled',
   'nova-theme-select-icon-dark': 'i-tabler-moon-filled',
 
-  'nova-social-icons-link':
-    'flex p-2 transition hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
+  'nova-social-icons-link': [
+    'flex p-2  hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
+    'transition active:scale-90',
+  ],
 
   'nova-page-frame-sidebar-pane':
     'md:border-r border-0 border-solid border-sl-hairline',
 
   'nova-link-card': [
     'flex flex-col px-5 py-4 rounded-xl relative gap-2',
-    'transition duration-200 shadow-sm hover:shadow-md',
+    'shadow-sm hover:shadow-md',
     'border-1 border-solid border-sl-gray-5',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
     'text-gray-700 dark:text-gray-200',
-    'active:translate-x-1',
+    'transition active:scale-99',
   ],
 
   'nova-link-card-link': [
@@ -82,13 +88,13 @@ const shortcut = {
   ],
 
   'nova-link-card-icon':
-    'i-lucide-arrow-right ml-2 size-5 transition-all [.nova-link-card:hover_&]:translate-x-1',
+    'i-lucide-arrow-right ml-2 size-5 transition [.nova-link-card:hover_&]:translate-x-1',
 
   'nova-link-button': [
     'inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2 gap-2',
-    'transition duration-200 no-underline border-1 border-solid border-transparent',
+    'no-underline border-1 border-solid border-transparent',
     'font-medium',
-    'active:translate-x-1',
+    'transition active:scale-97',
   ],
 
   'nova-link-button-primary': [
@@ -107,7 +113,7 @@ const shortcut = {
   'nova-link-button-minimal': ['text-gray-700 dark:text-gray-200'],
 
   'nova-link-button-icon':
-    'i-lucide-arrow-right size-5 transition-all [.nova-link-button:hover_&]:translate-x-1',
+    'i-lucide-arrow-right size-5 transition [.nova-link-button:hover_&]:translate-x-1',
 
   'nova-pagination':
     'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',
@@ -117,18 +123,23 @@ const shortcut = {
   'nova-pagination-link': [
     'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
     'text-sl-gray-2 hover:text-sl-white no-underline md:text-lg font-medium',
-
-    'transition duration-100',
-    'data-[side="left"]:active:-translate-x-1',
-    'data-[side="right"]:active:translate-x-1',
-
+    'transition',
     '[&[rel="prev"]]:flex-row-reverse',
     '[&[rel="next"]]:flex-row',
   ],
-  'nova-pagination-link-icon-right':
-    'min-w-5 min-h-5 transition block i-lucide-chevron-right',
-  'nova-pagination-link-icon-left':
-    'min-w-5 min-h-5 transition block i-lucide-chevron-left',
+  'nova-pagination-link-icon': [
+    'min-w-5 min-h-5 block',
+    'transition',
+  ],
+
+  'nova-pagination-link-icon-right': [
+    'i-lucide-chevron-right',
+    '[.nova-pagination-link:hover_&]:translate-x-1',
+  ],
+  'nova-pagination-link-icon-left': [
+    'i-lucide-chevron-left',
+    '[.nova-pagination-link:hover_&]:-translate-x-1',
+  ],
 
   'nova-mobile-table-of-contents':
     '[&_nav]:backdrop-blur [&_summary]:border-b-sl-hairline',
@@ -137,8 +148,15 @@ const shortcut = {
 const css = String.raw
 
 const preflight = css`
-  :root {
+  :root,
+  ::backdrop {
     --sl-content-width: 50rem;
+
+    --sl-text-h1: var(--sl-text-3xl);
+    --sl-text-h2: var(--sl-text-2xl);
+    --sl-text-h3: var(--sl-text-xl);
+    --sl-text-h4: var(--sl-text-lg);
+    --sl-text-h5: unset;
   }
 
   /* Dark mode Starlight theme variables. */

@@ -15,6 +15,10 @@ export default defineConfig({
               href: '/guide/getting-started/',
             },
             {
+              label: 'Changelog',
+              href: 'https://github.com/ocavue/starlight-theme-nova/blob/master/packages/starlight-theme-nova/CHANGELOG.md',
+            },
+            {
               label: 'Starlight',
               href: 'https://starlight.astro.build',
             },
