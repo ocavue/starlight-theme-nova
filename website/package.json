@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postinstall": "astro sync"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.33.0",
