@@ -1,5 +1,12 @@
 # starlight-theme-nova
 
+## 0.6.0
+
+### Minor Changes
+
+- 43c9c80: Improve button active animations.
+- 43c9c80: Decrease heading font size.
+
 ## 0.5.0
 
 ### Minor Changes
