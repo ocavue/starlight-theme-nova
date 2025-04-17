@@ -39,6 +39,14 @@
     "rehype": "^13.0.2",
     "shiki-twoslash-renderer": "workspace:*"
   },
+  "peerDependencies": {
+    "@astrojs/starlight": "*"
+  },
+  "peerDependenciesMeta": {
+    "@astrojs/starlight": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@astrojs/starlight": "^0.34.0",
     "@iconify-json/bxl": "^1.2.2",
