@@ -15,8 +15,8 @@ importers:
         specifier: ^2.13.1
         version: 2.13.1(@types/estree@1.0.6)(eslint@9.22.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)(typescript@5.8.2)
       '@ocavue/tsconfig':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.3.5
+        version: 0.3.5
       '@types/node':
         specifier: ^20.17.24
         version: 20.17.24
@@ -58,8 +58,8 @@ importers:
         specifier: ^7.52.3
         version: 7.52.3(@types/node@20.17.24)
       '@ocavue/tsconfig':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.3.5
+        version: 0.3.5
       shiki:
         specifier: ^3.2.1
         version: 3.2.1
@@ -116,8 +116,8 @@ importers:
         specifier: ^1.2.17
         version: 1.2.17
       '@ocavue/tsconfig':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.3.5
+        version: 0.3.5
       '@types/node':
         specifier: ^20.17.24
         version: 20.17.24
@@ -900,8 +900,8 @@ packages:
   '@ocavue/eslint-config@2.13.1':
     resolution: {integrity: sha512-6vWd45jKYMpMuZG4aylBKwRKwj+LaJvK3rJZ7cojLOE/yIRpjZBd5n42ZPW9H0sdy7CtHwi0+UogK4G0nqxbAw==}
 
-  '@ocavue/tsconfig@0.2.0':
-    resolution: {integrity: sha512-J5bo/9hxAU3j+CPEHhTrqvFMIIerpaTvxO7ZaoYZbvE0R/usQLA6jiLAZpstX/Ln+toD9hkqOGGQhZk0HJWfqg==}
+  '@ocavue/tsconfig@0.3.5':
+    resolution: {integrity: sha512-0ZP7HOj5pJIgnVuR9MMfzmgkhz7gIqqqEEYsRvMKmPALJSihThYRIsIu/4MqzMs57aFxqNa9Jad1UcgmHQre/w==}
 
   '@octokit/action@6.1.0':
     resolution: {integrity: sha512-lo+nHx8kAV86bxvOVOI3vFjX3gXPd/L7guAUbvs3pUvnR2KC+R7yjBkA1uACt4gYhs4LcWP3AXSGQzsbeN2XXw==}
@@ -5391,7 +5391,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@ocavue/tsconfig@0.2.0': {}
+  '@ocavue/tsconfig@0.3.5': {}
 
   '@octokit/action@6.1.0':
     dependencies:

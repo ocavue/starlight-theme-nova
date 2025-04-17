@@ -45,7 +45,7 @@
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "^1.2.35",
     "@iconify-json/tabler": "^1.2.17",
-    "@ocavue/tsconfig": "^0.2.0",
+    "@ocavue/tsconfig": "^0.3.5",
     "@types/node": "^20.17.24",
     "@unocss/cli": "^66.0.0",
     "astro": "^5.6.1",
