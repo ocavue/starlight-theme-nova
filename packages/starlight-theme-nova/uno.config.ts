@@ -127,10 +127,7 @@ const shortcut = {
     '[&[rel="prev"]]:flex-row-reverse',
     '[&[rel="next"]]:flex-row',
   ],
-  'nova-pagination-link-icon': [
-    'min-w-5 min-h-5 block',
-    'transition',
-  ],
+  'nova-pagination-link-icon': ['min-w-5 min-h-5 block', 'transition'],
 
   'nova-pagination-link-icon-right': [
     'i-lucide-chevron-right',
