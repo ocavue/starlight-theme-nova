@@ -40,7 +40,7 @@
     "shiki-twoslash-renderer": "workspace:*"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.33.0",
+    "@astrojs/starlight": "^0.34.0",
     "@iconify-json/bxl": "^1.2.2",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "^1.2.35",
