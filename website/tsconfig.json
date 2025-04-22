@@ -8,6 +8,10 @@
     ".astro/**/*.ts",
     "./*.mjs"
   ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
   "references": [
     {
       "path": "../packages/starlight-theme-nova/tsconfig.json"

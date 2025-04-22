@@ -44,7 +44,9 @@ export default function starlightThemeNova(
             ...components,
             ...config.components,
           },
-          expressiveCode: config.expressiveCode ?? false,
+          expressiveCode: {
+            removeUnusedThemes: false,
+          }
         } satisfies Partial<StarlightUserConfig>
 
         updateConfig(newConfig)
@@ -54,9 +56,9 @@ export default function starlightThemeNova(
           hooks: {
             'astro:config:setup': ({ updateConfig }) => {
               updateConfig({
-                markdown: {
-                  shikiConfig: createShikiConfig({ twoslash: true }),
-                },
+                // markdown: {
+                //   shikiConfig: createShikiConfig({ twoslash: true }),
+                // },
                 vite: {
                   plugins: [
                     vitePluginUserConfig({
