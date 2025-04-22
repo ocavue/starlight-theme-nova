@@ -3,45 +3,39 @@ title: Getting Started
 description: Learn how to use the Starlight Nova theme in your documentation.
 ---
 
-A modern and beautiful theme for [Starlight](https://starlight.astro.build).
 
-## Prerequisites
+import { MyReactTabs} from '../../../components/MyReactTabs'
+import { Code as ExpressiveCode } from '@astrojs/starlight/components'
+import { Code as AstroCode } from 'astro:components'
 
-You will need to have a Starlight website set up.
+<MyReactTabs client:only="react">
 
-If you don't have one yet, you can follow the ["Getting Started"](https://starlight.astro.build/getting-started) guide in the Starlight docs to create one.
+<Fragment slot="child1" >
 
-## Installation
+<ExpressiveCode lang="js" code={"// Child 1\nimport { Code as ExpressiveCode } from '@astrojs/starlight/components'"} />
 
-import { Steps } from '@astrojs/starlight/components'
-import { CodePackageManagers } from 'starlight-theme-nova/components'
+</Fragment>
 
-<Steps>
+<Fragment slot="child2" >
 
-1. The Starlight Nova theme is a Starlight [plugin](https://starlight.astro.build/reference/plugins/) that you can install using your favorite package manager:
+<ExpressiveCode lang="js" code={"// Child 2\nimport { Code as ExpressiveCode } from '@astrojs/starlight/components'"} />
 
-   <CodePackageManagers packages="starlight-theme-nova" />
+</Fragment>
 
-2. Configure the plugin in your Starlight [configuration](https://starlight.astro.build/reference/configuration/#plugins) in the `astro.config.mjs` file.
+</MyReactTabs>
 
-   ```ts
-   // astro.config.mjs
-   import starlight from '@astrojs/starlight'
-   import { defineConfig } from 'astro/config'
-   import starlightThemeNova from 'starlight-theme-nova'
+<MyReactTabs client:only="react">
 
-   export default defineConfig({
-     integrations: [
-       starlight({
-         plugins: [starlightThemeNova()], // [!code ++]
-         title: 'My Docs',
-       }),
-     ],
-   })
-   ```
+<Fragment slot="child1" >
 
-3. [Start the development server](https://starlight.astro.build/getting-started/#start-the-development-server) to preview the theme in action.
+<AstroCode lang="js" code={"// Child 1\nimport { Code as AstroCode } from 'astro:components'"} />
 
-</Steps>
+</Fragment>
 
-That's it! You should now see the Starlight Nova theme applied to your Starlight website.
+<Fragment slot="child2" >
+
+<AstroCode lang="js" code={"// Child 2\nimport { Code as AstroCode } from 'astro:components'"} />
+
+</Fragment>
+
+</MyReactTabs>
