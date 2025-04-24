@@ -39,14 +39,14 @@
   "dependencies": {
     "@aria-ui/core": "^0.0.21",
     "@aria-ui/tooltip": "^0.0.29",
-    "@shikijs/twoslash": "^3.2.2",
-    "@shikijs/types": "^3.2.2",
+    "@shikijs/twoslash": "^3.3.0",
+    "@shikijs/types": "^3.3.0",
     "@types/hast": "^3.0.4"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.52.5",
     "@ocavue/tsconfig": "^0.3.7",
-    "shiki": "^3.2.2",
+    "shiki": "^3.3.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3",
     "vitest": "^3.1.2"
