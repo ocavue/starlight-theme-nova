@@ -2,17 +2,6 @@
 
 A custom renderer for [`@shikijs/twoslash`](https://shiki.style/packages/twoslash) that provides a clean, modern styling for TypeScript code insights.
 
-## Features
-
-- Creates custom HTML elements for twoslash hovers, errors, and queries
-- Uses [@aria-ui/tooltip](https://www.npmjs.com/package/@aria-ui/tooltip) for accessible tooltips
-- Provides a clean, modern styling for TypeScript code insights
-- Supports all twoslash features:
-  - Type hover information
-  - Error messages
-  - Query completion
-  - Contextual highlights
-
 ## Installation
 
 ```bash
