@@ -34,7 +34,7 @@
   ],
   "scripts": {
     "test": "vitest",
-    "build": "tsc -b tsconfig.json && tsup"
+    "build": "tsdown"
   },
   "dependencies": {
     "@aria-ui/core": "^0.0.21",
@@ -47,7 +47,7 @@
     "@microsoft/api-extractor": "^7.52.5",
     "@ocavue/tsconfig": "^0.3.7",
     "shiki": "^3.3.0",
-    "tsup": "^8.4.0",
+    "tsdown": "^0.9.7",
     "typescript": "^5.8.3",
     "vitest": "^3.1.2"
   },

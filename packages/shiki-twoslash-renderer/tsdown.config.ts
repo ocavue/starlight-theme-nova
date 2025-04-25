@@ -1,8 +1,7 @@
-import { defineConfig } from 'tsup'
+import { defineConfig } from 'tsdown'
 
 export default defineConfig({
   entry: ['src/index.ts', 'src/elements.ts', 'src/style.css'],
-  tsconfig: './tsconfig.build.json',
   format: 'esm',
-  experimentalDts: true,
+  dts: true,
 })
