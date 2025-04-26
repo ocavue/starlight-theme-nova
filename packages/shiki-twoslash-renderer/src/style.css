@@ -13,13 +13,13 @@ twoslash-trigger {
 /* ===== Basic ===== */
 
 .twoslash {
-  --twoslash-border-color: color-mix(in srgb, var(--color-gray-500) 20%, transparent);
+  --twoslash-border-color: color-mix(in srgb, var(--color-gray-400) 40%, transparent);
   --twoslash-underline-color: currentColor;
   --twoslash-highlighted-border: color-mix(in srgb, var(--color-amber-500) 50%, transparent);
   --twoslash-highlighted-bg: color-mix(in srgb, var(--color-amber-500) 32%, transparent);
   --twoslash-popup-bg: Canvas;
   --twoslash-popup-color: inherit;
-  --twoslash-popup-shadow: var(--shadow-sm);
+  --twoslash-popup-shadow: var(--shadow-xs);
   --twoslash-docs-color: GrayText;
   --twoslash-docs-font: sans-serif;
   --twoslash-code-font: inherit;
