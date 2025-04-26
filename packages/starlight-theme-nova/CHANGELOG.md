@@ -1,5 +1,13 @@
 # starlight-theme-nova
 
+## 0.6.1
+
+### Patch Changes
+
+- 2f3d2cb: Update twoslash renderer colors.
+- Updated dependencies [2f3d2cb]
+  - shiki-twoslash-renderer@0.0.3
+
 ## 0.6.0
 
 ### Minor Changes
