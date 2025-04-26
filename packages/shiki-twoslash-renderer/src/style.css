@@ -27,8 +27,8 @@ twoslash-trigger {
   --twoslash-matched-color: inherit;
   --twoslash-unmatched-color: GrayText;
   --twoslash-cursor-color: color-mix(in srgb, GrayText 50%, transparent);
-  --twoslash-error-color: var(--color-red-400);
-  --twoslash-error-bg: color-mix(in srgb, var(--color-red-400) 32%, transparent);
+  --twoslash-error-color: var(--color-red-500);
+  --twoslash-error-bg: color-mix(in srgb, var(--color-red-500) 20%, transparent);
   --twoslash-warn-color: var(--color-amber-400);
   --twoslash-warn-bg: color-mix(in srgb, var(--color-amber-400) 32%, transparent);
   --twoslash-tag-color: var(--color-blue-400);
