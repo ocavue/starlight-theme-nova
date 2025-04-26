@@ -62,16 +62,6 @@
   }
 }
 
-.astro-code {
-  --twoslash-popup-bg: var(--shiki-light-bg);
-  background-color: var(--shiki-light-bg);
-}
-
-html[data-theme='dark'] .astro-code {
-  --twoslash-popup-bg: var(--shiki-dark-bg);
-  background-color: var(--shiki-dark-bg);
-}
-
 .astro-code,
 .astro-code span {
   color: var(--shiki-light);
