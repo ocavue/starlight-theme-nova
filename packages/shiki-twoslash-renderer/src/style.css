@@ -1,3 +1,5 @@
+@import './theme.css';
+
 twoslash-content {
   display: none;
 }
@@ -9,31 +11,32 @@ twoslash-trigger {
 }
 
 /* ===== Basic ===== */
-:root {
-  --twoslash-border-color: #8888;
+
+.twoslash {
+  --twoslash-border-color: color-mix(in srgb, var(--color-gray-400) 40%, transparent);
   --twoslash-underline-color: currentColor;
-  --twoslash-highlighted-border: #c37d0d50;
-  --twoslash-highlighted-bg: #c37d0d20;
-  --twoslash-popup-bg: #f8f8f8;
+  --twoslash-highlighted-border: color-mix(in srgb, var(--color-amber-500) 50%, transparent);
+  --twoslash-highlighted-bg: color-mix(in srgb, var(--color-amber-500) 32%, transparent);
+  --twoslash-popup-bg: Canvas;
   --twoslash-popup-color: inherit;
-  --twoslash-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
-  --twoslash-docs-color: #888;
+  --twoslash-popup-shadow: var(--shadow-xs);
+  --twoslash-docs-color: GrayText;
   --twoslash-docs-font: sans-serif;
   --twoslash-code-font: inherit;
   --twoslash-code-font-size: 1em;
   --twoslash-matched-color: inherit;
-  --twoslash-unmatched-color: #888;
-  --twoslash-cursor-color: #8888;
-  --twoslash-error-color: #d45656;
-  --twoslash-error-bg: #d4565620;
-  --twoslash-warn-color: #c37d0d;
-  --twoslash-warn-bg: #c37d0d20;
-  --twoslash-tag-color: #3772cf;
-  --twoslash-tag-bg: #3772cf20;
+  --twoslash-unmatched-color: GrayText;
+  --twoslash-cursor-color: color-mix(in srgb, GrayText 50%, transparent);
+  --twoslash-error-color: var(--color-red-500);
+  --twoslash-error-bg: color-mix(in srgb, var(--color-red-500) 20%, transparent);
+  --twoslash-warn-color: var(--color-amber-400);
+  --twoslash-warn-bg: color-mix(in srgb, var(--color-amber-400) 32%, transparent);
+  --twoslash-tag-color: var(--color-blue-400);
+  --twoslash-tag-bg: color-mix(in srgb, var(--color-blue-400) 32%, transparent);
   --twoslash-tag-warn-color: var(--twoslash-warn-color);
   --twoslash-tag-warn-bg: var(--twoslash-warn-bg);
-  --twoslash-tag-annotate-color: #1ba673;
-  --twoslash-tag-annotate-bg: #1ba67320;
+  --twoslash-tag-annotate-color: var(--color-green-400);
+  --twoslash-tag-annotate-bg: color-mix(in srgb, var(--color-green-400) 32%, transparent);
 }
 
 /* Respect people's wishes to not have animations */
@@ -172,7 +175,7 @@ twoslash-trigger {
 
 /* ===== Completeions ===== */
 .twoslash .twoslash-completion-cursor {
-  /* position: relative; */
+  position: relative;
 }
 
 .twoslash .twoslash-completion-cursor .twoslash-completion-list {
