@@ -14,7 +14,6 @@
     border-style: solid;
     border-width: 1px;
     border-color: var(--sl-color-border-inline-code);
-    background-color: var(--sl-color-bg-inline-code);
     padding: 0.125rem 0.25rem;
   }
 
