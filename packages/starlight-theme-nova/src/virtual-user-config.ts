@@ -1,4 +1,4 @@
-import { type ViteUserConfig } from 'astro'
+import type { ViteUserConfig } from 'astro'
 
 import type { ConfigSerialized } from './user-options'
 
