@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.7.1
+
+### Patch Changes
+
+- 0f9c6f1: Fix a bug where the code blocks have double borders.
+
 ## 0.7.0
 
 ### Minor Changes
