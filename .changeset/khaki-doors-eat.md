@@ -2,4 +2,4 @@
 'starlight-theme-nova': patch
 ---
 
-Adjust inline code backlink color inside asides.
+Adjust inline code background color inside asides.
