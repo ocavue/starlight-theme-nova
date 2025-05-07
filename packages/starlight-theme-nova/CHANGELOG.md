@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.7.2
+
+### Patch Changes
+
+- 9d154c3: Adjust inline code background color inside asides.
+
 ## 0.7.1
 
 ### Patch Changes
