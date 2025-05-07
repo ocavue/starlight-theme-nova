@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.3",
   "private": false,
+  "description": "A Shiki renderer for Twoslash based on web components",
   "author": {
     "name": "ocavue",
     "email": "ocavue@gmail.com"
