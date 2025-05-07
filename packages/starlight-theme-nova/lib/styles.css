@@ -1,8 +1,8 @@
 @layer starlight, nova;
 
-@import './styles.gen.css' layer(nova.gen);
-@import './markdown.css' layer(nova.markdown);
-@import './shiki.css' layer(nova.shiki);
-@import './aside.css' layer(nova.aside);
-@import './badge.css' layer(nova.badge);
-@import './card.css' layer(nova.card);
+@import './styles.gen.css' layer(nova);
+@import './markdown.css' layer(nova);
+@import './shiki.css' layer(nova);
+@import './aside.css' layer(nova);
+@import './badge.css' layer(nova);
+@import './card.css' layer(nova);
