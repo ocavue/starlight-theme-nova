@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.34.2",
-    "astro": "^5.7.10",
+    "astro": "^5.7.11",
     "sharp": "^0.34.1",
     "starlight-theme-nova": "workspace:*"
   }

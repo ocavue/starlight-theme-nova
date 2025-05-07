@@ -17,7 +17,7 @@
     "ci:version": "changeset version && pnpm install --no-frozen-lockfile"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.2",
+    "@changesets/cli": "^2.29.3",
     "@ocavue/eslint-config": "^2.15.1",
     "@ocavue/tsconfig": "^0.3.7",
     "@types/node": "^20.17.30",
