@@ -8,8 +8,10 @@ import CodeCopy from './CodeCopy.astro'
 </Default>
 
 <style is:global>
-  :root .sl-markdown-content dd:not(:where(.not-content *)) {
-    padding-inline-start: 2rem;
+  @layer nova {
+    :root .sl-markdown-content dd:not(:where(.not-content *)) {
+      padding-inline-start: 2rem;
+    }
   }
 </style>
 

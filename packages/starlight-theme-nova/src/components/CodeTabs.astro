@@ -20,57 +20,59 @@ const processedHtml = processCodeTabs(originalHtml)
 </div>
 
 <style is:global>
-  .sl-markdown-content .code-tabs {
-    overflow: hidden;
+  @layer nova {
+    .sl-markdown-content .code-tabs {
+      overflow: hidden;
 
-    &.code-tabs-border {
-      border-color: var(--sl-color-gray-5);
-      border-width: 1px;
-      border-style: solid;
-      border-radius: 0.5rem;
-    }
-
-    starlight-tabs {
-      margin-top: 0;
-    }
-
-    .tablist-wrapper {
-      scrollbar-width: none;
-
-      [role='tablist'] {
-        border-bottom-width: 1px;
+      &.code-tabs-border {
+        border-color: var(--sl-color-gray-5);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 0.5rem;
       }
 
-      [role='tab'] {
-        font-family: var(--sl-font-system-mono);
-        padding-top: 0.5rem;
-        padding-bottom: 0.25rem;
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        font-size: 0.875rem;
-        white-space: nowrap;
+      starlight-tabs {
+        margin-top: 0;
+      }
 
-        border-bottom-style: solid;
-        border-bottom-width: 0px;
+      .tablist-wrapper {
+        scrollbar-width: none;
 
-        &[aria-selected='true'] {
-          border-bottom-width: 3px;
+        [role='tablist'] {
+          border-bottom-width: 1px;
+        }
+
+        [role='tab'] {
+          font-family: var(--sl-font-system-mono);
+          padding-top: 0.5rem;
+          padding-bottom: 0.25rem;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+          font-size: 0.875rem;
+          white-space: nowrap;
+
+          border-bottom-style: solid;
+          border-bottom-width: 0px;
+
+          &[aria-selected='true'] {
+            border-bottom-width: 3px;
+          }
         }
       }
-    }
 
-    div[role='tabpanel'] {
-      margin: 0;
-    }
+      div[role='tabpanel'] {
+        margin: 0;
+      }
 
-    .astro-code {
-      border-radius: 0;
-    }
+      .astro-code {
+        border-radius: 0;
+      }
 
-    .nova-code-container {
-      border-radius: 0;
-      border-width: 0;
-      border-color: transparent;
+      .nova-code-container {
+        border-radius: 0;
+        border-width: 0;
+        border-color: transparent;
+      }
     }
   }
 </style>
