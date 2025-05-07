@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.7.0
+
+### Minor Changes
+
+- f902875: Groups all of the Nova theme CSS declarations into a single `nova` [cascade layer](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers).
+
 ## 0.6.1
 
 ### Patch Changes
