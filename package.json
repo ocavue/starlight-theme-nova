@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.15.9",
+  "packageManager": "pnpm@10.11.0",
   "description": "",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
