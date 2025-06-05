@@ -45,10 +45,9 @@
     "@types/hast": "^3.0.4"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.52.7",
     "@ocavue/tsconfig": "^0.3.7",
     "shiki": "^3.4.0",
-    "tsdown": "https://pkg.pr.new/tsdown@f82262c",
+    "tsdown": "^0.12.7",
     "typescript": "^5.8.3",
     "unplugin-lightningcss": "^0.4.1",
     "vitest": "^3.1.3"
