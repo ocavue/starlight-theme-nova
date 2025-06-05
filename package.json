@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.3",
-    "@ocavue/eslint-config": "^2.15.1",
+    "@ocavue/eslint-config": "^3.1.1",
     "@ocavue/tsconfig": "^0.3.7",
     "@types/node": "^20.17.30",
-    "eslint": "^9.24.0",
+    "eslint": "^9.28.0",
     "pkg-pr-new": "^0.0.43",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
