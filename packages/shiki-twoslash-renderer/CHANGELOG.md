@@ -1,5 +1,11 @@
 # shiki-twoslash-renderer
 
+## 0.0.4
+
+### Patch Changes
+
+- becc4aa: Update dependencies.
+
 ## 0.0.3
 
 ### Patch Changes

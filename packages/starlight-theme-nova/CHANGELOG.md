@@ -1,5 +1,13 @@
 # starlight-theme-nova
 
+## 0.7.3
+
+### Patch Changes
+
+- becc4aa: Update dependencies.
+- Updated dependencies [becc4aa]
+  - shiki-twoslash-renderer@0.0.4
+
 ## 0.7.2
 
 ### Patch Changes
