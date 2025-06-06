@@ -35,9 +35,10 @@ export default function starlightThemeNova(
       setup({ config, updateConfig, addIntegration, astroConfig }) {
         const newConfig = {
           customCss: [
-            // Including any user CSS *after* our own.
-            'starlight-theme-nova/styles.css',
             ...(config.customCss || []),
+            // Including nova styles *after* any user CSS, so that @layer nova
+            // can have a higher precedence.
+            'starlight-theme-nova/styles.css',
           ],
           components: {
             // Including any user components *after* our own.
