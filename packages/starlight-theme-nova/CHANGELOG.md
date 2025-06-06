@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.7.4
+
+### Patch Changes
+
+- abce0ab: Fix an issue where Nova styles were not being applied after user `@astrojs/starlight-tailwind`.
+
 ## 0.7.3
 
 ### Patch Changes
