@@ -88,8 +88,8 @@ importers:
         specifier: ^3.0.4
         version: 3.0.4
       astro-theme-toggle:
-        specifier: ^0.6.0
-        version: 0.6.0
+        specifier: ^0.6.1
+        version: 0.6.1
       hast-util-is-element:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1777,8 +1777,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
 
-  astro-theme-toggle@0.6.0:
-    resolution: {integrity: sha512-Pe2DTeckxJaspMXNWbHzhn3fQq6K4JTEZ/Gutehgty6qzfLWehsGPFtsKOhsS0r2EOK18MaUnONliE5+sDBLYw==}
+  astro-theme-toggle@0.6.1:
+    resolution: {integrity: sha512-UkU3ycEHnyl6M39rL3xXXwHfJKEKU0eSQS5dKEL+GInr+JS3jwpt/CCrS3jjc3IN/qVM8lv/gYXZpQx/Bu1Rlw==}
 
   astro@5.8.2:
     resolution: {integrity: sha512-t0TBpBdVluA2QVmbFBwpIqmTvBwNhIz1XTIT1BWPkDkoIgsiEMf6BOZqcoGG7f4GVKkUB9bTgMOhPgU3tbJ6vQ==}
@@ -6608,7 +6608,7 @@ snapshots:
       astro: 5.8.2(@types/node@20.17.57)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(typescript@5.8.3)
       rehype-expressive-code: 0.41.1
 
-  astro-theme-toggle@0.6.0: {}
+  astro-theme-toggle@0.6.1: {}
 
   astro@5.8.2(@types/node@20.17.57)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(typescript@5.8.3):
     dependencies:
