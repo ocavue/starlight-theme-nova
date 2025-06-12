@@ -13,7 +13,10 @@ const shortcut = {
     'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
   ],
 
-  'nova-site-title': '[&_*]:text-sl-text [&_*]:font-semibold [&_*]:text-lg',
+  'nova-nav-link': 'p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0',
+
+  'nova-site-title':
+    '[&_*]:text-sl-text [&_*]:font-semibold [&_*]:text-lg [&_a]:nova-nav-link',
 
   'nova-header': 'flex items-center gap-2 h-full box-border',
 
@@ -21,21 +24,27 @@ const shortcut = {
     /* Prevent long titles overflowing and covering the search and menu buttons on narrow viewports. */
     'overflow-clip',
     /* Avoid clipping focus ring around link inside title wrapper. */
-    'p-1 -m-1',
+    'p-3 -m-3',
     'min-w-0',
     'flex',
   ],
 
-  'nova-header-nav':
-    'flex flex-row flex-1 gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 text-sm font-medium max-md:[&_*]:hidden overflow-x-auto',
+  'nova-header-nav': [
+    'flex flex-row flex-1 ',
+    'gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 py-3',
+    'text-sm font-medium',
+    'max-md:[&_*]:hidden overflow-x-auto',
+  ],
 
-  'nova-header-nav-link': 'no-underline text-sl-gray-3 hover:text-sl-white',
+  'nova-header-nav-link':
+    'no-underline text-sl-gray-3 hover:text-sl-white nova-nav-link',
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
 
   'nova-header-actions': 'hidden md:flex print:hidden items-center gap-2',
 
-  'nova-mobile-menu-footer': 'flex print:hidden items-center gap-2 justify-end py-4',
+  'nova-mobile-menu-footer':
+    'flex print:hidden items-center gap-2 justify-end py-4',
 
   'nova-code-copy-button': [
     'size-6 absolute right-2 top-2 m-0 p-1 rounded border-1 border-solid border-sl-gray-5 backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50',
@@ -58,14 +67,12 @@ const shortcut = {
     '[.sl-markdown-content_&_pre.astro-code]:rounded-0',
   ],
 
-  'nova-theme-select': [
-    'size-8 overflow-visible',
-  ],
+  'nova-theme-select': ['size-8 overflow-visible'],
   'nova-theme-select-icon-light': 'i-tabler-sun-high-filled',
   'nova-theme-select-icon-dark': 'i-tabler-moon-filled',
 
   'nova-icon-button': [
-    "flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-sl-text",
+    'flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
     'transition active:scale-90',
     'focus-visible:outline-offset-1',
   ],
