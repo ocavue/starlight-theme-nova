@@ -33,7 +33,11 @@ const nav = options.nav ?? []
     <LanguageSelect />
     <ThemeSelect />
   </div>
-  {hasSidebar && <div class="nova-header-actions-sm">
-    <MobileMenuToggle />
-  </div>}
+  {
+    hasSidebar && (
+      <div class="nova-header-actions-sm">
+        <MobileMenuToggle />
+      </div>
+    )
+  }
 </div>

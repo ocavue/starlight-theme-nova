@@ -56,7 +56,8 @@ const shortcut = {
   ],
   'nova-search-button-icon': 'i-lucide-search',
 
-  'nova-mobile-menu-toggle-icon': 'i-lucide-menu [body[data-mobile-menu-expanded]_&]:i-lucide-x [body[data-mobile-menu-expanded]_&]:rotate-90 transition-transform',
+  'nova-mobile-menu-toggle-icon':
+    'i-lucide-menu [body[data-mobile-menu-expanded]_&]:i-lucide-x [body[data-mobile-menu-expanded]_&]:rotate-90 transition-transform',
 
   'nova-mobile-menu-footer':
     'flex print:hidden items-center gap-2 justify-end py-4',
@@ -97,7 +98,7 @@ const shortcut = {
     'invisible [body[data-mobile-menu-expanded]_&]:max-md:visible md:visible',
     'max-md:w-full md:w-[var(--sl-sidebar-width)]',
   ],
- 
+
   'nova-link-card': [
     'flex flex-col px-5 py-4 rounded-xl relative gap-2',
     'shadow-sm hover:shadow-md',
