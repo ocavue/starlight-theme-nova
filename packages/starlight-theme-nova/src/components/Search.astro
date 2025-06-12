@@ -20,12 +20,13 @@ if (project.trailingSlash === 'never')
 
 <site-search class={Astro.props.class} {...dataAttributes}>
   <button
+    class="nova-search-button"
     data-open-modal
     disabled
     aria-label={Astro.locals.t('search.label')}
     aria-keyshortcuts="Control+K"
   >
-    <Icon name="magnifier" />
+    <span class="nova-search-button-icon"></span>
     <span class="sl-hidden md:sl-block" aria-hidden="true"
       >{Astro.locals.t('search.label')}</span
     >
@@ -199,19 +200,11 @@ if (project.trailingSlash === 'never')
 
     @media (min-width: 50rem) {
       button[data-open-modal] {
-        border: 1px solid var(--sl-color-gray-5);
-        border-radius: 0.5rem;
         padding-inline-start: 0.75rem;
         padding-inline-end: 0.5rem;
         background-color: var(--sl-color-black);
         color: var(--sl-color-gray-2);
         font-size: var(--sl-text-sm);
-        width: 100%;
-        max-width: 22rem;
-      }
-      button[data-open-modal]:hover {
-        border-color: var(--sl-color-gray-2);
-        color: var(--sl-color-white);
       }
 
       button[data-open-modal] > :last-child {

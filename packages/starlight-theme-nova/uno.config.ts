@@ -43,6 +43,18 @@ const shortcut = {
 
   'nova-header-actions': 'hidden md:flex print:hidden items-center gap-2',
 
+  'nova-search-button-large': [
+    'flex p-2 hover:bg-gray-400/10 rounded-md w-full max-w-88 h-9 text-sl-text',
+    'transition-color',
+    'border-solid border-sl-gray-5 border-1',
+  ],
+
+  'nova-search-button': [
+    'max-md:nova-icon-button',
+    'md:nova-search-button-large',
+  ],
+  'nova-search-button-icon': 'i-lucide-search',
+
   'nova-mobile-menu-footer':
     'flex print:hidden items-center gap-2 justify-end py-4',
 
