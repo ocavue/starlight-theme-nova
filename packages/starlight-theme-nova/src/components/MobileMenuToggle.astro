@@ -1,5 +1,77 @@
 ---
-import Default from '@astrojs/starlight/components/MobileMenuToggle.astro'
+import { Icon } from '@astrojs/starlight/components'
 ---
 
-<Default />
+<nova-mobile-menu-toggle class="print:hidden">
+  <button
+    aria-expanded="false"
+    aria-label={Astro.locals.t('menuButton.accessibleLabel')}
+    aria-controls="starlight__sidebar"
+    class="sl-flex md:sl-hidden"
+  >
+    <Icon name="bars" class="open-menu" />
+    <Icon name="close" class="close-menu" />
+  </button>
+</nova-mobile-menu-toggle>
+
+<script>
+  import { register } from './mobile-menu-toggle'
+
+  register()
+</script>
+
+<style>
+  @layer starlight.core {
+    button {
+      position: fixed;
+      top: calc((var(--sl-nav-height) - var(--sl-menu-button-size)) / 2);
+      inset-inline-end: var(--sl-nav-pad-x);
+      z-index: var(--sl-z-index-navbar);
+      border: 0;
+      border-radius: 50%;
+      width: var(--sl-menu-button-size);
+      height: var(--sl-menu-button-size);
+      padding: 0.5rem;
+      background-color: var(--sl-color-white);
+      color: var(--sl-color-black);
+      box-shadow: var(--sl-shadow-md);
+      cursor: pointer;
+    }
+
+    [aria-expanded='true'] button {
+      background-color: var(--sl-color-gray-2);
+      box-shadow: none;
+    }
+
+    [aria-expanded='true'] button .open-menu {
+      display: none;
+    }
+
+    :not([aria-expanded='true']) button .close-menu {
+      display: none;
+    }
+
+    :global([data-theme='light']) button {
+      background-color: var(--sl-color-black);
+      color: var(--sl-color-white);
+    }
+
+    :global([data-theme='light']) [aria-expanded='true'] button {
+      background-color: var(--sl-color-gray-5);
+    }
+  }
+</style>
+
+<style is:global>
+  @layer starlight.core {
+    [data-mobile-menu-expanded] {
+      overflow: hidden;
+    }
+
+    @media (min-width: 50rem) {
+      [data-mobile-menu-expanded] {
+        overflow: auto;
+      }
+    }
+  }
+</style>

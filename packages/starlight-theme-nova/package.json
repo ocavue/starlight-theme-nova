@@ -30,6 +30,7 @@
     "build": "unocss"
   },
   "dependencies": {
+    "@aria-ui/core": "^0.0.21",
     "@shikijs/transformers": "^3.5.0",
     "@shikijs/twoslash": "^3.5.0",
     "@shikijs/types": "^3.5.0",
