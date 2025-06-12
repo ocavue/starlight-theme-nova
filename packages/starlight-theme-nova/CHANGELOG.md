@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.8.0
+
+### Minor Changes
+
+- 5a83443: Add `icon` and `iconPlacement` props to the `LinkButton` component for better customization. Now Nova's `<LinkButton>` component accepts the same props in Starlight's [`<LinkButton>` component](https://starlight.astro.build/components/link-buttons/).
+
 ## 0.7.4
 
 ### Patch Changes
