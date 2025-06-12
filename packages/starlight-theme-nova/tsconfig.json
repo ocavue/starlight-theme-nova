@@ -1,6 +1,6 @@
 {
   "extends": "@ocavue/tsconfig/dom/app.json",
-  "include": ["**/*.ts", "**/*.astro"],
+  "include": ["**/*.ts", "**/*.astro", ".astro/*.d.ts"],
   "compilerOptions": {
     "jsx": "preserve"
   }

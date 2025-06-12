@@ -112,8 +112,11 @@ const shortcut = {
 
   'nova-link-button-minimal': ['text-gray-700 dark:text-gray-200'],
 
-  'nova-link-button-icon':
+  'nova-link-button-icon-right':
     'i-lucide-arrow-right size-5 transition [.nova-link-button:hover_&]:translate-x-1',
+
+  'nova-link-button-icon-left':
+    'i-lucide-arrow-left size-5 transition [.nova-link-button:hover_&]:-translate-x-1',
 
   'nova-pagination':
     'flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full',

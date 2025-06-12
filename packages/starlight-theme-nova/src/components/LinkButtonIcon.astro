@@ -1,0 +1,20 @@
+---
+import { Icon } from '@astrojs/starlight/components'
+import type { StarlightIcon } from '@astrojs/starlight/types'
+
+interface Props {
+  icon: StarlightIcon
+}
+
+const { icon } = Astro.props
+
+let className = ''
+
+if (icon === 'right-arrow') {
+  className = 'nova-link-button-icon-right'
+} else if (icon === 'left-arrow') {
+  className = 'nova-link-button-icon-left'
+}
+---
+
+{className ? <div class={className} /> : <Icon name={icon} size="1.25rem" />}
