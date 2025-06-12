@@ -15,14 +15,7 @@ function setupMobileMenuToggle(host: BaseElement) {
   }
 
   useAriaAttribute(host, 'aria-expanded', () => {
-    switch (expanded.get()) {
-      case true:
-        return 'true'
-      case false:
-        return 'false'
-      default:
-        return undefined
-    }
+    return expanded.get() ? 'true' : 'false'
   })
 
   useEffect(host, () => {
