@@ -10,7 +10,7 @@ const shortcut = {
     'backdrop-blur bg-sl-bg-nav',
     'w-full fixed inset-0',
     'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
-    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x] max-md:[[data-has-sidebar]_&]:pe-[calc(var(--sl-nav-gap)+var(--sl-nav-pad-x)+var(--sl-menu-button-size))]',
+    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x]',
   ],
 
   'nova-nav-link': 'p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0',
@@ -41,7 +41,8 @@ const shortcut = {
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
 
-  'nova-header-actions': 'hidden md:flex print:hidden items-center gap-2',
+  'nova-header-actions-lg': 'hidden md:flex print:hidden items-center gap-2',
+  'nova-header-actions-sm': 'flex md:hidden print:hidden items-center gap-2',
 
   'nova-search-button-large': [
     'flex p-2 hover:bg-gray-400/10 rounded-md w-full max-w-88 h-9 text-sl-text',
@@ -54,6 +55,8 @@ const shortcut = {
     'md:nova-search-button-large',
   ],
   'nova-search-button-icon': 'i-lucide-search',
+
+  'nova-mobile-menu-toggle-icon': 'i-lucide-menu [body[data-mobile-menu-expanded]_&]:i-lucide-x [body[data-mobile-menu-expanded]_&]:rotate-90 transition-transform',
 
   'nova-mobile-menu-footer':
     'flex print:hidden items-center gap-2 justify-end py-4',
@@ -89,9 +92,12 @@ const shortcut = {
     'focus-visible:outline-offset-1',
   ],
 
-  'nova-page-frame-sidebar-pane':
-    'md:border-r border-0 border-solid border-sl-hairline',
-
+  'nova-page-frame-sidebar-pane': [
+    'md:border-r border-0 border-solid border-sl-hairline visible',
+    'invisible [body[data-mobile-menu-expanded]_&]:max-md:visible md:visible',
+    'max-md:w-full md:w-[var(--sl-sidebar-width)]',
+  ],
+ 
   'nova-link-card': [
     'flex flex-col px-5 py-4 rounded-xl relative gap-2',
     'shadow-sm hover:shadow-md',
