@@ -2,11 +2,13 @@
 import { Toggle } from 'astro-theme-toggle'
 ---
 
-<Toggle class="nova-theme-select">
-  <Fragment slot="icon-light">
-    <div class="nova-theme-select-icon-light"></div>
-  </Fragment>
-  <Fragment slot="icon-dark">
-    <div class="nova-theme-select-icon-dark"></div>
-  </Fragment>
-</Toggle>
+<div class="nova-theme-select">
+  <Toggle class="nova-theme-select-toggle">
+    <Fragment slot="icon-light">
+      <div class="nova-theme-select-icon-light"></div>
+    </Fragment>
+    <Fragment slot="icon-dark">
+      <div class="nova-theme-select-icon-dark"></div>
+    </Fragment>
+  </Toggle>
+</div>

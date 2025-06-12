@@ -22,6 +22,8 @@ const components = {
   Hero: 'starlight-theme-nova/components/Hero.astro',
   MobileTableOfContents:
     'starlight-theme-nova/components/MobileTableOfContents.astro',
+  MobileMenuFooter: 'starlight-theme-nova/components/MobileMenuFooter.astro',
+  LanguageSelect: 'starlight-theme-nova/components/LanguageSelect.astro',
 } as const
 
 export type { ThemeNovaOptions }

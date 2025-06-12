@@ -35,6 +35,8 @@ const shortcut = {
 
   'nova-header-actions': 'hidden md:flex print:hidden items-center gap-2',
 
+  'nova-mobile-menu-footer': 'flex print:hidden items-center gap-2 justify-end py-4',
+
   'nova-code-copy-button': [
     'size-6 absolute right-2 top-2 m-0 p-1 rounded border-1 border-solid border-sl-gray-5 backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50',
     'transition active:scale-90',
@@ -57,7 +59,10 @@ const shortcut = {
   ],
 
   'nova-theme-select': [
-    'size-8 p-2 rounded-md text-sl-text hover:bg-gray-400/30',
+    'size-8',
+  ],
+  'nova-theme-select-toggle': [
+    'p-2 rounded-md text-sl-text hover:bg-gray-400/30',
     'transition active:scale-90',
   ],
   'nova-theme-select-icon-light': 'i-tabler-sun-high-filled',
