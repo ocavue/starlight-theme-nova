@@ -18,3 +18,11 @@ declare module 'virtual:starlight/components/ThemeSelect' {
   const ThemeSelect: typeof import('./components/ThemeSelect.astro').default
   export default ThemeSelect
 }
+declare module 'virtual:starlight/components/LanguageSelect' {
+  const LanguageSelect: typeof import('./components/LanguageSelect.astro').default
+  export default LanguageSelect
+}
+declare module 'virtual:starlight/components/MobileMenuFooter' {
+  const MobileMenuFooter: typeof import('./components/MobileMenuFooter.astro').default
+  export default MobileMenuFooter
+}
