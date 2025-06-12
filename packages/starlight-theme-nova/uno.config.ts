@@ -59,18 +59,15 @@ const shortcut = {
   ],
 
   'nova-theme-select': [
-    'size-8',
-  ],
-  'nova-theme-select-toggle': [
-    'p-2 rounded-md text-sl-text hover:bg-gray-400/30',
-    'transition active:scale-90',
+    'size-8 overflow-visible',
   ],
   'nova-theme-select-icon-light': 'i-tabler-sun-high-filled',
   'nova-theme-select-icon-dark': 'i-tabler-moon-filled',
 
-  'nova-social-icons-link': [
-    'flex p-2  hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
+  'nova-icon-button': [
+    "flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-sl-text",
     'transition active:scale-90',
+    'focus-visible:outline-offset-1',
   ],
 
   'nova-page-frame-sidebar-pane':
