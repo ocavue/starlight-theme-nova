@@ -1,5 +1,13 @@
----
-import Default from '@astrojs/starlight/components/MobileMenuToggle.astro'
----
+<nova-mobile-menu-toggle
+  class="print:hidden nova-icon-button"
+  aria-label={Astro.locals.t('menuButton.accessibleLabel')}
+  aria-controls="starlight__sidebar"
+>
+  <div class="nova-mobile-menu-toggle-icon"></div>
+</nova-mobile-menu-toggle>
 
-<Default />
+<script>
+  import { register } from './mobile-menu-toggle'
+
+  register()
+</script>

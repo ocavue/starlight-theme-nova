@@ -1,4 +1,6 @@
 ---
+const { hasSidebar } = Astro.locals.starlightRoute
+
 import LanguageSelect from 'virtual:starlight/components/LanguageSelect'
 import Search from 'virtual:starlight/components/Search'
 import SiteTitle from 'virtual:starlight/components/SiteTitle'
@@ -6,6 +8,8 @@ import SocialIcons from 'virtual:starlight/components/SocialIcons'
 import ThemeSelect from 'virtual:starlight/components/ThemeSelect'
 
 import options from 'virtual:starlight-theme-nova/user-config'
+import MobileMenuToggle from './MobileMenuToggle.astro'
+
 const nav = options.nav ?? []
 ---
 
@@ -25,9 +29,16 @@ const nav = options.nav ?? []
   <div class="nova-header-search">
     <Search />
   </div>
-  <div class="nova-header-actions">
+  <div class="nova-header-actions-lg">
     <SocialIcons />
     <LanguageSelect />
     <ThemeSelect />
   </div>
+  {
+    hasSidebar && (
+      <div class="nova-header-actions-sm">
+        <MobileMenuToggle />
+      </div>
+    )
+  }
 </div>

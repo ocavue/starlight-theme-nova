@@ -75,6 +75,12 @@ importers:
 
   packages/starlight-theme-nova:
     dependencies:
+      '@aria-ui/core':
+        specifier: ^0.0.21
+        version: 0.0.21
+      '@pagefind/default-ui':
+        specifier: ^1.3.0
+        version: 1.3.0
       '@shikijs/transformers':
         specifier: ^3.5.0
         version: 3.5.0
