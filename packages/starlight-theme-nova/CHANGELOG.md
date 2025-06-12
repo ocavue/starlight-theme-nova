@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.8.1
+
+### Patch Changes
+
+- 135f55b: Tweak the menu button style on small screens.
+
 ## 0.8.0
 
 ### Minor Changes
