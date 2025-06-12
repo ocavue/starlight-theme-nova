@@ -1,3 +1,12 @@
+// Copied from https://github.com/withastro/starlight/blob/9d3ba179c5d524c1c61d771ceb1a7b4e754bee16/packages/starlight/virtual-internal.d.ts#L25
+declare module 'virtual:starlight/pagefind-config' {
+  import type { StarlightConfig } from '@astrojs/starlight/types'
+
+  export const pagefindUserConfig: Partial<
+    Extract<StarlightConfig['pagefind'], object>
+  >
+}
+
 declare module 'virtual:starlight-theme-nova/user-config' {
   const config: import('./user-options').ConfigSerialized
   export default config
