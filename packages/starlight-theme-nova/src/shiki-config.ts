@@ -12,7 +12,6 @@ import type { ShikiConfig } from 'astro'
 import { createRenderer } from 'shiki-twoslash-renderer'
 
 import { transformerContainer } from './shiki-transformer-container'
-import { transformerCopyButton } from './shiki-transformer-copy-button'
 
 export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
   const transformers: ShikiTransformer[] = [
@@ -23,7 +22,6 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
     transformerNotationWordHighlight(),
     transformerRemoveNotationEscape(),
 
-    transformerCopyButton(),
     transformerContainer(),
     options.twoslash
       ? transformerTwoslash({

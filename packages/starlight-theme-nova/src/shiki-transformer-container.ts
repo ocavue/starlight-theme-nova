@@ -55,7 +55,21 @@ export function transformerContainer(): ShikiTransformer {
             [CODE_PROPERTY_TITLE]: title || undefined,
             class: 'nova-code-container not-content',
           },
-          children,
+          children: [
+            ...children,
+            {
+              type: 'element',
+              tagName: 'nova-code-copy-button',
+              properties: {
+                type: 'button',
+                'data-code': this.source,
+                title: 'Copy code',
+                'aria-label': 'Copy code',
+                class: 'nova-code-copy-button',
+              },
+              children: [],
+            },
+          ],
         },
       ]
 
