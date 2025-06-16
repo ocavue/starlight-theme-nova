@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.9.0
+
+### Minor Changes
+
+- 9c56508: Support for custom heading IDs / anchor links by adding `{#heading-id}` to the heading.
+
 ## 0.8.1
 
 ### Patch Changes
