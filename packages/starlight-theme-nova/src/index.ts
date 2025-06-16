@@ -2,6 +2,7 @@ import type {
   StarlightPlugin,
   StarlightUserConfig,
 } from '@astrojs/starlight/types'
+import remarkCustomHeaderId from 'remark-custom-header-id'
 
 import { createShikiConfig } from './shiki-config'
 import type { ThemeNovaOptions } from './user-options'
@@ -59,6 +60,7 @@ export default function starlightThemeNova(
               updateConfig({
                 markdown: {
                   shikiConfig: createShikiConfig({ twoslash: true }),
+                  remarkPlugins: [remarkCustomHeaderId],
                 },
                 vite: {
                   plugins: [
