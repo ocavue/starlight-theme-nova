@@ -112,14 +112,28 @@ Task List
 
 ## Heading
 
-> # Heading 1
->
-> ## Heading 2
->
-> ### Heading 3
+### Heading IDs
+
+Using headings in Markdown will automatically give you anchor links so you can link directly to certain sections of your page. See [Automatic heading anchor links](https://starlight.astro.build/guides/authoring-content/#automatic-heading-anchor-links) for more details.
+
+In addition, you can also manually add anchor links to headings by adding `{#heading-id}` to the heading.
+
+```mdx
+### Hello World {#my-custom-id}
+```
+
+Or in MDX:
+
+```mdx
+### Hello World \{#my-custom-id\}
+```
+
+> Example:
 >
 > #### Heading 4
 >
 > ##### Heading 5
 >
 > ###### Heading 6
+>
+> #### With custom IDs \{#my-custom-id\}
