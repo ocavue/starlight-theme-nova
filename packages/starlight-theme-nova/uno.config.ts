@@ -184,7 +184,8 @@ const preflight = css`
     --sl-text-h2: var(--sl-text-2xl);
     --sl-text-h3: var(--sl-text-xl);
     --sl-text-h4: var(--sl-text-lg);
-    --sl-text-h5: unset;
+    --sl-text-h5: var(--sl-text-base);
+    --sl-text-h6: var(--sl-text-sm);
   }
 
   /* Dark mode Starlight theme variables. */
