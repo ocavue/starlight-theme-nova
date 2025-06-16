@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.1",
   "description": "",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.4",
-    "@ocavue/eslint-config": "^3.1.1",
+    "@ocavue/eslint-config": "^3.1.2",
     "@ocavue/tsconfig": "^0.3.7",
     "@types/node": "^20.17.30",
     "eslint": "^9.28.0",
