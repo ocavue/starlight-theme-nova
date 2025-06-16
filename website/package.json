@@ -13,8 +13,8 @@
     "postinstall": "astro sync"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.34.3",
-    "astro": "^5.8.2",
+    "@astrojs/starlight": "^0.34.4",
+    "astro": "^5.9.3",
     "sharp": "^0.34.2",
     "starlight-theme-nova": "workspace:*"
   }
