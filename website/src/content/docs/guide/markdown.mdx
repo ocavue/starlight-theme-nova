@@ -112,19 +112,7 @@ Task List
 
 ## Heading
 
-> Example:
->
-> # Heading 1
->
-> ## Heading 2
->
-> ### Heading 3
->
-> #### Heading 4
->
-> ##### Heading 5
->
-> ###### Heading 6
+
 
 ### Heading IDs
 
@@ -132,6 +120,23 @@ Using headings in Markdown will automatically give you anchor links so you can l
 
 In addition, you can also manually add anchor links to headings by adding `{#heading-id}` to the heading.
 
-```md
+```mdx
 ### Hello World {#my-custom-id}
 ```
+
+Or in MDX:
+
+```mdx
+### Hello World \{#my-custom-id\}
+```
+
+> Example:
+>
+> #### Heading 4
+>
+> ##### Heading 5
+>
+> ###### Heading 6
+>
+> #### With custom IDs \{#my-custom-id\}
+
