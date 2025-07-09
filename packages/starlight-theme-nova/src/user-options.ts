@@ -1,5 +1,5 @@
 export interface NavItem {
-  label: string
+  label: string | Record<string, string>
   href: string
 }
 

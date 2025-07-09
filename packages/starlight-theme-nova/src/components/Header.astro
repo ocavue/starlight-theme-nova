@@ -11,6 +11,20 @@ import options from 'virtual:starlight-theme-nova/user-config'
 import MobileMenuToggle from './MobileMenuToggle.astro'
 
 const nav = options.nav ?? []
+
+const { locale } = Astro.locals.starlightRoute;
+
+const getLocalizedLabel = (label : string | Record<string, string>) => {
+  if (typeof label === 'string') {
+    return label;
+  }
+ 
+  if (locale && label[locale]) {
+    return label[locale];
+  }
+
+  return Object.values(label)[0] ?? '';
+};
 ---
 
 <div class="nova-header">
@@ -21,7 +35,7 @@ const nav = options.nav ?? []
     {
       nav.map((item) => (
         <a class="nova-header-nav-link" href={item.href}>
-          {item.label}
+          {getLocalizedLabel(item.label)}
         </a>
       ))
     }
