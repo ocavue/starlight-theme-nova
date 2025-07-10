@@ -12,39 +12,39 @@ import MobileMenuToggle from './MobileMenuToggle.astro'
 
 const nav = options.nav ?? []
 
-const { locale } = Astro.locals.starlightRoute;
+const { locale } = Astro.locals.starlightRoute
 
-const getLocalizedLabel = (label : string | Record<string, string>) => {
+const getLocalizedLabel = (label: string | Record<string, string>) => {
   if (typeof label === 'string') {
-    return label;
+    return label
   }
- 
+
   if (typeof locale === 'string' && label[locale]) {
-    return label[locale];
+    return label[locale]
   }
 
   if (label['root']) {
-    return label['root'];
+    return label['root']
   }
 
-  return Object.values(label)[0] ?? '';
-};
+  return Object.values(label)[0] ?? ''
+}
 
-const getLocalizedHref = (href : string | Record<string, string>) => {
+const getLocalizedHref = (href: string | Record<string, string>) => {
   if (typeof href === 'string') {
-    return href;
+    return href
   }
-  
+
   if (typeof locale === 'string' && href[locale]) {
-    return href[locale];
+    return href[locale]
   }
 
   if (href['root']) {
-    return href['root'];
+    return href['root']
   }
 
-  return Object.values(href)[0] ?? '';
-};
+  return Object.values(href)[0] ?? ''
+}
 ---
 
 <div class="nova-header">
