@@ -1,6 +1,6 @@
 export interface NavItem {
   label: string | Record<string, string>
-  href: string
+  href: string | Record<string, string>
 }
 
 export interface ThemeNovaOptions {

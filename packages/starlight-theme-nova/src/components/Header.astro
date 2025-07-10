@@ -19,11 +19,31 @@ const getLocalizedLabel = (label : string | Record<string, string>) => {
     return label;
   }
  
-  if (locale && label[locale]) {
+  if (typeof locale === 'string' && label[locale]) {
     return label[locale];
   }
 
+  if (label['root']) {
+    return label['root'];
+  }
+
   return Object.values(label)[0] ?? '';
+};
+
+const getLocalizedHref = (href : string | Record<string, string>) => {
+  if (typeof href === 'string') {
+    return href;
+  }
+  
+  if (typeof locale === 'string' && href[locale]) {
+    return href[locale];
+  }
+
+  if (href['root']) {
+    return href['root'];
+  }
+
+  return Object.values(href)[0] ?? '';
 };
 ---
 
@@ -34,7 +54,7 @@ const getLocalizedLabel = (label : string | Record<string, string>) => {
   <nav class="nova-header-nav">
     {
       nav.map((item) => (
-        <a class="nova-header-nav-link" href={item.href}>
+        <a class="nova-header-nav-link" href={getLocalizedHref(item.href)}>
           {getLocalizedLabel(item.label)}
         </a>
       ))
