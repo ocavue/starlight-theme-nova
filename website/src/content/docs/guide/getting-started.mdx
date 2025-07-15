@@ -35,7 +35,14 @@ import { CodePackageManagers } from 'starlight-theme-nova/components'
    export default defineConfig({
      integrations: [
        starlight({
-         plugins: [starlightThemeNova()], // [!code ++]
+         plugins: [
+           starlightThemeNova({ // [!code ++]
+             nav: [ // [!code ++]
+               { label: "Link1", href: "/link1" }, // [!code ++]
+               { label: "Link2", href: "/link2" }, // [!code ++]
+             ], // [!code ++]
+           }), // [!code ++]
+         ],
          title: 'My Docs',
        }),
      ],
