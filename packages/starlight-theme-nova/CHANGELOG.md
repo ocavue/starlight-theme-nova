@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.9.1
+
+### Patch Changes
+
+- 38934d1: Add i18n support for option `nav`.
+
 ## 0.9.0
 
 ### Minor Changes
