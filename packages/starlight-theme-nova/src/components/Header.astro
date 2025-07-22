@@ -14,36 +14,24 @@ const nav = options.nav ?? []
 
 const { locale } = Astro.locals.starlightRoute
 
-const getLocalizedLabel = (label: string | Record<string, string>) => {
-  if (typeof label === 'string') {
-    return label
+const getLocalizedValue = (
+  value: string | { [local: string]: string }
+): string => {
+  if (typeof value === 'string') {
+    return value
   }
 
-  if (typeof locale === 'string' && label[locale]) {
-    return label[locale]
+  if (typeof locale === 'string' && value[locale]) {
+    return value[locale]
   }
 
-  if (label['root']) {
-    return label['root']
+  // Use the same "root" convention as the Starlight docs to get the default value.
+  // https://github.com/withastro/starlight/blob/9d3ba179c5d524c1c61d771ceb1a7b4e754bee16/docs/src/content/docs/guides/i18n.mdx?plain=1#L72-L75
+  if (value['root']) {
+    return value['root']
   }
 
-  return Object.values(label)[0] ?? ''
-}
-
-const getLocalizedHref = (href: string | Record<string, string>) => {
-  if (typeof href === 'string') {
-    return href
-  }
-
-  if (typeof locale === 'string' && href[locale]) {
-    return href[locale]
-  }
-
-  if (href['root']) {
-    return href['root']
-  }
-
-  return Object.values(href)[0] ?? ''
+  return Object.values(value)[0] ?? ''
 }
 ---
 
@@ -54,8 +42,8 @@ const getLocalizedHref = (href: string | Record<string, string>) => {
   <nav class="nova-header-nav">
     {
       nav.map((item) => (
-        <a class="nova-header-nav-link" href={getLocalizedHref(item.href)}>
-          {getLocalizedLabel(item.label)}
+        <a class="nova-header-nav-link" href={getLocalizedValue(item.href)}>
+          {getLocalizedValue(item.label)}
         </a>
       ))
     }
