@@ -26,7 +26,7 @@ import { CodePackageManagers } from 'starlight-theme-nova/components'
 
 2. Configure the plugin in your Starlight [configuration](https://starlight.astro.build/reference/configuration/#plugins) in the `astro.config.mjs` file.
 
-   ```ts
+   ```ts twoslash
    // astro.config.mjs
    import starlight from '@astrojs/starlight'
    import { defineConfig } from 'astro/config'
@@ -36,14 +36,7 @@ import { CodePackageManagers } from 'starlight-theme-nova/components'
      integrations: [
        starlight({
          plugins: [
-           starlightThemeNova({
-             // [!code ++]
-             nav: [
-               // [!code ++]
-               { label: 'Link1', href: '/link1' }, // [!code ++]
-               { label: 'Link2', href: '/link2' }, // [!code ++]
-             ], // [!code ++]
-           }), // [!code ++]
+           starlightThemeNova(/* options */), // [!code ++]
          ],
          title: 'My Docs',
        }),
@@ -51,8 +44,48 @@ import { CodePackageManagers } from 'starlight-theme-nova/components'
    })
    ```
 
+   Check the [Options](#options) section below for available options.
+
 3. [Start the development server](https://starlight.astro.build/getting-started/#start-the-development-server) to preview the theme in action.
 
 </Steps>
 
 That's it! You should now see the Starlight Nova theme applied to your Starlight website.
+
+## Options
+
+### `nav`
+
+You can add optional navigation items to the top navigation bar by passing an array of objects to the `nav` option.
+
+```ts twoslash
+import starlightThemeNova from 'starlight-theme-nova'
+// ---cut---
+starlightThemeNova({
+  nav: [
+    { label: 'Quick start', href: '/guide/getting-started' },
+    { label: 'External link', href: 'https://example.com' },
+  ],
+})
+```
+
+If you want to support multiple languages, you can pass an object with values for each different locale to `label` and `href`. When using the object form, the keys must be BCP-47 tags (e.g. `en`, `ar`, or `zh-CN`) or the `root` key to set the default value:
+
+```ts twoslash
+import starlightThemeNova from 'starlight-theme-nova'
+// ---cut---
+starlightThemeNova({
+  nav: [
+    {
+      label: {
+        en: 'Quick start',
+        'zh-CN': '快速开始',
+      },
+      href: {
+        en: '/guide/getting-started',
+        'zh-CN': '/zh-CN/guide/getting-started',
+      },
+    },
+  ],
+})
+```
