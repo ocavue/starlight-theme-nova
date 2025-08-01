@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.9.2
+
+### Patch Changes
+
+- 0388ff7: Adjust sidebar padding.
+
 ## 0.9.1
 
 ### Patch Changes
