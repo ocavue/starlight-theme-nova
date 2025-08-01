@@ -40,13 +40,13 @@
   "dependencies": {
     "@aria-ui/core": "^0.0.21",
     "@aria-ui/tooltip": "^0.0.29",
-    "@shikijs/twoslash": "^3.8.1",
-    "@shikijs/types": "^3.8.1",
+    "@shikijs/twoslash": "^3.9.1",
+    "@shikijs/types": "^3.9.1",
     "@types/hast": "^3.0.4"
   },
   "devDependencies": {
     "@ocavue/tsconfig": "^0.3.7",
-    "shiki": "^3.8.1",
+    "shiki": "^3.9.1",
     "tsdown": "^0.13.0",
     "typescript": "^5.8.3",
     "unplugin-lightningcss": "^0.4.1",
