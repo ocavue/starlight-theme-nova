@@ -1,0 +1,91 @@
+---
+title: 入门
+description: 学习如何在你的文档中使用 Starlight Nova 主题.
+sidebar:
+  order: 10
+---
+
+一个基于 [Starlight](https://starlight.astro.build/zh-cn) 的现代 / 漂亮的主题.
+
+## 先决条件
+
+你需要先创建一个 Starlight 网站.
+
+如果你还没有, 你可以通过 ["开始使用"](https://starlight.astro.build/zh-cn/getting-started) 指南在 Starlight文档中创建一个.
+
+## 安装
+
+import { Steps } from '@astrojs/starlight/components'
+import { CodePackageManagers } from 'starlight-theme-nova/components'
+
+<Steps>
+
+1. Starlight Nova 主题是一个 Starlight [插件](https://starlight.astro.build/zh-cn/reference/plugins/), 你可以使用自己喜欢的包管理器安装
+
+   <CodePackageManagers packages="starlight-theme-nova" />
+
+2. 在 `astro.config.mjs` 中 [配置 Starlight 插件](https://starlight.astro.build/zh-cn/reference/configuration/#plugins).
+
+   ```ts twoslash
+   // astro.config.mjs
+   import starlight from '@astrojs/starlight'
+   import { defineConfig } from 'astro/config'
+   import starlightThemeNova from 'starlight-theme-nova'
+
+   export default defineConfig({
+     integrations: [
+       starlight({
+         plugins: [
+           starlightThemeNova(/* options */), // [!code ++]
+         ],
+         title: 'My Docs',
+       }),
+     ],
+   })
+   ```
+
+   在下面的 [Options](#options) 部分获取可用项.
+
+3. [启动开发服务器](https://starlight.astro.build/getting-started/#start-the-development-server) 以预览主题.
+
+</Steps>
+
+就是这样! 现在你应该可以看到 Starlight Nova 主题已经应用到你的 Starlight 网站.
+
+## 选项
+
+### `nav`
+
+你可以通过将一些对象传递到 'nav' 选项以在顶部导航栏添加一些可选的导航项.
+
+```ts twoslash
+import starlightThemeNova from 'starlight-theme-nova'
+// ---cut---
+starlightThemeNova({
+  nav: [
+    { label: 'Quick start', href: '/guide/getting-started' },
+    { label: 'External link', href: 'https://example.com' },
+  ],
+})
+```
+
+如果需要支持多语言, 你可以将每个不同语言环境的值传递给 'label' 和 'href' 对象, 当使用 object 对象时, 键值必须是相应语言目录的名称 (例如 `en`, `ar`, 或者 `zh-cn`) 或 `root` 键来设置默认值：
+
+```ts twoslash
+import starlightThemeNova from 'starlight-theme-nova'
+// ---cut---
+starlightThemeNova({
+  nav: [
+    {
+      label: {
+        en: 'Quick start',
+        'zh-cn': '快速开始',
+      },
+      href: {
+        en: '/guide/getting-started',
+        'zh-cn': '/zh-cn/guide/getting-started',
+      },
+    },
+  ],
+})
+```

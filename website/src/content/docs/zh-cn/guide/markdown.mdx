@@ -1,0 +1,139 @@
+---
+title: Markdown
+description: 了解如何在文档中使用 Starlet Nova 主题.
+sidebar:
+  order: 20
+---
+
+import ShikiHighlightLineCode from '../../../snippets/shiki-highlight-line.md?raw'
+import ShikiHighlightLine from '../../../snippets/shiki-highlight-line.md'
+import ShikiHighlightWordCode from '../../../snippets/shiki-highlight-word.md?raw'
+import ShikiHighlightWord from '../../../snippets/shiki-highlight-word.md'
+import ShikiDiffCode from '../../../snippets/shiki-diff.md?raw'
+import ShikiDiff from '../../../snippets/shiki-diff.md'
+import CodeTitleCode from '../../../snippets/code-title.md?raw'
+import CodeTitle from '../../../snippets/code-title.md'
+import CodeTabsMarkdownCode from '../../../snippets/code-tabs-markdown.mdx?raw'
+import CodeTabsMarkdown from '../../../snippets/code-tabs-markdown.mdx'
+import TwoslashCode from '../../../snippets/twoslash.md?raw'
+import Twoslash from '../../../snippets/twoslash.md'
+
+import { Code, CodeTabs, CodeTabItem } from 'starlight-theme-nova/components'
+
+## 代码块 (带标题)
+
+输入:
+
+<Code code={CodeTitleCode} lang="md" />
+
+输出:
+
+<CodeTitle />
+
+## 代码标签页
+
+输入:
+
+<Code code={CodeTabsMarkdownCode} lang="md" />
+
+输出:
+
+<CodeTabsMarkdown />
+
+## 代码块突出显示
+
+输入:
+
+<Code code={ShikiHighlightLineCode} lang="md" />
+
+输出:
+
+<ShikiHighlightLine />
+
+## Word Highlighting in Code Blocks
+
+输入:
+
+<Code code={ShikiHighlightWordCode.replace('[!', '[\\!')} lang="md" />
+
+输出:
+
+<ShikiHighlightWord />
+
+## Diff Highlighting in Code Blocks
+
+输入:
+
+<Code code={ShikiDiffCode} lang="md" />
+
+输出:
+
+<ShikiDiff />
+
+## Twoslash
+
+Nova supports [Twoslash](https://twoslash.netlify.app/) out of the box. Hover over the code block to see the inline type.
+
+输入:
+
+<Code code={TwoslashCode} lang="md" />
+
+输出:
+
+<Twoslash />
+
+## Table
+
+| Name | Age | City        |
+| ---- | --- | ----------- |
+| John | 25  | New York    |
+| Jane | 30  | Los Angeles |
+| Jim  | 35  | Chicago     |
+
+## List
+
+Ordered List
+
+1. Number 1
+2. Number 2
+3. Number 3
+
+Unordered List
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+Task List
+
+- [x] Checkbox 1
+- [ ] Checkbox 2
+- [ ] Checkbox 3
+
+## Heading
+
+### Heading IDs
+
+Using headings in Markdown will automatically give you anchor links so you can link directly to certain sections of your page. See [Automatic heading anchor links](https://starlight.astro.build/guides/authoring-content/#automatic-heading-anchor-links) for more details.
+
+In addition, you can also manually add anchor links to headings by adding `{#heading-id}` to the heading.
+
+```mdx
+### Hello World {#my-custom-id}
+```
+
+Or in MDX:
+
+```mdx
+### Hello World \{#my-custom-id\}
+```
+
+> Example:
+>
+> #### Heading 4
+>
+> ##### Heading 5
+>
+> ###### Heading 6
+>
+> #### With custom IDs \{#my-custom-id\}

@@ -1,0 +1,41 @@
+---
+title: Link Card
+---
+
+import LinkCardPreview from '../../../snippets/link-card.mdx'
+import LinkCardContent from '../../../snippets/link-card.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
+To display links to different pages prominently, use the `<LinkCard>` component.
+
+## Preview
+
+<LinkCardPreview />
+
+## Usage
+
+<Code code={LinkCardContent} lang="jsx" />
+
+## `<LinkCard>` Props
+
+The `<LinkCard>` component accepts the following props, as well as all other [`<a>` element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a):
+
+### `title`
+
+**required**  
+**type:** `string`
+
+The title of the link card to display.
+
+### `href`
+
+**required**  
+**type:** `string`
+
+The URL to link to when the card is interacted with.
+
+### `description`
+
+**type:** `string`
+
+An optional description to display below the title.

@@ -1,0 +1,43 @@
+---
+title: Code Package Managers
+---
+
+import CodePackageManagersPreview from '../../../snippets/code-package-managers.mdx'
+import CodePackageManagersContent from '../../../snippets/code-package-managers.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
+Displays a list of install commands for different package managers.
+
+## Preview
+
+<CodePackageManagersPreview />
+
+## Usage
+
+<Code code={CodePackageManagersContent} lang="jsx" />
+
+## `<CodePackageManagers>` Props
+
+The `<CodePackageManagers>` component accepts the following props:
+
+### `packageManagers`
+
+**type:** `PackageManager[]`
+
+**default:** `['pnpm', 'npm', 'yarn', 'bun']`
+
+The package managers to use.
+
+### `packages`
+
+**type:** `string`
+
+The packages to install. If you want to install multiple packages, you can pass a space-separated string.
+
+### `dev`
+
+**type:** `boolean`
+
+**default:** `false`
+
+Whether to install the packages as dev dependencies.

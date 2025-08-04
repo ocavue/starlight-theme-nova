@@ -1,0 +1,37 @@
+---
+title: Code Tabs
+---
+
+import CodeTabsPreview from '../../../snippets/code-tabs.mdx'
+import CodeTabsContent from '../../../snippets/code-tabs.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
+Displays a list of code blocks with tabs.
+
+## Preview
+
+<CodeTabsPreview />
+
+## Usage
+
+<Code code={CodeTabsContent} lang="jsx" />
+
+## `<CodeTabs>` Props
+
+### `syncKey`
+
+**type:** `string`
+
+A key used to keep multiple tab groups synchronized across multiple pages.
+
+## `<CodeTabItem>` Props
+
+The `<CodeTabItem>` component accepts the following props, as well as all other [`<Code>` component props](/components/code):
+
+### `label`
+
+**required**
+
+**type:** `string`
+
+The label to display in the tab.

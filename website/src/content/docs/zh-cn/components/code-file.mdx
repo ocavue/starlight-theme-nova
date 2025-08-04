@@ -1,0 +1,41 @@
+---
+title: Code File
+---
+
+import CodeFilePreview from '../../../snippets/code-file.mdx'
+import CodeFileContent from '../../../snippets/code-file.mdx?raw'
+import { CodeFile, Code } from 'starlight-theme-nova/components'
+
+Displays a code block from a local file.
+
+## Preview
+
+<CodeFilePreview />
+
+## Usage
+
+<Code code={CodeFileContent} lang="jsx" />
+
+## `<CodeFile>` Props
+
+The `<CodeFile>` component accepts the following props, as well as all other [`<Code>` component props](/components/code):
+
+### `path`
+
+**required**
+
+**type:** `string`
+
+The file path relative to the project root.
+
+### `title`
+
+**type:** `string`
+
+The title of the file. If not provided, the file name will be used.
+
+### `lang`
+
+**type:** `string`
+
+The language of the file. If not provided, the file extension will be used.

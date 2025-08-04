@@ -1,0 +1,36 @@
+---
+title: Starlight Nova
+description: 构建漂亮的文档网站
+template: splash
+hero:
+  tagline: 基于 Starlight 的一个现代 / 漂亮的主题
+  image:
+    file: ../../../assets/houston.webp
+  actions:
+    - text: 快速开始
+      link: /zh-cn/guide/getting-started/
+      icon: right-arrow
+    - text: 阅读 Starlight 官方文档
+      link: https://starlight.astro.build/zh-cn
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components'
+
+## 下一步
+
+<CardGrid>
+  <Card title="安装主题" icon="pencil">
+    转到 [快速开始向导](/zh-cn/guide/getting-started/) 开始安装.
+  </Card>
+  <Card title="添加新内容" icon="add-document">
+    将 Markdown 或 MDX 文件添加到 `src/content/docs` 以创建新页面.
+  </Card>
+  <Card title="配置你的网站" icon="setting">
+    在 `astro.config.mjs` 中编辑 `sidebar` 和其它配置.
+  </Card>
+  <Card title="阅读文档" icon="open-book">
+    在 [Starlight 文档](https://starlight.astro.build/zh-cn) 了解更多.
+  </Card>
+</CardGrid>

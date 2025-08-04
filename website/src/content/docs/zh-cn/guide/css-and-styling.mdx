@@ -1,0 +1,27 @@
+---
+title: CSS & 样式
+description: 了解如何使用自定义 CSS 来自定义 Starkight 站点和 Starlight Nova 主题。
+sidebar:
+  order: 40
+---
+
+## 自定义 CSS 样式
+
+为了自定义使用 Starlight Nova 主题时 Starlight 站点的样式, 你可以提供其他 CSS 文件来修改或扩展 Starlight 和 Starlight Nova 主题的默认样式.
+
+[在 Starlight 文档中了解有关自定义 CSS 的更多信息.](https://starlight.astro.build/zh-cn/guides/css-and-tailwind/#custom-css-styles)
+
+## 层叠层
+
+像 Starlight 一样, Starlight Nova 主题在内部使用 [层叠层](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_layers) 来管理样式顺序.
+这样可以确保 CSS 顺序的可预测性, 并允许更简单的覆盖.
+任何自定义的非图层 CSS 都将覆盖来自 `starlight` 和 `nova` 图层的默认样式。
+
+如果使用层叠层, 可以在 [自定义 CSS](https://starlight.astro.build/zh-cn/guides/css-and-tailwind/#custom-css-styles) 中使用 [`@layer`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@layer) 定义不同层相对于 Starlight 和 Starlight Nova 主题样式的优先顺序:
+
+```css title="src/styles/custom.css" /starlight/ /nova/
+@layer my-reset, starlight, nova, my-overrides;
+```
+
+上面的示例定义了一个名为 `my-reset` 的自定义层级，应用于所有 Starlight 和 Starlight Nova 主题层级之前，另一个名为 `my-overrides` 的自定义层级应用于所有 Starlight 和 Starlight Nova 主题层级之后。
+`my-overrides` 层中的任何样式将优先于 Starlight 和 Starlight Nova 主题样式，但 Starlight 或 Starlight Nova 主题仍可更改 `my-reset` 层中的样式。
