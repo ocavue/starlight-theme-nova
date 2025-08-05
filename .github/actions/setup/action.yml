@@ -23,3 +23,10 @@ runs:
     - name: Install
       run: pnpm install
       shell: bash
+
+    # Update npm to use OIDC publishing
+    # https://docs.npmjs.com/trusted-publishers
+    - name: Update npm
+      run: npm install -g npm@latest
+      shell: bash
+
