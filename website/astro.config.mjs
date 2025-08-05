@@ -7,15 +7,36 @@ import starlightThemeNova from 'starlight-theme-nova'
 export default defineConfig({
   integrations: [
     starlight({
+      defaultLocale: 'root',
+      locales: {
+        root: {
+          label: 'English',
+          lang: 'en',
+        },
+        'zh-cn': {
+          label: '中文 (简体)',
+          lang: 'zh-CN',
+        },
+      },
+
       plugins: [
         starlightThemeNova({
           nav: [
             {
-              label: 'Docs',
-              href: '/guide/getting-started/',
+              label: {
+                root: 'Docs',
+                'zh-cn': '文档',
+              },
+              href: {
+                root: '/guide/getting-started/',
+                'zh-cn': '/zh-cn/guide/getting-started/',
+              },
             },
             {
-              label: 'Changelog',
+              label: {
+                root: 'Changelog',
+                'zh-cn': '更新日志',
+              },
               href: 'https://github.com/ocavue/starlight-theme-nova/blob/master/packages/starlight-theme-nova/CHANGELOG.md',
             },
             {
@@ -43,10 +64,16 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Guide',
+          translations: {
+            'zh-CN': '向导',
+          },
           autogenerate: { directory: 'guide' },
         },
         {
           label: 'Components',
+          translations: {
+            'zh-CN': '组件',
+          },
           autogenerate: { directory: 'components' },
         },
       ],

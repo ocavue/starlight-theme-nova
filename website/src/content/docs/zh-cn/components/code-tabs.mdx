@@ -1,0 +1,37 @@
+---
+title: 代码标签页
+---
+
+import CodeTabsPreview from '../../../snippets/code-tabs.mdx'
+import CodeTabsContent from '../../../snippets/code-tabs.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
+显示带选项卡的代码块列表.
+
+## 预览
+
+<CodeTabsPreview />
+
+## 用法
+
+<Code code={CodeTabsContent} lang="jsx" />
+
+## `<CodeTabs>` 属性
+
+### `syncKey`
+
+**类型:** `string`
+
+一个键, 用于在多个页面上保持多个标签组同步.
+
+## `<CodeTabItem>` 属性
+
+`<CodeTabItem>` 组件接受以下属性以及所有其他 [`<Code>` 组件的属性](/zh-cn/components/code):
+
+### `label`
+
+**必填**
+
+**类型:** `string`
+
+要在标签页中显示的标签.

@@ -1,0 +1,41 @@
+---
+title: 代码文件
+---
+
+import CodeFilePreview from '../../../snippets/code-file.mdx'
+import CodeFileContent from '../../../snippets/code-file.mdx?raw'
+import { CodeFile, Code } from 'starlight-theme-nova/components'
+
+显示本地文件中的代码块.
+
+## 预览
+
+<CodeFilePreview />
+
+## 用法
+
+<Code code={CodeFileContent} lang="jsx" />
+
+## `<CodeFile>` 属性
+
+`<CodeFile>` 组件接受以下属性以及所有其他 [`<Code>` 组件的属性](/zh-cn/components/code):
+
+### `path`
+
+**必填**
+
+**类型:** `string`
+
+相对于项目根目录的文件路径.
+
+### `title`
+
+**类型:** `string`
+
+文件标题. 如果未提供, 将使用文件名.
+
+### `lang`
+
+**类型:** `string`
+
+文件的代码语言. 如果未提供, 将使用文件扩展名指向的代码语言.

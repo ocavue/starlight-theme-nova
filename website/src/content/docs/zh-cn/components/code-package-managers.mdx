@@ -1,0 +1,43 @@
+---
+title: 包管理器代码块
+---
+
+import CodePackageManagersPreview from '../../../snippets/code-package-managers.mdx'
+import CodePackageManagersContent from '../../../snippets/code-package-managers.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
+显示不同软件包管理器的安装命令列表.
+
+## 预览
+
+<CodePackageManagersPreview />
+
+## 用法
+
+<Code code={CodePackageManagersContent} lang="jsx" />
+
+## `<CodePackageManagers>` 属性
+
+`<CodePackageManagers>` 组件接受以下属性:
+
+### `packageManagers`
+
+**类型:** `PackageManager[]`
+
+**默认值:** `['pnpm', 'npm', 'yarn', 'bun']`
+
+要使用的软件包管理器.
+
+### `packages`
+
+**类型:** `string`
+
+要安装的软件包. 如果要安装多个软件包, 可以使用空格分隔字符串.
+
+### `dev`
+
+**类型:** `boolean`
+
+**默认值:** `false`
+
+是否将软件包安装为 dev 依赖项.

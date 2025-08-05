@@ -1,0 +1,41 @@
+---
+title: 链接卡片
+---
+
+import LinkCardPreview from '../../../snippets/link-card.mdx'
+import LinkCardContent from '../../../snippets/link-card.mdx?raw'
+import { Code } from 'starlight-theme-nova/components'
+
+要突出显示不同页面的链接，可使用 `<LinkCard>` 组件。
+
+## 预览
+
+<LinkCardPreview />
+
+## 用法
+
+<Code code={LinkCardContent} lang="jsx" />
+
+## `<LinkCard>` 属性
+
+`<LinkCard>` 组件接受以下属性以及所有其它 [`<a>` 的元素属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/a):
+
+### `title`
+
+**必填**  
+**类型:** `string`
+
+要显示的链接卡片的标题.
+
+### `href`
+
+**必填**  
+**类型:** `string`
+
+与卡片交互时要链接到的 URL.
+
+### `description`
+
+**类型:** `string`
+
+标题下方显示的可选描述.
