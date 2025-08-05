@@ -69,7 +69,7 @@ starlightThemeNova({
 })
 ```
 
-如果需要支持多语言, 你可以将每个不同语言环境的值传递给 'label' 和 'href' 对象, 当使用 object 对象时, 键值必须是相应语言目录的名称 (例如 `en`, `ar`, 或者 `zh-cn`) 或 `root` 键来设置默认值：
+如果需要支持多语言, 你可以将每个不同语言环境的值传递给 `label` 和 `href` 对象。当使用 object 对象时, 键值必须是相应语言的 BCP-47 标签 (例如 `en`, `ar`, 或者 `zh-CN`) 或 `root` 键来设置默认值：
 
 ```ts twoslash
 import starlightThemeNova from 'starlight-theme-nova'
@@ -79,11 +79,11 @@ starlightThemeNova({
     {
       label: {
         en: 'Quick start',
-        'zh-cn': '快速开始',
+        'zh-CN': '快速开始',
       },
       href: {
         en: '/guide/getting-started',
-        'zh-cn': '/zh-cn/guide/getting-started',
+        'zh-CN': '/zh-cn/guide/getting-started',
       },
     },
   ],

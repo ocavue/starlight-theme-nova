@@ -9,30 +9,11 @@ import ThemeSelect from 'virtual:starlight/components/ThemeSelect'
 
 import options from 'virtual:starlight-theme-nova/user-config'
 import MobileMenuToggle from './MobileMenuToggle.astro'
+import { getI18nText } from './get-i18n-text'
 
 const nav = options.nav ?? []
 
-const { locale } = Astro.locals.starlightRoute
-
-const getLocalizedValue = (
-  value: string | { [local: string]: string },
-): string => {
-  if (typeof value === 'string') {
-    return value
-  }
-
-  if (typeof locale === 'string' && value[locale]) {
-    return value[locale]
-  }
-
-  // Use the same "root" convention as the Starlight docs to get the default value.
-  // https://github.com/withastro/starlight/blob/9d3ba179c5d524c1c61d771ceb1a7b4e754bee16/docs/src/content/docs/guides/i18n.mdx?plain=1#L72-L75
-  if (value['root']) {
-    return value['root']
-  }
-
-  return Object.values(value)[0] ?? ''
-}
+const route = Astro.locals.starlightRoute
 ---
 
 <div class="nova-header">
@@ -42,8 +23,8 @@ const getLocalizedValue = (
   <nav class="nova-header-nav">
     {
       nav.map((item) => (
-        <a class="nova-header-nav-link" href={getLocalizedValue(item.href)}>
-          {getLocalizedValue(item.label)}
+        <a class="nova-header-nav-link" href={getI18nText(item.href, route)}>
+          {getI18nText(item.label, route)}
         </a>
       ))
     }
