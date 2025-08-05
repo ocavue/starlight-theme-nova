@@ -1,37 +1,37 @@
 ---
-title: Code Tabs
+title: 代码标签页
 ---
 
 import CodeTabsPreview from '../../../snippets/code-tabs.mdx'
 import CodeTabsContent from '../../../snippets/code-tabs.mdx?raw'
 import { Code } from 'starlight-theme-nova/components'
 
-Displays a list of code blocks with tabs.
+显示带选项卡的代码块列表.
 
-## Preview
+## 预览
 
 <CodeTabsPreview />
 
-## Usage
+## 用法
 
 <Code code={CodeTabsContent} lang="jsx" />
 
-## `<CodeTabs>` Props
+## `<CodeTabs>` 属性
 
 ### `syncKey`
 
-**type:** `string`
+**类型:** `string`
 
-A key used to keep multiple tab groups synchronized across multiple pages.
+一个键, 用于在多个页面上保持多个标签组同步.
 
-## `<CodeTabItem>` Props
+## `<CodeTabItem>` 属性
 
-The `<CodeTabItem>` component accepts the following props, as well as all other [`<Code>` component props](/components/code):
+`<CodeTabItem>` 组件接受以下属性以及所有其他 [`<Code>` 组件的属性](/zh-cn/components/code):
 
 ### `label`
 
-**required**
+**必填**
 
-**type:** `string`
+**类型:** `string`
 
-The label to display in the tab.
+要在标签页中显示的标签.

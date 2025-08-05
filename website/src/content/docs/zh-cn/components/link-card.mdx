@@ -1,41 +1,41 @@
 ---
-title: Link Card
+title: 链接卡片
 ---
 
 import LinkCardPreview from '../../../snippets/link-card.mdx'
 import LinkCardContent from '../../../snippets/link-card.mdx?raw'
 import { Code } from 'starlight-theme-nova/components'
 
-To display links to different pages prominently, use the `<LinkCard>` component.
+要突出显示不同页面的链接，可使用 `<LinkCard>` 组件。
 
-## Preview
+## 预览
 
 <LinkCardPreview />
 
-## Usage
+## 用法
 
 <Code code={LinkCardContent} lang="jsx" />
 
-## `<LinkCard>` Props
+## `<LinkCard>` 属性
 
-The `<LinkCard>` component accepts the following props, as well as all other [`<a>` element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a):
+`<LinkCard>` 组件接受以下属性以及所有其它 [`<a>` 的元素属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/a):
 
 ### `title`
 
-**required**  
-**type:** `string`
+**必填**  
+**类型:** `string`
 
-The title of the link card to display.
+要显示的链接卡片的标题.
 
 ### `href`
 
-**required**  
-**type:** `string`
+**必填**  
+**类型:** `string`
 
-The URL to link to when the card is interacted with.
+与卡片交互时要链接到的 URL.
 
 ### `description`
 
-**type:** `string`
+**类型:** `string`
 
-An optional description to display below the title.
+标题下方显示的可选描述.

@@ -40,7 +40,7 @@ import { Code, CodeTabs, CodeTabItem } from 'starlight-theme-nova/components'
 
 <CodeTabsMarkdown />
 
-## 代码块突出显示
+## 代码行突出显示
 
 输入:
 
@@ -50,7 +50,7 @@ import { Code, CodeTabs, CodeTabItem } from 'starlight-theme-nova/components'
 
 <ShikiHighlightLine />
 
-## Word Highlighting in Code Blocks
+## 代码中的单词突出显示
 
 输入:
 
@@ -60,7 +60,7 @@ import { Code, CodeTabs, CodeTabItem } from 'starlight-theme-nova/components'
 
 <ShikiHighlightWord />
 
-## Diff Highlighting in Code Blocks
+## 代码行差异突出显示
 
 输入:
 
@@ -72,7 +72,7 @@ import { Code, CodeTabs, CodeTabItem } from 'starlight-theme-nova/components'
 
 ## Twoslash
 
-Nova supports [Twoslash](https://twoslash.netlify.app/) out of the box. Hover over the code block to see the inline type.
+Nova 开箱即支持 [Twoslash](https://twoslash.netlify.app/). 将鼠标悬停在代码块上, 即可看到内联类型.
 
 输入:
 
@@ -82,7 +82,7 @@ Nova supports [Twoslash](https://twoslash.netlify.app/) out of the box. Hover ov
 
 <Twoslash />
 
-## Table
+## 表格
 
 | Name | Age | City        |
 | ---- | --- | ----------- |
@@ -90,45 +90,45 @@ Nova supports [Twoslash](https://twoslash.netlify.app/) out of the box. Hover ov
 | Jane | 30  | Los Angeles |
 | Jim  | 35  | Chicago     |
 
-## List
+## 列表
 
-Ordered List
+有序列表
 
 1. Number 1
 2. Number 2
 3. Number 3
 
-Unordered List
+无序列表
 
 - Bullet 1
 - Bullet 2
 - Bullet 3
 
-Task List
+任务列表
 
 - [x] Checkbox 1
 - [ ] Checkbox 2
 - [ ] Checkbox 3
 
-## Heading
+## 标题
 
-### Heading IDs
+### 标题 锚链接
 
-Using headings in Markdown will automatically give you anchor links so you can link directly to certain sections of your page. See [Automatic heading anchor links](https://starlight.astro.build/guides/authoring-content/#automatic-heading-anchor-links) for more details.
+在 Markdown 中使用标题会自动为您提供锚链接, 这样您就可以直接链接到页面的某些部分. 详情请参阅 [自动生成标题锚点链接](https://starlight.astro.build/zh-cn/guides/authoring-content/#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%A0%87%E9%A2%98%E9%94%9A%E7%82%B9%E9%93%BE%E6%8E%A5).
 
-In addition, you can also manually add anchor links to headings by adding `{#heading-id}` to the heading.
+此外，您还可以通过在标题中添加 `{#heading-id}` 为标题手动添加锚链接.
 
 ```mdx
 ### Hello World {#my-custom-id}
 ```
 
-Or in MDX:
+或者在 MDX 中:
 
 ```mdx
 ### Hello World \{#my-custom-id\}
 ```
 
-> Example:
+> 示例:
 >
 > #### Heading 4
 >

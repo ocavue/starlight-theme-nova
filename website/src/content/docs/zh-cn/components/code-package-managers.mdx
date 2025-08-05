@@ -1,43 +1,43 @@
 ---
-title: Code Package Managers
+title: 包管理器代码块
 ---
 
 import CodePackageManagersPreview from '../../../snippets/code-package-managers.mdx'
 import CodePackageManagersContent from '../../../snippets/code-package-managers.mdx?raw'
 import { Code } from 'starlight-theme-nova/components'
 
-Displays a list of install commands for different package managers.
+显示不同软件包管理器的安装命令列表.
 
-## Preview
+## 预览
 
 <CodePackageManagersPreview />
 
-## Usage
+## 用法
 
 <Code code={CodePackageManagersContent} lang="jsx" />
 
-## `<CodePackageManagers>` Props
+## `<CodePackageManagers>` 属性
 
-The `<CodePackageManagers>` component accepts the following props:
+`<CodePackageManagers>` 组件接受以下属性:
 
 ### `packageManagers`
 
-**type:** `PackageManager[]`
+**类型:** `PackageManager[]`
 
-**default:** `['pnpm', 'npm', 'yarn', 'bun']`
+**默认值:** `['pnpm', 'npm', 'yarn', 'bun']`
 
-The package managers to use.
+要使用的软件包管理器.
 
 ### `packages`
 
-**type:** `string`
+**类型:** `string`
 
-The packages to install. If you want to install multiple packages, you can pass a space-separated string.
+要安装的软件包. 如果要安装多个软件包, 可以使用空格分隔字符串.
 
 ### `dev`
 
-**type:** `boolean`
+**类型:** `boolean`
 
-**default:** `false`
+**默认值:** `false`
 
-Whether to install the packages as dev dependencies.
+是否将软件包安装为 dev 依赖项.
