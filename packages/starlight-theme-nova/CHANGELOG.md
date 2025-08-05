@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.9.3
+
+### Patch Changes
+
+- 75033dc: Provide a better error message when a translation is not found.
+
 ## 0.9.2
 
 ### Patch Changes
