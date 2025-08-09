@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.9.4
+
+### Patch Changes
+
+- 8189a97: Correct a typo in an error message.
+
 ## 0.9.3
 
 ### Patch Changes
