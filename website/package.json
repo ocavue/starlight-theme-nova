@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "description": "",
+  "description": "The website for the Starlight Nova theme",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
