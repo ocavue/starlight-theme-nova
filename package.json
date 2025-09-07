@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.1",
   "description": "Root package for the Starlight Nova theme monorepo",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
@@ -17,14 +17,14 @@
     "ci:version": "changeset version && pnpm install --no-frozen-lockfile"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.5",
+    "@changesets/cli": "^2.29.6",
     "@ocavue/eslint-config": "^3.3.3",
-    "@ocavue/tsconfig": "^0.3.7",
+    "@ocavue/tsconfig": "^0.5.0",
     "@types/node": "^20.17.30",
     "eslint": "^9.35.0",
-    "pkg-pr-new": "^0.0.54",
+    "pkg-pr-new": "^0.0.59",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   }
 }
