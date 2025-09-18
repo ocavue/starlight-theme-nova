@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.9.5
+
+### Patch Changes
+
+- 1176859: Update dependencies.
+
 ## 0.9.4
 
 ### Patch Changes
