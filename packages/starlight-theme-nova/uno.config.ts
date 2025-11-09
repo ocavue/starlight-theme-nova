@@ -16,7 +16,7 @@ const shortcut = {
   'nova-nav-link': 'p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0',
 
   'nova-site-title':
-    '[&_*]:text-sl-text [&_*]:font-semibold [&_*]:text-lg [&_a]:nova-nav-link',
+    '[&_*]:text-[var(--sl-color-text)] [&_*]:font-semibold [&_*]:text-lg [&_a]:nova-nav-link',
 
   'nova-header': 'flex items-center gap-2 h-full box-border',
 
@@ -45,7 +45,7 @@ const shortcut = {
   'nova-header-actions-sm': 'flex md:hidden print:hidden items-center gap-2',
 
   'nova-search-button-large': [
-    'flex p-2 hover:bg-gray-400/10 rounded-md w-full max-w-88 h-9 text-sl-text',
+    'flex p-2 hover:bg-gray-400/10 rounded-md w-full max-w-88 h-9 text-[var(--sl-color-text)]',
     'transition-color',
     'border-solid border-sl-gray-5 border-1',
   ],
@@ -88,7 +88,7 @@ const shortcut = {
   'nova-theme-select-icon-dark': 'i-tabler-moon-filled',
 
   'nova-icon-button': [
-    'flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
+    'flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)]',
     'transition active:scale-90',
     'focus-visible:outline-offset-1',
   ],
@@ -304,7 +304,6 @@ const config: UserConfig = defineConfig({
       '2xl': '120rem',
     },
     colors: {
-      'sl-text': 'var(--sl-color-text)',
       'sl-white': 'var(--sl-color-white)',
       'sl-gray-1': 'var(--sl-color-gray-1)',
       'sl-gray-2': 'var(--sl-color-gray-2)',
