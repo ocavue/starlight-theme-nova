@@ -9,8 +9,8 @@ const shortcut = {
     'box-border border-b-1 border-solid border-0 border-sl-hairline',
     'backdrop-blur bg-sl-bg-nav',
     'w-full fixed inset-0',
-    'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
-    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x]',
+    'h-[var(--sl-nav-height)] z-[var(--sl-z-index-navbar)]',
+    'py-[var(--sl-nav-pad-y)] px-[var(--sl-nav-pad-x)]',
   ],
 
   'nova-nav-link': 'p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0',
