@@ -6,17 +6,17 @@ const shortcut = {
   'nova-page-frame': 'flex flex-col min-h-screen',
 
   'nova-page-frame-header': [
-    'box-border border-b-1 border-solid border-0 border-sl-hairline',
-    'backdrop-blur bg-sl-bg-nav',
+    'box-border border-b-1 border-solid border-0 border-[var(--sl-color-hairline)]',
+    'backdrop-blur bg-[var(--sl-color-bg-nav)]',
     'w-full fixed inset-0',
-    'h-[--sl-nav-height] z-[--sl-z-index-navbar]',
-    'py-[--sl-nav-pad-y] px-[--sl-nav-pad-x]',
+    'h-[var(--sl-nav-height)] z-[var(--sl-z-index-navbar)]',
+    'py-[var(--sl-nav-pad-y)] px-[var(--sl-nav-pad-x)]',
   ],
 
   'nova-nav-link': 'p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0',
 
   'nova-site-title':
-    '[&_*]:text-sl-text [&_*]:font-semibold [&_*]:text-lg [&_a]:nova-nav-link',
+    '[&_*]:text-[var(--sl-color-text)] [&_*]:font-semibold [&_*]:text-lg [&_a]:nova-nav-link',
 
   'nova-header': 'flex items-center gap-2 h-full box-border',
 
@@ -37,7 +37,7 @@ const shortcut = {
   ],
 
   'nova-header-nav-link':
-    'no-underline text-sl-gray-3 hover:text-sl-white nova-nav-link',
+    'no-underline text-[var(--sl-color-gray-3)] hover:text-[var(--sl-color-white)] nova-nav-link',
 
   'nova-header-search': 'flex print:hidden md:flex-1 md:max-w-60',
 
@@ -45,9 +45,9 @@ const shortcut = {
   'nova-header-actions-sm': 'flex md:hidden print:hidden items-center gap-2',
 
   'nova-search-button-large': [
-    'flex p-2 hover:bg-gray-400/10 rounded-md w-full max-w-88 h-9 text-sl-text',
+    'flex p-2 hover:bg-gray-400/10 rounded-md w-full max-w-88 h-9 text-[var(--sl-color-text)]',
     'transition-color',
-    'border-solid border-sl-gray-5 border-1',
+    'border-solid border-[var(--sl-color-gray-5)] border-1',
   ],
 
   'nova-search-button': [
@@ -63,7 +63,7 @@ const shortcut = {
     'flex print:hidden items-center gap-2 justify-end py-4',
 
   'nova-code-copy-button': [
-    'size-6 absolute right-2 top-2 m-0 p-1 rounded border-1 border-solid border-sl-gray-5 backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50',
+    'size-6 absolute right-2 top-2 m-0 p-1 rounded border-1 border-solid border-[var(--sl-color-gray-5)] backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50',
     'transition active:scale-90',
   ],
 
@@ -72,12 +72,12 @@ const shortcut = {
   'nova-code-copy-button-icon-check': 'w-full h-full block i-lucide-check',
 
   'nova-code-title':
-    'border-b-1 border-b-solid px-4 py-2 border-b-sl-gray-5 font-mono text-sl-gray-3 text-sm bg-sl-bg hidden [div[data-nova-code-container][data-nova-code-title]_&]:block',
+    'border-b-1 border-b-solid px-4 py-2 border-b-[var(--sl-color-gray-5)] font-mono text-[var(--sl-color-gray-3)] text-sm bg-[var(--sl-color-bg)] hidden [div[data-nova-code-container][data-nova-code-title]_&]:block',
 
   'nova-code-container': [
     'relative [&_pre]:relative overflow-hidden',
     '[&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100',
-    'border-1 border-solid border-sl-gray-5',
+    'border-1 border-solid border-[var(--sl-color-gray-5)]',
     '[.sl-markdown-content_&_pre.astro-code]:border-0 [.sl-markdown-content_&_pre.astro-code]:border-transparent',
     'rounded-md',
     '[.sl-markdown-content_&_pre.astro-code]:rounded-0',
@@ -88,13 +88,13 @@ const shortcut = {
   'nova-theme-select-icon-dark': 'i-tabler-moon-filled',
 
   'nova-icon-button': [
-    'flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-sl-text',
+    'flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)]',
     'transition active:scale-90',
     'focus-visible:outline-offset-1',
   ],
 
   'nova-page-frame-sidebar-pane': [
-    'md:border-r border-0 border-solid border-sl-hairline visible',
+    'md:border-r border-0 border-solid border-[var(--sl-color-hairline)] visible',
     'invisible [body[data-mobile-menu-expanded]_&]:max-md:visible md:visible',
     'max-md:w-full md:w-[var(--sl-sidebar-width)]',
   ],
@@ -102,7 +102,7 @@ const shortcut = {
   'nova-link-card': [
     'flex flex-col px-5 py-4 rounded-xl relative gap-2',
     'shadow-sm hover:shadow-md',
-    'border-1 border-solid border-sl-gray-5',
+    'border-1 border-solid border-[var(--sl-color-gray-5)]',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
     'text-gray-700 dark:text-gray-200',
     'transition active:scale-99',
@@ -132,7 +132,7 @@ const shortcut = {
   ],
 
   'nova-link-button-secondary': [
-    'border-sl-gray-5',
+    'border-[var(--sl-color-gray-5)]',
     'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
     'shadow-sm hover:shadow-md',
     'text-gray-700 dark:text-gray-200',
@@ -153,7 +153,7 @@ const shortcut = {
 
   'nova-pagination-link': [
     'flex items-center justify-end p-2 rounded-xl m-0 gap-2',
-    'text-sl-gray-2 hover:text-sl-white no-underline md:text-lg font-medium',
+    'text-[var(--sl-color-gray-2)] hover:text-[var(--sl-color-white)] no-underline md:text-lg font-medium',
     'transition',
     '[&[rel="prev"]]:flex-row-reverse',
     '[&[rel="next"]]:flex-row',
@@ -170,7 +170,7 @@ const shortcut = {
   ],
 
   'nova-mobile-table-of-contents':
-    '[&_nav]:backdrop-blur [&_summary]:border-b-sl-hairline',
+    '[&_nav]:backdrop-blur [&_summary]:border-b-[var(--sl-color-hairline)]',
 }
 
 const css = String.raw
@@ -305,20 +305,6 @@ const config: UserConfig = defineConfig({
       lg: '72rem',
       xl: '90rem',
       '2xl': '120rem',
-    },
-    colors: {
-      'sl-text': 'var(--sl-color-text)',
-      'sl-white': 'var(--sl-color-white)',
-      'sl-gray-1': 'var(--sl-color-gray-1)',
-      'sl-gray-2': 'var(--sl-color-gray-2)',
-      'sl-gray-3': 'var(--sl-color-gray-3)',
-      'sl-gray-4': 'var(--sl-color-gray-4)',
-      'sl-gray-5': 'var(--sl-color-gray-5)',
-      'sl-gray-6': 'var(--sl-color-gray-6)',
-      'sl-black': 'var(--sl-color-black)',
-      'sl-bg-nav': 'var(--sl-color-bg-nav)',
-      'sl-hairline': 'var(--sl-color-hairline)',
-      'sl-bg': 'var(--sl-color-bg)',
     },
   },
   preflights: [{ getCSS: () => preflight }],
