@@ -11,6 +11,9 @@
     --sl-text-h4: var(--sl-text-lg);
     --sl-text-h5: var(--sl-text-base);
     --sl-text-h6: var(--sl-text-sm);
+
+    /* Prevent adjustments of font size after orientation changes in iOS. */
+    -webkit-text-size-adjust: 100%;
   }
 
   /* Dark mode Starlight theme variables. */
