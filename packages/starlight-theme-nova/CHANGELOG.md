@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.10.0
+
+### Minor Changes
+
+- f599bf5: Prevent adjustments of font size after orientation changes in iOS.
+
 ## 0.9.5
 
 ### Patch Changes

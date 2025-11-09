@@ -1,7 +1,7 @@
 {
   "name": "starlight-theme-nova",
   "type": "module",
-  "version": "0.9.5",
+  "version": "0.10.0",
   "description": "A beautiful theme for Astro Starlight",
   "author": "ocavue <ocavue@gmail.com>",
   "license": "MIT",
