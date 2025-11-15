@@ -1,6 +1,6 @@
 // @ts-check
 import starlight from '@astrojs/starlight'
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
 import starlightThemeNova from 'starlight-theme-nova'
 

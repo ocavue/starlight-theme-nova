@@ -37,7 +37,13 @@ export default function starlightThemeNova(
   return {
     name: 'starlight-theme-nova',
     hooks: {
-      setup: async ({ config, updateConfig, addIntegration, astroConfig, logger }) => {
+      setup: async ({
+        config,
+        updateConfig,
+        addIntegration,
+        astroConfig,
+        logger,
+      }) => {
         const newConfig = {
           customCss: [
             ...(config.customCss || []),
