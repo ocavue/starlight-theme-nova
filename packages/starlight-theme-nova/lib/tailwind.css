@@ -1,0 +1,328 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@source "../src/**.ts";
+@source "../src/**.astro";
+@plugin '@egoist/tailwindcss-icons';
+
+:root,
+::backdrop {
+  --sl-content-width: 50rem;
+
+  --sl-text-h1: var(--sl-text-3xl);
+  --sl-text-h2: var(--sl-text-2xl);
+  --sl-text-h3: var(--sl-text-xl);
+  --sl-text-h4: var(--sl-text-lg);
+  --sl-text-h5: var(--sl-text-base);
+  --sl-text-h6: var(--sl-text-sm);
+
+  /* Prevent adjustments of font size after orientation changes in iOS. */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Dark mode Starlight theme variables. */
+:root {
+  --sl-color-white: white;
+  --sl-color-gray-1: var(--color-gray-200);
+  --sl-color-gray-2: var(--color-gray-300);
+  --sl-color-gray-3: var(--color-gray-400);
+  --sl-color-gray-4: var(--color-gray-600);
+  --sl-color-gray-5: var(--color-gray-700);
+  --sl-color-gray-6: var(--color-gray-800);
+  --sl-color-black: var(--color-gray-950);
+
+  --sl-color-accent-low: var(--color-gray-950);
+  --sl-color-accent: var(--color-gray-600);
+  --sl-color-accent-high: var(--color-gray-100);
+
+  --sl-color-bg-inline-code: var(--color-gray-800);
+  --sl-color-border-inline-code: var(--color-gray-700);
+  --sl-color-bg-nav: color-mix(in oklch, var(--color-gray-950) 50%, transparent);
+
+  --sl-color-orange-low: var(--color-amber-950);
+  --sl-color-orange: var(--color-amber-900);
+  --sl-color-orange-high: var(--color-amber-200);
+
+  --sl-color-green-low: var(--color-green-950);
+  --sl-color-green: var(--color-green-900);
+  --sl-color-green-high: var(--color-green-200);
+
+  --sl-color-blue-low: var(--color-blue-950);
+  --sl-color-blue: var(--color-blue-900);
+  --sl-color-blue-high: var(--color-blue-200);
+
+  --sl-color-purple-low: var(--color-purple-950);
+  --sl-color-purple: var(--color-purple-900);
+  --sl-color-purple-high: var(--color-purple-200);
+
+  --sl-color-red-low: var(--color-red-950);
+  --sl-color-red: var(--color-red-900);
+  --sl-color-red-high: var(--color-red-200);
+
+  --nano-color-highlight: var(--sl-color-gray-5);
+}
+
+/* Light mode Starlight theme variables */
+:root[data-theme='light'] {
+  --sl-color-white: var(--color-gray-900);
+  --sl-color-gray-1: var(--color-gray-800);
+  --sl-color-gray-2: var(--color-gray-700);
+  --sl-color-gray-3: var(--color-gray-500);
+  --sl-color-gray-4: var(--color-gray-400);
+  --sl-color-gray-5: var(--color-gray-300);
+  --sl-color-gray-6: var(--color-gray-200);
+  --sl-color-gray-7: var(--color-gray-100);
+  --sl-color-black: white;
+
+  --sl-color-accent-low: var(--color-gray-200);
+  --sl-color-accent: var(--color-gray-800);
+  --sl-color-accent-high: var(--color-gray-900);
+
+  --sl-color-bg-inline-code: var(--color-gray-100);
+  --sl-color-border-inline-code: var(--color-gray-300);
+  --sl-color-bg-nav: color-mix(in oklch, var(--color-white) 80%, transparent);
+
+  --sl-color-orange-low: var(--color-amber-100);
+  --sl-color-orange: var(--color-amber-400);
+  --sl-color-orange-high: var(--color-amber-800);
+
+  --sl-color-green-low: var(--color-green-100);
+  --sl-color-green: var(--color-green-400);
+  --sl-color-green-high: var(--color-green-800);
+
+  --sl-color-blue-low: var(--color-blue-100);
+  --sl-color-blue: var(--color-blue-400);
+  --sl-color-blue-high: var(--color-blue-800);
+
+  --sl-color-purple-low: var(--color-purple-100);
+  --sl-color-purple: var(--color-purple-400);
+  --sl-color-purple-high: var(--color-purple-800);
+
+  --sl-color-red-low: var(--color-red-100);
+  --sl-color-red: var(--color-red-400);
+  --sl-color-red-high: var(--color-red-800);
+
+  --nano-color-highlight: var(--sl-color-gray-6);
+}
+
+.nova-page-frame {
+  @apply flex flex-col min-h-screen;
+}
+
+.nova-page-frame-header {
+  @apply box-border border-b-1 border-solid border-0 border-[var(--sl-color-hairline)];
+  @apply backdrop-blur bg-[var(--sl-color-bg-nav)];
+  @apply w-full fixed inset-0;
+  @apply h-[var(--sl-nav-height)] z-[var(--sl-z-index-navbar)];
+  @apply py-[var(--sl-nav-pad-y)] px-[var(--sl-nav-pad-x)];
+}
+
+.nova-nav-link {
+  @apply p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0;
+}
+
+.nova-site-title {
+  @apply [&_*]:text-[var(--sl-color-text)] [&_*]:font-semibold [&_*]:text-lg;
+  @apply p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0;
+}
+
+.nova-header {
+  @apply flex items-center gap-2 h-full box-border;
+}
+
+.nova-header-title {
+  /* Prevent long titles overflowing and covering the search and menu buttons on narrow viewports. */
+  @apply overflow-clip;
+  /* Avoid clipping focus ring around link inside title wrapper. */
+  @apply p-3 -m-3;
+  @apply min-w-0;
+  @apply flex;
+}
+
+.nova-header-nav {
+  @apply flex flex-row flex-1;
+  @apply gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 py-3;
+  @apply text-sm font-medium;
+  @apply max-md:[&_*]:hidden overflow-x-auto;
+}
+
+.nova-header-nav-link {
+  @apply no-underline text-[var(--sl-color-gray-3)] hover:text-[var(--sl-color-white)];
+  @apply p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0;
+}
+
+.nova-header-search {
+  @apply flex print:hidden md:flex-1 md:max-w-60;
+}
+
+.nova-header-actions-lg {
+  @apply hidden md:flex print:hidden items-center gap-2;
+}
+
+.nova-header-actions-sm {
+  @apply flex md:hidden print:hidden items-center gap-2;
+}
+
+.nova-search-button {
+  @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)];
+  @apply transition active:scale-90;
+  @apply focus-visible:outline-offset-1;
+
+  @apply flex md:p-2 md:hover:bg-gray-400/10 md:rounded-md md:w-full md:max-w-88 md:h-9 md:text-[var(--sl-color-text)];
+  @apply md:transition-colors;
+  @apply md:border-solid md:border-[var(--sl-color-gray-5)] md:border-1;
+}
+
+.nova-search-button-icon {
+  @apply i-lucide-search;
+}
+
+.nova-mobile-menu-toggle-icon {
+  @apply i-lucide-menu [body[data-mobile-menu-expanded]_&]:i-lucide-x [body[data-mobile-menu-expanded]_&]:rotate-90 transition-transform;
+}
+
+.nova-mobile-menu-footer {
+  @apply flex print:hidden items-center gap-2 justify-end py-4;
+}
+
+.nova-code-copy-button {
+  @apply size-6 absolute right-2 top-2 m-0 p-1 rounded border-1 border-solid border-[var(--sl-color-gray-5)] backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50;
+  @apply transition active:scale-90;
+}
+
+.nova-code-copy-button-icon-clipboard {
+  @apply w-full h-full block i-lucide-clipboard;
+}
+
+.nova-code-copy-button-icon-check {
+  @apply w-full h-full block i-lucide-check;
+}
+
+.nova-code-title {
+  @apply border-b-1 border-solid px-4 py-2 border-b-[var(--sl-color-gray-5)] font-mono text-[var(--sl-color-gray-3)] text-sm bg-[var(--sl-color-bg)] hidden [div[data-nova-code-container][data-nova-code-title]_&]:block;
+}
+
+.nova-code-container {
+  @apply relative [&_pre]:relative overflow-hidden;
+  @apply [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100;
+  @apply border-1 border-solid border-[var(--sl-color-gray-5)];
+  @apply rounded-md;
+}
+
+.sl-markdown-content .nova-code-container pre.astro-code,
+.sl-markdown-content .nova-code-container pre.astro-code code {
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.nova-theme-select {
+  @apply size-8 overflow-visible;
+}
+
+.nova-theme-select-icon-light {
+  @apply i-tabler-sun-high-filled;
+}
+
+.nova-theme-select-icon-dark {
+  @apply i-tabler-moon-filled;
+}
+
+.nova-icon-button {
+  @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)];
+  @apply transition active:scale-90;
+  @apply focus-visible:outline-offset-1;
+}
+
+.nova-page-frame-sidebar-pane {
+  @apply md:border-r border-0 border-solid border-[var(--sl-color-hairline)] visible;
+  @apply invisible [body[data-mobile-menu-expanded]_&]:max-md:visible md:visible;
+  @apply max-md:w-full md:w-[var(--sl-sidebar-width)];
+}
+
+.nova-link-card {
+  @apply flex flex-col px-5 py-4 rounded-xl relative gap-2;
+  @apply shadow-sm hover:shadow-md;
+  @apply border-1 border-solid border-[var(--sl-color-gray-5)];
+  @apply bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700;
+  @apply text-gray-700 dark:text-gray-200;
+  @apply transition active:scale-99;
+}
+
+.nova-link-card-link {
+  @apply inline-flex items-center justify-between no-underline font-semibold text-lg text-gray-700 dark:text-gray-200;
+  /* a11y fix for https://github.com/withastro/starlight/issues/487 */
+  @apply before:content-[''] before:absolute before:inset-0;
+}
+
+.nova-link-card-icon {
+  @apply i-lucide-arrow-right ml-2 size-5 transition [.nova-link-card:hover_&]:translate-x-1;
+}
+
+.nova-link-button {
+  @apply inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2 gap-2;
+  @apply no-underline border-1 border-solid border-transparent;
+  @apply font-medium;
+  @apply transition active:scale-97;
+}
+
+.nova-link-button-primary {
+  @apply bg-black hover:bg-gray-800 dark:bg-gray-100 dark:hover:bg-gray-300;
+  @apply shadow-sm hover:shadow-md;
+  @apply text-white dark:text-gray-900;
+}
+
+.nova-link-button-secondary {
+  @apply border-[var(--sl-color-gray-5)];
+  @apply bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700;
+  @apply shadow-sm hover:shadow-md;
+  @apply text-gray-700 dark:text-gray-200;
+}
+
+.nova-link-button-minimal {
+  @apply text-gray-700 dark:text-gray-200;
+}
+
+.nova-link-button-icon-right {
+  @apply i-lucide-arrow-right size-5 transition [.nova-link-button:hover_&]:translate-x-1;
+}
+
+.nova-link-button-icon-left {
+  @apply i-lucide-arrow-left size-5 transition [.nova-link-button:hover_&]:-translate-x-1;
+}
+
+.nova-pagination {
+  @apply flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full;
+}
+
+.nova-pagination-divider {
+  @apply flex-1;
+}
+
+.nova-pagination-link {
+  @apply flex items-center justify-end p-2 rounded-xl m-0 gap-2;
+  @apply text-[var(--sl-color-gray-2)] hover:text-[var(--sl-color-white)] no-underline md:text-lg font-medium;
+  @apply transition;
+  @apply [&[rel="prev"]]:flex-row-reverse;
+  @apply [&[rel="next"]]:flex-row;
+}
+
+.nova-pagination-link-icon {
+  @apply min-w-5 min-h-5 block;
+  @apply transition;
+}
+
+.nova-pagination-link-icon-right {
+  @apply i-lucide-chevron-right;
+  @apply [.nova-pagination-link:hover_&]:translate-x-1;
+}
+
+.nova-pagination-link-icon-left {
+  @apply i-lucide-chevron-left;
+  @apply [.nova-pagination-link:hover_&]:-translate-x-1;
+}
+
+.nova-mobile-table-of-contents {
+  @apply [&_nav]:backdrop-blur [&_summary]:border-b-[var(--sl-color-hairline)];
+}

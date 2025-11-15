@@ -1,6 +1,6 @@
-@layer starlight, nova;
+@layer base, starlight, nova, theme, components, utilities;
 
-@import './styles.gen.css' layer(nova);
+/* @import './styles.gen.css' layer(nova); */
 @import './markdown.css' layer(nova);
 @import './shiki.css' layer(nova);
 @import './aside.css' layer(nova);

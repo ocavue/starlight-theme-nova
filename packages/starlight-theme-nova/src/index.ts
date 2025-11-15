@@ -1,7 +1,9 @@
 import type {
+  StarlightConfig,
   StarlightPlugin,
   StarlightUserConfig,
 } from '@astrojs/starlight/types'
+import type { AstroConfig } from 'astro'
 import remarkCustomHeaderId from 'remark-custom-header-id'
 
 import { createShikiConfig } from './shiki-config'
@@ -25,7 +27,7 @@ const components = {
     'starlight-theme-nova/components/MobileTableOfContents.astro',
   MobileMenuFooter: 'starlight-theme-nova/components/MobileMenuFooter.astro',
   LanguageSelect: 'starlight-theme-nova/components/LanguageSelect.astro',
-} as const
+} as const satisfies Partial<StarlightConfig['components']>
 
 export type { ThemeNovaOptions }
 
@@ -35,13 +37,14 @@ export default function starlightThemeNova(
   return {
     name: 'starlight-theme-nova',
     hooks: {
-      setup({ config, updateConfig, addIntegration, astroConfig }) {
+      setup: async ({ config, updateConfig, addIntegration, astroConfig, logger }) => {
         const newConfig = {
           customCss: [
             ...(config.customCss || []),
             // Including nova styles *after* any user CSS, so that @layer nova
             // can have a higher precedence.
             'starlight-theme-nova/styles.css',
+            'starlight-theme-nova/tailwind.css',
           ],
           components: {
             // Including any user components *after* our own.
@@ -52,6 +55,15 @@ export default function starlightThemeNova(
         } satisfies Partial<StarlightUserConfig>
 
         updateConfig(newConfig)
+
+        const hasTailwindcss = await checkHasTailwindcss(
+          astroConfig.vite?.plugins,
+        )
+        if (!hasTailwindcss) {
+          logger.warn(
+            'Tailwind CSS vite plugin is not detected, please add tailwindcss to your project. See https://tailwindcss.com/docs/installation/framework-guides/astro for more information.',
+          )
+        }
 
         addIntegration({
           name: 'starlight-theme-nova-integration',
@@ -77,4 +89,27 @@ export default function starlightThemeNova(
       },
     },
   }
+}
+
+type ViteUserConfig = AstroConfig['vite']
+type VitePlugin = NonNullable<ViteUserConfig['plugins']>[number]
+
+async function checkHasTailwindcss(
+  plugin: VitePlugin | Promise<VitePlugin>,
+): Promise<boolean> {
+  const awaited = await plugin
+
+  if (!awaited) {
+    return false
+  }
+  if (Array.isArray(awaited)) {
+    for (const p of awaited) {
+      if (await checkHasTailwindcss(p)) {
+        return true
+      }
+    }
+    return false
+  }
+  let name = awaited.name || ''
+  return name.includes('tailwind')
 }
