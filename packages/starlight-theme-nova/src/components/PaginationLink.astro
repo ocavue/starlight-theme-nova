@@ -1,4 +1,7 @@
 ---
+import ChevronRightIcon from '../icons/lucide-chevron-right.svg'
+import ChevronLeftIcon from '../icons/lucide-chevron-left.svg'
+
 interface Props {
   label: string
   href: string
@@ -11,11 +14,12 @@ const { label, href, rel, side } = Astro.props
 
 <a href={href} rel={rel} data-side={side} class:list={['nova-pagination-link']}>
   <span>{label}</span>
-  <span
-    class:list={[
-      'nova-pagination-link-icon',
-      side === 'right'
-        ? 'nova-pagination-link-icon-right'
-        : 'nova-pagination-link-icon-left',
-    ]}></span>
+
+  {
+    side === 'right' ? (
+      <ChevronRightIcon class="nova-pagination-link-icon nova-pagination-link-icon-right" />
+    ) : (
+      <ChevronLeftIcon class="nova-pagination-link-icon nova-pagination-link-icon-left" />
+    )
+  }
 </a>

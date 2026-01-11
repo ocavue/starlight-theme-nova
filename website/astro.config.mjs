@@ -1,10 +1,15 @@
 // @ts-check
 import starlight from '@astrojs/starlight'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
+import minify from 'astro-minify-html-swc'
 import starlightThemeNova from 'starlight-theme-nova'
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
     starlight({
       defaultLocale: 'root',
@@ -78,6 +83,7 @@ export default defineConfig({
         },
       ],
     }),
+    minify(),
   ],
 
   devToolbar: { enabled: false },

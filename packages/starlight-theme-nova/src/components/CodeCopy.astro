@@ -1,6 +1,6 @@
 <script>
-  const DEFAULT_HTML = /* html */ `<span class="nova-code-copy-button-icon-clipboard"></span>`
-  const SUCCESS_HTML = /* html */ `<span class="nova-code-copy-button-icon-check"></span>`
+  import ClipboardIcon from '../icons/lucide-clipboard.svg?raw'
+  import CheckIcon from '../icons/lucide-check.svg?raw'
 
   class CodeCopyButton extends HTMLElement {
     constructor() {
@@ -8,10 +8,12 @@
     }
 
     connectedCallback() {
-      this.innerHTML = DEFAULT_HTML
-
       const update = () => {
-        this.innerHTML = state === 'ready' ? DEFAULT_HTML : SUCCESS_HTML
+        const iconHtml = state === 'ready' ? ClipboardIcon : CheckIcon
+        this.innerHTML =
+          '<span class="w-full h-full block [&_svg]:w-full [&_svg]:h-full">' +
+          iconHtml +
+          '</span>'
       }
 
       let state: 'ready' | 'success' = 'ready'

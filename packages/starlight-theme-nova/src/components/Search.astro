@@ -1,5 +1,6 @@
 ---
 import project from 'virtual:starlight/project-context'
+import SearchIcon from '../icons/lucide-search.svg'
 
 const pagefindTranslations = {
   placeholder: Astro.locals.t('search.label'),
@@ -25,7 +26,7 @@ if (project.trailingSlash === 'never')
     aria-label={Astro.locals.t('search.label')}
     aria-keyshortcuts="Control+K"
   >
-    <span class="nova-search-button-icon"></span>
+    <SearchIcon class="size-4" />
     <span class="sl-hidden md:sl-block" aria-hidden="true"
       >{Astro.locals.t('search.label')}</span
     >

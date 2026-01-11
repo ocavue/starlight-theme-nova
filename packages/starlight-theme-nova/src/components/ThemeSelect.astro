@@ -1,14 +1,16 @@
 ---
 import { Toggle } from 'astro-theme-toggle/components'
+import MoonIcon from '../icons/tabler-moon-filled.svg'
+import SunIcon from '../icons/tabler-sun-high-filled.svg'
 ---
 
 <div class="nova-theme-select">
   <Toggle class="nova-icon-button">
     <Fragment slot="icon-light">
-      <div class="nova-theme-select-icon-light"></div>
+      <SunIcon class="size-4" />
     </Fragment>
     <Fragment slot="icon-dark">
-      <div class="nova-theme-select-icon-dark"></div>
+      <MoonIcon class="size-4" />
     </Fragment>
   </Toggle>
 </div>
