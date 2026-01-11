@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.1
+
+### Patch Changes
+
+- c1daa40: Fix an issue where the sidebar might not be hidden automatically on smaller screens.
+
 ## 0.11.0
 
 ### Minor Changes
