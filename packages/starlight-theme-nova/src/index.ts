@@ -42,15 +42,19 @@ export default function starlightThemeNova(
         updateConfig,
         addIntegration,
         astroConfig,
-        logger,
       }) => {
+        const hasTailwindcss = await checkHasTailwindcss(
+          astroConfig.vite?.plugins,
+        )
+        
+
         const newConfig = {
           customCss: [
             ...(config.customCss || []),
             // Including nova styles *after* any user CSS, so that @layer nova
             // can have a higher precedence.
             'starlight-theme-nova/styles.css',
-            'starlight-theme-nova/tailwind.css',
+            hasTailwindcss ? 'starlight-theme-nova/tailwind.css' : 'starlight-theme-nova/tailwind.gen.css',
           ],
           components: {
             // Including any user components *after* our own.
@@ -62,14 +66,7 @@ export default function starlightThemeNova(
 
         updateConfig(newConfig)
 
-        const hasTailwindcss = await checkHasTailwindcss(
-          astroConfig.vite?.plugins,
-        )
-        if (!hasTailwindcss) {
-          logger.warn(
-            'Tailwind CSS vite plugin is not detected, please add tailwindcss to your project. See https://tailwindcss.com/docs/installation/framework-guides/astro for more information.',
-          )
-        }
+
 
         addIntegration({
           name: 'starlight-theme-nova-integration',
