@@ -1,3 +1,5 @@
+@layer base, starlight, nova, theme, components, utilities;
+
 @import 'tailwindcss';
 
 @source '../src/**/*.ts';
