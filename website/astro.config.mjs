@@ -13,6 +13,7 @@ export default defineConfig({
   integrations: [
     starlight({
       defaultLocale: 'root',
+      customCss: ['./src/styles/global.css'],
       locales: {
         root: {
           label: 'English',

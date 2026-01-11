@@ -5,6 +5,7 @@ sidebar:
   order: 10
 ---
 
+
 A modern and beautiful theme for [Starlight](https://starlight.astro.build).
 
 ## Prerequisites
@@ -89,3 +90,50 @@ starlightThemeNova({
   ],
 })
 ```
+
+## Use with Tailwind CSS
+
+You can optionally use Tailwind CSS with the Starlight Nova theme. To do so, you need to:
+
+<Steps>
+
+1. Install Tailwind CSS and its dependencies.
+
+   ```bash
+   npm install tailwindcss @tailwindcss/vite
+   ```
+
+2. Create a `./src/styles/global.css` file and add the following content:
+
+   ```css  
+   /** ./src/styles/global.css */
+   @import 'tailwindcss';
+   @import 'starlight-theme-nova/tailwind.css';
+   ```
+
+3. Configure your Astro config file:
+
+   ```ts
+   // astro.config.mjs
+   import starlight from '@astrojs/starlight'
+   import tailwindcss from '@tailwindcss/vite' // [!code ++]
+   import { defineConfig } from 'astro/config'
+   import starlightThemeNova from 'starlight-theme-nova'
+
+   export default defineConfig({
+     vite: { // [!code ++]
+       plugins: [tailwindcss()], // [!code ++]
+     }, // [!code ++]
+     integrations: [
+       starlight({
+         plugins: [
+           starlightThemeNova(), 
+         ],
+         title: 'My Docs',
+         customCss: ['./src/styles/global.css'], // [!code ++]
+       }),
+     ],
+   })
+   ```
+
+</Steps>
