@@ -304,12 +304,10 @@
 }
 
 .nova-pagination-link-icon-right {
-  @apply i-lucide-chevron-right;
   @apply [.nova-pagination-link:hover_&]:translate-x-1;
 }
 
 .nova-pagination-link-icon-left {
-  @apply i-lucide-chevron-left;
   @apply [.nova-pagination-link:hover_&]:-translate-x-1;
 }
 
