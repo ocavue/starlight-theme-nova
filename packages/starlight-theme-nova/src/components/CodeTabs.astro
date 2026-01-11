@@ -22,6 +22,8 @@ const processedHtml = processCodeTabs(originalHtml)
 <style is:global>
   @layer utilities {
     .sl-markdown-content .code-tabs {
+      overflow: hidden;
+
       &.code-tabs-border {
         border-color: var(--sl-color-gray-5);
         border-width: 1px;
@@ -29,11 +31,17 @@ const processedHtml = processCodeTabs(originalHtml)
         border-radius: 0.5rem;
       }
 
-      [role='tablist'] {
-        border-bottom-width: 1px;
+      starlight-tabs {
+        margin-top: 0;
       }
 
       .tablist-wrapper {
+        scrollbar-width: none;
+
+        [role='tablist'] {
+          border-bottom-width: 1px;
+        }
+
         [role='tab'] {
           font-family: var(--sl-font-system-mono);
           padding-top: 0.5rem;
@@ -42,6 +50,13 @@ const processedHtml = processCodeTabs(originalHtml)
           padding-right: 0.75rem;
           font-size: 0.875rem;
           white-space: nowrap;
+
+          border-bottom-style: solid;
+          border-bottom-width: 0px;
+
+          &[aria-selected='true'] {
+            border-bottom-width: 3px;
+          }
         }
       }
 
