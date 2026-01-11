@@ -89,3 +89,47 @@ starlightThemeNova({
   ],
 })
 ```
+
+## 与 Tailwind CSS 一起使用
+
+你可以选择将 Tailwind CSS 与 Starlight Nova 主题一起使用。为此，你需要：
+
+<Steps>
+
+1. 安装 Tailwind CSS 及其依赖项：
+
+   ```bash
+   npm install tailwindcss @tailwindcss/vite
+   ```
+
+2. 创建 `./src/styles/global.css` 文件并添加以下内容：
+
+   ```css
+   /** ./src/styles/global.css */
+   @import 'tailwindcss';
+   @import 'starlight-theme-nova/tailwind.css';
+   ```
+
+3. 配置你的 Astro 配置文件：
+
+   ```ts
+   // astro.config.mjs
+   import starlight from '@astrojs/starlight'
+   import tailwindcss from '@tailwindcss/vite' // [!code ++]
+   import { defineConfig } from 'astro/config'
+   import starlightThemeNova from 'starlight-theme-nova'
+
+   export default defineConfig({
+     vite: {
+       plugins: [tailwindcss()], // [!code ++]
+     integrations: [
+       starlight({
+         plugins: [starlightThemeNova()],
+         title: 'My Docs',
+         customCss: ['./src/styles/global.css'], // [!code ++]
+       }),
+     ],
+   })
+   ```
+
+</Steps>

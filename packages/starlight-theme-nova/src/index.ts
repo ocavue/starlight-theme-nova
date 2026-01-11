@@ -53,14 +53,14 @@ export default function starlightThemeNova(
 
         const newConfig = {
           customCss: [
+            'starlight-theme-nova/layer.css',
+
+            useTailwind ? '' : 'starlight-theme-nova/tailwind.gen.css',
+
             ...(config.customCss || []),
-            // Including nova styles *after* any user CSS, so that @layer nova
-            // can have a higher precedence.
+
             'starlight-theme-nova/styles.css',
-            useTailwind
-              ? 'starlight-theme-nova/tailwind.css'
-              : 'starlight-theme-nova/tailwind.gen.css',
-          ],
+          ].filter(Boolean),
           components: {
             // Including any user components *after* our own.
             ...components,

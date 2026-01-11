@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "build": "pnpm run build:tailwindcss",
-    "build:tailwindcss": "tailwindcss -i ./lib/tailwind.css -o ./lib/tailwind.gen.css"
+    "build:tailwindcss": "tailwindcss -i ./lib/tailwind.build.css -o ./lib/tailwind.gen.css"
   },
   "dependencies": {
     "@aria-ui/core": "^0.0.22",
