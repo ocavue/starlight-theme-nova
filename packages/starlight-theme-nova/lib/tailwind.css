@@ -108,11 +108,11 @@
 }
 
 .nova-page-frame-header {
-  @apply box-border border-b-1 border-solid border-0 border-[var(--sl-color-hairline)];
-  @apply backdrop-blur bg-[var(--sl-color-bg-nav)];
+  @apply box-border border-b border-solid border-0 border-(--sl-color-hairline);
+  @apply backdrop-blur bg-(--sl-color-bg-nav);
   @apply w-full fixed inset-0;
-  @apply h-[var(--sl-nav-height)] z-[var(--sl-z-index-navbar)];
-  @apply py-[var(--sl-nav-pad-y)] px-[var(--sl-nav-pad-x)];
+  @apply h-(--sl-nav-height) z-(--sl-z-index-navbar);
+  @apply py-(--sl-nav-pad-y) px-(--sl-nav-pad-x);
 }
 
 .nova-nav-link {
@@ -120,7 +120,7 @@
 }
 
 .nova-site-title {
-  @apply [&_*]:text-[var(--sl-color-text)] [&_*]:font-semibold [&_*]:text-lg;
+  @apply **:text-(--sl-color-text) **:font-semibold **:text-lg;
   @apply p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0;
 }
 
@@ -141,11 +141,11 @@
   @apply flex flex-row flex-1;
   @apply gap-4 xl:gap-6 pl-4 xl:pl-6 pr-4 py-3;
   @apply text-sm font-medium;
-  @apply max-md:[&_*]:hidden overflow-x-auto;
+  @apply max-md:**:hidden overflow-x-auto;
 }
 
 .nova-header-nav-link {
-  @apply no-underline text-[var(--sl-color-gray-3)] hover:text-[var(--sl-color-white)];
+  @apply no-underline text-(--sl-color-gray-3) hover:text-(--sl-color-white);
   @apply p-1.5 -m-1.5 rounded-md focus-visible:outline-offset-0;
 }
 
@@ -162,13 +162,13 @@
 }
 
 .nova-search-button {
-  @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)];
+  @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-(--sl-color-text);
   @apply transition active:scale-90;
   @apply focus-visible:outline-offset-1;
 
-  @apply flex md:p-2 md:hover:bg-gray-400/10 md:rounded-md md:w-full md:max-w-88 md:h-9 md:text-[var(--sl-color-text)];
+  @apply flex md:p-2 md:hover:bg-gray-400/10 md:rounded-md md:w-full md:max-w-88 md:h-9 md:text-(--sl-color-text);
   @apply md:transition-colors;
-  @apply md:border-solid md:border-[var(--sl-color-gray-5)] md:border-1;
+  @apply md:border-solid md:border-(--sl-color-gray-5) md:border;
 }
 
 .nova-mobile-menu-footer {
@@ -176,18 +176,18 @@
 }
 
 .nova-code-copy-button {
-  @apply size-6 absolute right-2 top-2 m-0 p-1 rounded border-1 border-solid border-[var(--sl-color-gray-5)] backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50;
+  @apply size-6 absolute right-2 top-2 m-0 p-1 rounded border border-solid border-(--sl-color-gray-5) backdrop-blur-sm text-black dark:text-white bg-gray-100/30 dark:bg-gray-600/30 hover:bg-gray-200/50 hover:dark:bg-gray-500/50;
   @apply transition active:scale-90;
 }
 
 .nova-code-title {
-  @apply border-b-1 border-solid px-4 py-2 border-b-[var(--sl-color-gray-5)] font-mono text-[var(--sl-color-gray-3)] text-sm bg-[var(--sl-color-bg)] hidden [div[data-nova-code-container][data-nova-code-title]_&]:block;
+  @apply border-b border-solid px-4 py-2 border-b-(--sl-color-gray-5) font-mono text-(--sl-color-gray-3) text-sm bg-(--sl-color-bg) hidden [div[data-nova-code-container][data-nova-code-title]_&]:block;
 }
 
 .nova-code-container {
   @apply relative [&_pre]:relative overflow-hidden;
   @apply [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100;
-  @apply border-1 border-solid border-[var(--sl-color-gray-5)];
+  @apply border border-solid border-(--sl-color-gray-5);
   @apply rounded-md;
 }
 
@@ -204,21 +204,21 @@
 }
 
 .nova-icon-button {
-  @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)];
+  @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-(--sl-color-text);
   @apply transition active:scale-90;
   @apply focus-visible:outline-offset-1;
 }
 
 .nova-page-frame-sidebar-pane {
-  @apply md:border-r border-0 border-solid border-[var(--sl-color-hairline)] visible;
+  @apply md:border-r border-0 border-solid border-(--sl-color-hairline) visible;
   @apply invisible [body[data-mobile-menu-expanded]_&]:max-md:visible md:visible;
-  @apply max-md:w-full md:w-[var(--sl-sidebar-width)];
+  @apply max-md:w-full md:w-(--sl-sidebar-width);
 }
 
 .nova-link-card {
   @apply flex flex-col px-5 py-4 rounded-xl relative gap-2;
   @apply shadow-sm hover:shadow-md;
-  @apply border-1 border-solid border-[var(--sl-color-gray-5)];
+  @apply border border-solid border-(--sl-color-gray-5);
   @apply bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700;
   @apply text-gray-700 dark:text-gray-200;
   @apply transition active:scale-99;
@@ -232,7 +232,7 @@
 
 .nova-link-button {
   @apply inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2 gap-2;
-  @apply no-underline border-1 border-solid border-transparent;
+  @apply no-underline border border-solid border-transparent;
   @apply font-medium;
   @apply transition active:scale-97;
 }
@@ -244,7 +244,7 @@
 }
 
 .nova-link-button-secondary {
-  @apply border-[var(--sl-color-gray-5)];
+  @apply border-(--sl-color-gray-5);
   @apply bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700;
   @apply shadow-sm hover:shadow-md;
   @apply text-gray-700 dark:text-gray-200;
@@ -264,12 +264,12 @@
 
 .nova-pagination-link {
   @apply flex items-center justify-end p-2 rounded-xl m-0 gap-2;
-  @apply text-[var(--sl-color-gray-2)] hover:text-[var(--sl-color-white)] no-underline md:text-lg font-medium;
+  @apply text-(--sl-color-gray-2) hover:text-(--sl-color-white) no-underline md:text-lg font-medium;
   @apply transition;
-  @apply [&[rel="prev"]]:flex-row-reverse;
-  @apply [&[rel="next"]]:flex-row;
+  @apply [[rel="prev"]]:flex-row-reverse;
+  @apply [[rel="next"]]:flex-row;
 }
 
 .nova-mobile-table-of-contents {
-  @apply [&_nav]:backdrop-blur [&_summary]:border-b-[var(--sl-color-hairline)];
+  @apply [&_nav]:backdrop-blur [&_summary]:border-b-(--sl-color-hairline);
 }
