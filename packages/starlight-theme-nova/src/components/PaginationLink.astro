@@ -12,14 +12,14 @@ interface Props {
 const { label, href, rel, side } = Astro.props
 ---
 
-<a href={href} rel={rel} data-side={side} class:list={['nova-pagination-link']}>
+<a href={href} rel={rel} data-side={side} class="nova-pagination-link group">
   <span>{label}</span>
 
   {
     side === 'right' ? (
-      <ChevronRightIcon class="nova-pagination-link-icon nova-pagination-link-icon-right" />
+      <ChevronRightIcon class="min-w-5 min-h-5 block transition group-hover:translate-x-1" />
     ) : (
-      <ChevronLeftIcon class="nova-pagination-link-icon nova-pagination-link-icon-left" />
+      <ChevronLeftIcon class="min-w-5 min-h-5 block transition group-hover:-translate-x-1" />
     )
   }
 </a>
