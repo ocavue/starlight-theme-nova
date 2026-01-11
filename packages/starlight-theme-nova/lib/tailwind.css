@@ -174,10 +174,6 @@
 }
 
 
-.nova-mobile-menu-toggle-icon {
-  @apply i-lucide-menu [body[data-mobile-menu-expanded]_&]:i-lucide-x [body[data-mobile-menu-expanded]_&]:rotate-90 transition-transform;
-}
-
 .nova-mobile-menu-footer {
   @apply flex print:hidden items-center gap-2 justify-end py-4;
 }
