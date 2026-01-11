@@ -20,7 +20,7 @@ const processedHtml = processCodeTabs(originalHtml)
 </div>
 
 <style is:global>
-  @layer nova {
+  @layer utilities {
     .sl-markdown-content .code-tabs {
       overflow: hidden;
 
@@ -71,7 +71,7 @@ const processedHtml = processCodeTabs(originalHtml)
       [data-nova-code-container] {
         border-radius: 0;
         border-width: 0;
-        border-color: transparent !important; /* TODO: remove this important */
+        border-color: transparent;
       }
     }
   }
