@@ -25,7 +25,7 @@ export interface ThemeNovaOptions {
    *
    * Check https://docs.astro.build/en/guides/styling/#tailwind for how to add
    * Tailwind CSS to your Astro project.
-   * 
+   *
    * @default "detect"
    */
   stylingSystem?: 'css' | 'tailwind' | 'detect'
