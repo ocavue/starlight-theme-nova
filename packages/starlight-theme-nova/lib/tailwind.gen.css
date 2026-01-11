@@ -903,16 +903,16 @@
       display: none;
     }
   }
-  .\[\&_\.nova-code-copy-button\]\:opacity-0 {
-    & .nova-code-copy-button {
-      opacity: 0%;
-    }
-  }
   .\[\&_nav\]\:backdrop-blur {
     & nav {
       --tw-backdrop-blur: blur(8px);
       -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
       backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    }
+  }
+  .\[\&_nova-code-copy-button\]\:opacity-0 {
+    & nova-code-copy-button {
+      opacity: 0%;
     }
   }
   .\[\&_pre\]\:relative {
@@ -935,8 +935,8 @@
       width: 100%;
     }
   }
-  .\[\&\:hover_\.nova-code-copy-button\]\:opacity-100 {
-    &:hover .nova-code-copy-button {
+  .\[\&\:hover_nova-code-copy-button\]\:opacity-100 {
+    &:hover nova-code-copy-button {
       opacity: 100%;
     }
   }
@@ -1059,7 +1059,7 @@
   --sl-color-red-high: var(--color-red-800);
   --nano-color-highlight: var(--sl-color-gray-6);
 }
-.sl-markdown-content .nova-code-container pre.astro-code, .sl-markdown-content .nova-code-container pre.astro-code code {
+.sl-markdown-content [data-nova-code-container] pre.astro-code, .sl-markdown-content [data-nova-code-container] pre.astro-code code {
   border-width: 0;
   border-style: solid;
   border-color: transparent;

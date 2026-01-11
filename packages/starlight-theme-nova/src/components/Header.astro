@@ -20,9 +20,8 @@ const route = Astro.locals.starlightRoute
   <div
     class:list={[
       /* Prevent long titles overflowing and covering the search and menu buttons on narrow viewports. */
-      'overflow-clip',
       /* Avoid clipping focus ring around link inside title wrapper. */
-      '-m-3 p-3',
+      '-m-3 overflow-clip p-3',
       'flex min-w-0',
     ]}
   >

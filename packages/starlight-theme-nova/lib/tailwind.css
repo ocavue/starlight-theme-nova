@@ -103,8 +103,8 @@
   --nano-color-highlight: var(--sl-color-gray-6);
 }
 
-.sl-markdown-content .nova-code-container pre.astro-code,
-.sl-markdown-content .nova-code-container pre.astro-code code {
+.sl-markdown-content [data-nova-code-container] pre.astro-code,
+.sl-markdown-content [data-nova-code-container] pre.astro-code code {
   border-width: 0;
   border-style: solid;
   border-color: transparent;

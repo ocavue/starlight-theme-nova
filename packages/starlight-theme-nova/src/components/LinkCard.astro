@@ -20,7 +20,6 @@ const { title, description, class: className, ...attributes } = Astro.props
   <a
     class:list={[
       'inline-flex items-center justify-between text-lg font-semibold text-gray-700 no-underline dark:text-gray-200',
-
       /* a11y fix for https://github.com/withastro/starlight/issues/487 */
       "before:absolute before:inset-0 before:content-['']",
     ]}

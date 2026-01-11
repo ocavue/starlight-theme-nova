@@ -55,7 +55,7 @@ export function transformerContainer(): ShikiTransformer {
             [CODE_PROPERTY_CONTAINER]: '',
             [CODE_PROPERTY_TITLE]: title || undefined,
             class:
-              'nova-code-container not-content relative overflow-hidden [&_pre]:relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100 border border-solid border-(--sl-color-gray-5) rounded-md',
+              'not-content relative overflow-hidden [&_pre]:relative [&_nova-code-copy-button]:opacity-0 [&:hover_nova-code-copy-button]:opacity-100 border border-solid border-(--sl-color-gray-5) rounded-md',
           },
           children: [
             ...children,
