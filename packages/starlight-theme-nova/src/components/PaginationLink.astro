@@ -12,7 +12,12 @@ interface Props {
 const { label, href, rel, side } = Astro.props
 ---
 
-<a href={href} rel={rel} data-side={side} class="nova-pagination-link group">
+<a
+  href={href}
+  rel={rel}
+  data-side={side}
+  class="group m-0 flex items-center justify-end gap-2 rounded-xl p-2 font-medium text-(--sl-color-gray-2) no-underline transition hover:text-(--sl-color-white) md:text-lg [[rel='next']]:flex-row [[rel='prev']]:flex-row-reverse"
+>
   <span>{label}</span>
 
   {

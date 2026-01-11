@@ -2,8 +2,10 @@
 const { hasSidebar } = Astro.locals.starlightRoute
 ---
 
-<div class="nova-page-frame">
-  <header class="nova-page-frame-header">
+<div class="flex min-h-screen flex-col">
+  <header
+    class="fixed inset-0 z-(--sl-z-index-navbar) box-border h-(--sl-nav-height) w-full border-0 border-b border-solid border-(--sl-color-hairline) bg-(--sl-color-bg-nav) px-(--sl-nav-pad-x) py-(--sl-nav-pad-y) backdrop-blur"
+  >
     <slot name="header" />
   </header>
   {
@@ -15,7 +17,10 @@ const { hasSidebar } = Astro.locals.starlightRoute
       >
         <div
           id="starlight__sidebar"
-          class:list={['sidebar-pane', 'nova-page-frame-sidebar-pane']}
+          class:list={[
+            'sidebar-pane',
+            'invisible visible border-0 border-solid border-(--sl-color-hairline) max-md:w-full md:visible md:w-(--sl-sidebar-width) md:border-r [body[data-mobile-menu-expanded]_&]:max-md:visible',
+          ]}
         >
           <div class="sidebar-content sl-flex">
             <slot name="sidebar" />

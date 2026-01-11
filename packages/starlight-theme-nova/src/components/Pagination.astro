@@ -6,7 +6,10 @@ const { prev, next } = pagination
 const isRtl = dir === 'rtl'
 ---
 
-<div class="nova-pagination print:hidden" dir={dir}>
+<div
+  class="flex min-w-full flex-row items-stretch justify-between gap-2 px-1 pt-0 pb-6 print:hidden"
+  dir={dir}
+>
   {
     prev && (
       <PaginationLink
@@ -17,7 +20,7 @@ const isRtl = dir === 'rtl'
       />
     )
   }
-  <div class="nova-pagination-divider"></div>
+  <div class="flex-1"></div>
   {
     next && (
       <PaginationLink

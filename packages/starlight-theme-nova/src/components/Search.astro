@@ -20,7 +20,7 @@ if (project.trailingSlash === 'never')
 
 <site-search class={Astro.props.class} {...dataAttributes}>
   <button
-    class="nova-search-button"
+    class="flex size-8 rounded-md p-2 text-(--sl-color-text) transition hover:bg-gray-400/30 focus-visible:outline-offset-1 active:scale-90 md:h-9 md:w-full md:max-w-88 md:rounded-md md:border md:border-solid md:border-(--sl-color-gray-5) md:p-2 md:text-(--sl-color-text) md:transition-colors md:hover:bg-gray-400/10"
     data-open-modal
     disabled
     aria-label={Astro.locals.t('search.label')}

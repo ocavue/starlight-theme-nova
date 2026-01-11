@@ -16,30 +16,42 @@ const nav = options.nav ?? []
 const route = Astro.locals.starlightRoute
 ---
 
-<div class="nova-header">
-  <div class="nova-header-title">
+<div class="box-border flex h-full items-center gap-2">
+  <div
+    class:list={[
+      /* Prevent long titles overflowing and covering the search and menu buttons on narrow viewports. */
+      /* Avoid clipping focus ring around link inside title wrapper. */
+      '-m-3 overflow-clip p-3',
+      'flex min-w-0',
+    ]}
+  >
     <SiteTitle />
   </div>
-  <nav class="nova-header-nav">
+  <nav
+    class="flex flex-1 flex-row gap-4 overflow-x-auto py-3 pr-4 pl-4 text-sm font-medium max-md:**:hidden xl:gap-6 xl:pl-6"
+  >
     {
       nav.map((item) => (
-        <a class="nova-header-nav-link" href={getI18nText(item.href, route)}>
+        <a
+          class="-m-1.5 rounded-md p-1.5 text-(--sl-color-gray-3) no-underline hover:text-(--sl-color-white) focus-visible:outline-offset-0"
+          href={getI18nText(item.href, route)}
+        >
           {getI18nText(item.label, route)}
         </a>
       ))
     }
   </nav>
-  <div class="nova-header-search">
+  <div class="flex md:max-w-60 md:flex-1 print:hidden">
     <Search />
   </div>
-  <div class="nova-header-actions-lg">
+  <div class="hidden items-center gap-2 md:flex print:hidden">
     <SocialIcons />
     <LanguageSelect />
     <ThemeSelect />
   </div>
   {
     hasSidebar && (
-      <div class="nova-header-actions-sm">
+      <div class="flex items-center gap-2 md:hidden print:hidden">
         <MobileMenuToggle />
       </div>
     )
