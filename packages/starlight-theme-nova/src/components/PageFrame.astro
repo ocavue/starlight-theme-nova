@@ -19,10 +19,16 @@ const { hasSidebar } = Astro.locals.starlightRoute
           id="starlight__sidebar"
           class:list={[
             'sidebar-pane',
-            'invisible visible border-0 border-solid border-(--sl-color-hairline) max-md:w-full md:visible md:w-(--sl-sidebar-width) md:border-r [body[data-mobile-menu-expanded]_&]:max-md:visible',
+            'invisible border-0 border-solid border-(--sl-color-hairline) max-md:w-full md:visible md:w-(--sl-sidebar-width) md:border-r [body[data-mobile-menu-expanded]_&]:max-md:visible',
           ]}
         >
-          <div class="sidebar-content sl-flex">
+          <div
+            class:list={[
+              // The class name `sidebar-content` is used here: https://github.com/withastro/starlight/blob/5387d33b9644900afd61651b8287503698cdb065/packages/starlight/user-components/Badge.astro#L77
+              'sidebar-content',
+              'flex h-full min-h-max flex-col px-(--sl-sidebar-pad-x) py-4',
+            ]}
+          >
             <slot name="sidebar" />
           </div>
         </div>
@@ -41,14 +47,6 @@ const { hasSidebar } = Astro.locals.starlightRoute
       inset-inline-start: 0;
       background-color: var(--sl-color-black);
       overflow-y: auto;
-    }
-
-    .sidebar-content {
-      height: 100%;
-      min-height: max-content;
-      padding: 1rem var(--sl-sidebar-pad-x) 1rem;
-      flex-direction: column;
-      gap: 1rem;
     }
 
     .main-frame {
