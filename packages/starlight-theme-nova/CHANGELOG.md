@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.4
+
+### Patch Changes
+
+- 1169ff2: Update `<CodeTabs>` component styles.
+
 ## 0.11.3
 
 ### Patch Changes
