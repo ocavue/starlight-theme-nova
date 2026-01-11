@@ -1,6 +1,8 @@
 ---
 import { Icon } from '@astrojs/starlight/components'
 import type { StarlightIcon } from '@astrojs/starlight/types'
+import ArrowRightIcon from '../icons/lucide-arrow-right.svg'
+import ArrowLeftIcon from '../icons/lucide-arrow-left.svg'
 
 interface Props {
   icon: StarlightIcon
@@ -8,13 +10,15 @@ interface Props {
 
 const { icon } = Astro.props
 
-let className = ''
 
-if (icon === 'right-arrow') {
-  className = 'nova-link-button-icon-right'
-} else if (icon === 'left-arrow') {
-  className = 'nova-link-button-icon-left'
-}
 ---
 
-{className ? <div class={className} /> : <Icon name={icon} size="1.25rem" />}
+{
+  (icon === 'right-arrow') ? (
+    <ArrowRightIcon class="nova-link-button-icon-right block" />
+  ) : (icon === 'left-arrow') ? (
+    <ArrowLeftIcon class="nova-link-button-icon-left block" />
+  ) : (
+    <Icon name={icon} size="1.25rem" />
+  )
+}

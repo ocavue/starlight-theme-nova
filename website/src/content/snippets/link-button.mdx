@@ -1,8 +1,9 @@
 import { LinkButton } from 'starlight-theme-nova/components'
 
-<LinkButton href="/guide/getting-started/">Get started</LinkButton>
+<div>
+<LinkButton href="/guide/getting-started/">Primary</LinkButton>
 <LinkButton href="/guide/markdown/" variant="secondary">
-  Markdown
+  Secondary
 </LinkButton>
 <LinkButton
   href="https://docs.astro.build"
@@ -10,5 +11,10 @@ import { LinkButton } from 'starlight-theme-nova/components'
   icon="external"
   iconPlacement="start"
 >
-  Related: Astro
+  Minimal with external icon
 </LinkButton>
+</div>
+<div>
+<LinkButton href="/guide/markdown/" variant="secondary" icon="right-arrow">Right Arrow</LinkButton>
+<LinkButton href="/guide/markdown/" variant="secondary" icon="left-arrow"  iconPlacement="start"  >Left Arrow</LinkButton>
+</div>

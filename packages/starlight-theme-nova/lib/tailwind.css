@@ -218,13 +218,6 @@
   @apply size-8 overflow-visible;
 }
 
-.nova-theme-select-icon-light {
-  @apply i-tabler-sun-high-filled;
-}
-
-.nova-theme-select-icon-dark {
-  @apply i-tabler-moon-filled;
-}
 
 .nova-icon-button {
   @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)];
@@ -254,7 +247,7 @@
 }
 
 .nova-link-card-icon {
-  @apply i-lucide-arrow-right ml-2 size-5 transition [.nova-link-card:hover_&]:translate-x-1;
+  @apply ml-2 size-5 transition [.nova-link-card:hover_&]:translate-x-1;
 }
 
 .nova-link-button {
@@ -282,11 +275,11 @@
 }
 
 .nova-link-button-icon-right {
-  @apply i-lucide-arrow-right size-5 transition [.nova-link-button:hover_&]:translate-x-1;
+  @apply size-5 transition [.nova-link-button:hover_&]:translate-x-1;
 }
 
 .nova-link-button-icon-left {
-  @apply i-lucide-arrow-left size-5 transition [.nova-link-button:hover_&]:-translate-x-1;
+  @apply  size-5 transition [.nova-link-button:hover_&]:-translate-x-1;
 }
 
 .nova-pagination {

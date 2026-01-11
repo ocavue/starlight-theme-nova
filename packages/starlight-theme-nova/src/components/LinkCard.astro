@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
+import ArrowRightIcon from '../icons/lucide-arrow-right.svg'
 
 interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
   title: string
@@ -12,7 +13,9 @@ const { title, description, class: className, ...attributes } = Astro.props
 <div class:list={['nova-link-card not-content', className]}>
   <a class="nova-link-card-link" {...attributes}>
     <span set:html={title} />
-    <div class="nova-link-card-icon"></div>
+    <div class="nova-link-card-icon">
+      <ArrowRightIcon class="size-5" />
+    </div>
   </a>
   {description && <span set:html={description} />}
 </div>
