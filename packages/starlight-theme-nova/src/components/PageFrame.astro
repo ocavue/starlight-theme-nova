@@ -18,11 +18,20 @@ const { hasSidebar } = Astro.locals.starlightRoute
         <div
           id="starlight__sidebar"
           class:list={[
-            'sidebar-pane',
-            'invisible visible border-0 border-solid border-(--sl-color-hairline) max-md:w-full md:visible md:w-(--sl-sidebar-width) md:border-r [body[data-mobile-menu-expanded]_&]:max-md:visible',
+            'nova-scroll-container',
+
+            'invisible md:visible [body[data-mobile-menu-expanded]_&]:max-md:visible',
+
+            'fixed top-(--sl-nav-height) bottom-0 left-0 z-(--sl-z-index-menu) overflow-y-auto border-0 border-solid border-(--sl-color-hairline) bg-(--sl-color-black) max-md:w-full md:w-(--sl-sidebar-width) md:border-r',
           ]}
         >
-          <div class="sidebar-content sl-flex">
+          <div
+            class:list={[
+              // The class name `sidebar-content` is used here: https://github.com/withastro/starlight/blob/5387d33b9644900afd61651b8287503698cdb065/packages/starlight/user-components/Badge.astro#L77
+              'sidebar-content',
+              'flex h-full min-h-max flex-col px-(--sl-sidebar-pad-x) py-4',
+            ]}
+          >
             <slot name="sidebar" />
           </div>
         </div>
@@ -34,23 +43,6 @@ const { hasSidebar } = Astro.locals.starlightRoute
 
 <style>
   @layer nova {
-    .sidebar-pane {
-      position: fixed;
-      z-index: var(--sl-z-index-menu);
-      inset-block: var(--sl-nav-height) 0;
-      inset-inline-start: 0;
-      background-color: var(--sl-color-black);
-      overflow-y: auto;
-    }
-
-    .sidebar-content {
-      height: 100%;
-      min-height: max-content;
-      padding: 1rem var(--sl-sidebar-pad-x) 1rem;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
     .main-frame {
       padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
       padding-inline-start: var(--sl-content-inline-start);

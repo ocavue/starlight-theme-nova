@@ -110,3 +110,8 @@
   border-color: transparent;
   border-radius: 0;
 }
+
+@utility nova-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-5) transparent;
+}
