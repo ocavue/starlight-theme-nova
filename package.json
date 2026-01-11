@@ -8,8 +8,13 @@
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
     "build": "pnpm -r run build",
-    "lint": "eslint .",
-    "fix": "eslint --fix . && prettier --write .",
+    "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+    "lint:eslint": "eslint --cache .",
+    "lint:prettier": "prettier --cache --check .",
+    "fix": "pnpm run fix:eslint && pnpm run fix:prettier && pnpm run build:tailwindcss",
+    "fix:eslint": "eslint --cache --fix .",
+    "fix:prettier": "prettier --cache --write .",
+    "build:tailwindcss": "pnpm --filter ./packages/starlight-theme-nova run build",
     "prepublishOnly": "pnpm run build",
     "typecheck": "tsc -b",
     "change": "changeset",
@@ -25,6 +30,7 @@
     "pkg-pr-new": "^0.0.60",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "^5.9.3"
   }
 }

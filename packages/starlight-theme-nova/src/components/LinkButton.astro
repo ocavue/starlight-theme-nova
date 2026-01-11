@@ -19,7 +19,12 @@ const {
 } = Astro.props
 ---
 
-<span class="not-content inline-flex justify-center items-center align-middle">
+<span
+  class:list={[
+    'not-content',
+    'inline-flex items-center justify-center align-middle',
+  ]}
+>
   <a
     class:list={[
       'nova-link-button group not-content',

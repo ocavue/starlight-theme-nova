@@ -10,7 +10,7 @@ interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
 const { title, description, class: className, ...attributes } = Astro.props
 ---
 
-<div class:list={['nova-link-card not-content group', className]}>
+<div class:list={['nova-link-card', 'not-content', 'group', className]}>
   <a class="nova-link-card-link" {...attributes}>
     <span set:html={title} />
     <ArrowRightIcon class="ml-2 size-5 transition group-hover:translate-x-1" />
