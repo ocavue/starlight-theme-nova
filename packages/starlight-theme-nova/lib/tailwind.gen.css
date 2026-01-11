@@ -476,15 +476,15 @@
   }
 }
 .nova-site-title {
-  & * {
+  :is(& *) {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
-  & * {
+  :is(& *) {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  & * {
+  :is(& *) {
     color: var(--sl-color-text);
   }
   margin: calc(var(--spacing) * -1.5);
@@ -528,7 +528,7 @@
   font-weight: var(--font-weight-medium);
   overflow-x: auto;
   @media (width < 48rem) {
-    & * {
+    :is(& *) {
       display: none;
     }
   }
@@ -1037,10 +1037,10 @@
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
-  &[rel="prev"] {
+  &:is([rel="prev"]) {
     flex-direction: row-reverse;
   }
-  &[rel="next"] {
+  &:is([rel="next"]) {
     flex-direction: row;
   }
 }
