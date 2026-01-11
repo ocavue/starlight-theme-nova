@@ -18,7 +18,7 @@ export default defineConfig({
           label: 'English',
           lang: 'en',
         },
-        'zh-cn': {
+        'zh-CN': {
           label: '简体中文',
           lang: 'zh-CN',
         },
@@ -30,17 +30,17 @@ export default defineConfig({
             {
               label: {
                 root: 'Docs',
-                'zh-cn': '文档',
+                'zh-CN': '文档',
               },
               href: {
                 root: '/guide/getting-started/',
-                'zh-cn': '/zh-cn/guide/getting-started/',
+                'zh-CN': '/zh-cn/guide/getting-started/',
               },
             },
             {
               label: {
                 root: 'Changelog',
-                'zh-cn': '更新日志',
+                'zh-CN': '更新日志',
               },
               href: 'https://github.com/ocavue/starlight-theme-nova/blob/master/packages/starlight-theme-nova/CHANGELOG.md',
             },
