@@ -38,9 +38,18 @@ export default function starlightThemeNova(
     name: 'starlight-theme-nova',
     hooks: {
       setup: async ({ config, updateConfig, addIntegration, astroConfig }) => {
-        const hasTailwindcss = await checkHasTailwindcss(
-          astroConfig.vite?.plugins,
-        )
+        let useTailwind: boolean
+
+        if (options.stylingSystem === 'css') {
+          useTailwind = false
+        } else if (options.stylingSystem === 'tailwind') {
+          useTailwind = true
+        } else {
+          const hasTailwindcss = await checkHasTailwindcss(
+            astroConfig.vite?.plugins,
+          )
+          useTailwind = hasTailwindcss
+        }
 
         const newConfig = {
           customCss: [
@@ -48,7 +57,7 @@ export default function starlightThemeNova(
             // Including nova styles *after* any user CSS, so that @layer nova
             // can have a higher precedence.
             'starlight-theme-nova/styles.css',
-            hasTailwindcss
+            useTailwind
               ? 'starlight-theme-nova/tailwind.css'
               : 'starlight-theme-nova/tailwind.gen.css',
           ],
