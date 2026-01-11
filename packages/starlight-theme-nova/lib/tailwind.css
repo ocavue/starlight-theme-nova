@@ -187,14 +187,7 @@
   @apply transition active:scale-90;
 }
 
-.nova-code-copy-button-icon-clipboard {
-  @apply w-full h-full block i-lucide-clipboard;
-}
-
-.nova-code-copy-button-icon-check {
-  @apply w-full h-full block i-lucide-check;
-}
-
+ 
 .nova-code-title {
   @apply border-b-1 border-solid px-4 py-2 border-b-[var(--sl-color-gray-5)] font-mono text-[var(--sl-color-gray-3)] text-sm bg-[var(--sl-color-bg)] hidden [div[data-nova-code-container][data-nova-code-title]_&]:block;
 }
