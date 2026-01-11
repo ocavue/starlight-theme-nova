@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "dev": "unocss -w",
-    "build": "unocss"
+    "build": "pnpm run build:tailwindcss",
+    "build:tailwindcss": "tailwindcss -i ./lib/tailwind.css -o ./lib/tailwind.gen.css"
   },
   "dependencies": {
     "@aria-ui/core": "^0.0.22",
