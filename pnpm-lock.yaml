@@ -75,18 +75,6 @@ importers:
       '@astrojs/starlight':
         specifier: ^0.36.2
         version: 0.36.2(astro@5.15.4(@types/node@20.17.57)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.36.0)(typescript@5.9.3))
-      '@iconify-json/bxl':
-        specifier: ^1.2.2
-        version: 1.2.2
-      '@iconify-json/logos':
-        specifier: ^1.2.10
-        version: 1.2.10
-      '@iconify-json/lucide':
-        specifier: ^1.2.72
-        version: 1.2.72
-      '@iconify-json/tabler':
-        specifier: ^1.2.23
-        version: 1.2.23
       '@ocavue/tsconfig':
         specifier: ^0.5.0
         version: 0.5.0
@@ -646,21 +634,6 @@ packages:
   '@humanwhocodes/retry@0.4.2':
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
-
-  '@iconify-json/bxl@1.2.2':
-    resolution: {integrity: sha512-+cSX1abFQ2Q8jK9IdLHC05luZYq3zgNFqXsiEcKyigUdIEmGQNQp4xjnsCUmOYFvHrV7C1/D0wr/Lm/stAD3tw==}
-
-  '@iconify-json/logos@1.2.10':
-    resolution: {integrity: sha512-qxaXKJ6fu8jzTMPQdHtNxlfx6tBQ0jXRbHZIYy5Ilh8Lx9US9FsAdzZWUR8MXV8PnWTKGDFO4ZZee9VwerCyMA==}
-
-  '@iconify-json/lucide@1.2.72':
-    resolution: {integrity: sha512-kq/ZDUtCdBfjGxIMaUI+Ctt3dC/0sHmrUyTU1i04+8ehlo3/PUGKqrJd4C9J/kQl1jfcHpaUPqGUFvgZ9orhQg==}
-
-  '@iconify-json/tabler@1.2.23':
-    resolution: {integrity: sha512-Knb8ykgMwB5uSoqrDv1xIdJYM03OP06OXjN6QvGXaTNtdHkW9ciKA+aftz6lwM2jwJA+bsUWeDzLBlPt2uJm4w==}
-
-  '@iconify/types@2.0.0':
-    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@img/colour@1.0.0':
     resolution: {integrity: sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw==}
@@ -5022,24 +4995,6 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.2': {}
-
-  '@iconify-json/bxl@1.2.2':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/logos@1.2.10':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/lucide@1.2.72':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/tabler@1.2.23':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify/types@2.0.0': {}
 
   '@img/colour@1.0.0': {}
 
