@@ -3,6 +3,15 @@
 @source '../src/**/*.ts';
 @source '../src/**/*.astro';
 
+@theme {
+  /* 
+   Match Starlight breakpoints 
+   https://github.com/withastro/starlight/blob/893be3b4a106ab75b706142bbd06b00268ccc298/packages/starlight/style/util.css#L22-L43 
+  */
+  --breakpoint-md: 50rem;
+  --breakpoint-lg: 72rem;
+}
+
 :root,
 ::backdrop {
   --sl-content-width: 50rem;
