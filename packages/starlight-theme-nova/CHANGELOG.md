@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.3
+
+### Patch Changes
+
+- 7a0187b: Update Tailwind CSS installation instructions.
+
 ## 0.11.2
 
 ### Patch Changes
