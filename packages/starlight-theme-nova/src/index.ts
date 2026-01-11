@@ -56,8 +56,8 @@ export default function starlightThemeNova(
             useTailwind
               ? 'starlight-theme-nova/tailwind.css'
               : 'starlight-theme-nova/tailwind.gen.css',
-              'starlight-theme-nova/styles.css',
             ...(config.customCss || []),
+            'starlight-theme-nova/styles.css',
           ],
           components: {
             // Including any user components *after* our own.
