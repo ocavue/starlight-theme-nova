@@ -19,8 +19,13 @@ const { hasSidebar } = Astro.locals.starlightRoute
           id="starlight__sidebar"
           class:list={[
             'sidebar-pane',
-            'nova-scroll-container', 
-            'invisible border-0 border-solid border-(--sl-color-hairline) max-md:w-full md:visible md:w-(--sl-sidebar-width) md:border-r [body[data-mobile-menu-expanded]_&]:max-md:visible',
+            'nova-scroll-container',
+
+            
+            'invisible md:visible [body[data-mobile-menu-expanded]_&]:max-md:visible',
+
+            // TODO: move the .sidebar-pane CSS in <style> to tailwind utility class name in the following line:
+            'border-0 border-solid border-(--sl-color-hairline) max-md:w-full md:w-(--sl-sidebar-width) md:border-r',
           ]}
         >
           <div
@@ -28,7 +33,6 @@ const { hasSidebar } = Astro.locals.starlightRoute
               // The class name `sidebar-content` is used here: https://github.com/withastro/starlight/blob/5387d33b9644900afd61651b8287503698cdb065/packages/starlight/user-components/Badge.astro#L77
               'sidebar-content',
               'flex h-full min-h-max flex-col px-(--sl-sidebar-pad-x) py-4',
-              
             ]}
           >
             <slot name="sidebar" />
