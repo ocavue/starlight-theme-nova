@@ -18,14 +18,11 @@ const { hasSidebar } = Astro.locals.starlightRoute
         <div
           id="starlight__sidebar"
           class:list={[
-            'sidebar-pane',
             'nova-scroll-container',
 
-            
             'invisible md:visible [body[data-mobile-menu-expanded]_&]:max-md:visible',
 
-            // TODO: move the .sidebar-pane CSS in <style> to tailwind utility class name in the following line:
-            'border-0 border-solid border-(--sl-color-hairline) max-md:w-full md:w-(--sl-sidebar-width) md:border-r',
+            'fixed top-(--sl-nav-height) bottom-0 left-0 z-(--sl-z-index-menu) overflow-y-auto border-0 border-solid border-(--sl-color-hairline) bg-(--sl-color-black) max-md:w-full md:w-(--sl-sidebar-width) md:border-r',
           ]}
         >
           <div
@@ -46,15 +43,6 @@ const { hasSidebar } = Astro.locals.starlightRoute
 
 <style>
   @layer nova {
-    .sidebar-pane {
-      position: fixed;
-      z-index: var(--sl-z-index-menu);
-      inset-block: var(--sl-nav-height) 0;
-      inset-inline-start: 0;
-      background-color: var(--sl-color-black);
-      overflow-y: auto;
-    }
-
     .main-frame {
       padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
       padding-inline-start: var(--sl-content-inline-start);
