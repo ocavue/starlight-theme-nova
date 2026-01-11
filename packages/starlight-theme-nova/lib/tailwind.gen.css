@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -1092,6 +1092,10 @@
   border-style: solid;
   border-color: transparent;
   border-radius: 0;
+}
+.sl-markdown-content .code-tabs .tablist-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-5) transparent;
 }
 @property --tw-rotate-x {
   syntax: "*";
