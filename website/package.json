@@ -19,5 +19,8 @@
     "sharp": "^0.34.5",
     "starlight-theme-nova": "workspace:*",
     "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "astro-minify-html-swc": "^0.1.10"
   }
 }

@@ -1,13 +1,13 @@
 ---
 import project from 'virtual:starlight/project-context'
-import SearchIcon from '../icons/lucide/search.svg'
+import SearchIcon from '../icons/lucide-search.svg'
 
 const pagefindTranslations = {
   placeholder: Astro.locals.t('search.label'),
   ...Object.fromEntries(
     Object.entries(Astro.locals.t.all())
       .filter(([key]) => key.startsWith('pagefind.'))
-      .map(([key, value]) => [key.replace('pagefind.', ''), value]),
+      .map(([key, value]) => [key.replace('pagefind.', ''), value])
   ),
 }
 
@@ -26,7 +26,7 @@ if (project.trailingSlash === 'never')
     aria-label={Astro.locals.t('search.label')}
     aria-keyshortcuts="Control+K"
   >
-   <SearchIcon class="size-4" /> 
+    <SearchIcon class="size-4" />
     <span class="sl-hidden md:sl-block" aria-hidden="true"
       >{Astro.locals.t('search.label')}</span
     >
@@ -89,10 +89,10 @@ if (project.trailingSlash === 'never')
     constructor() {
       super()
       const openBtn = this.querySelector<HTMLButtonElement>(
-        'button[data-open-modal]',
+        'button[data-open-modal]'
       )!
       const closeBtn = this.querySelector<HTMLButtonElement>(
-        'button[data-close-modal]',
+        'button[data-close-modal]'
       )!
       const dialog = this.querySelector('dialog')!
       const dialogFrame = this.querySelector('.dialog-frame')!

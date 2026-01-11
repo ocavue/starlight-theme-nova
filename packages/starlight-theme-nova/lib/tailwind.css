@@ -173,9 +173,6 @@
   @apply md:border-solid md:border-[var(--sl-color-gray-5)] md:border-1;
 }
 
-.nova-search-button-icon {
-  @apply i-lucide-search;
-}
 
 .nova-mobile-menu-toggle-icon {
   @apply i-lucide-menu [body[data-mobile-menu-expanded]_&]:i-lucide-x [body[data-mobile-menu-expanded]_&]:rotate-90 transition-transform;
