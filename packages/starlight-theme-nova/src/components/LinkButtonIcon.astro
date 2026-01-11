@@ -13,9 +13,9 @@ const { icon } = Astro.props
 
 {
   icon === 'right-arrow' ? (
-    <ArrowRightIcon class="nova-link-button-icon-right block" />
+    <ArrowRightIcon class="size-5 transition block group-hover:translate-x-1" />
   ) : icon === 'left-arrow' ? (
-    <ArrowLeftIcon class="nova-link-button-icon-left block" />
+    <ArrowLeftIcon class="size-5 transition block group-hover:-translate-x-1" />
   ) : (
     <Icon name={icon} size="1.25rem" />
   )

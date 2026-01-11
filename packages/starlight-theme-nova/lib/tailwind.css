@@ -230,10 +230,6 @@
   @apply before:content-[''] before:absolute before:inset-0;
 }
 
-.nova-link-card-icon {
-  @apply ml-2 size-5 transition [.nova-link-card:hover_&]:translate-x-1;
-}
-
 .nova-link-button {
   @apply inline-flex items-center justify-between px-6 py-3 rounded-xl me-2 mt-2 mb-2 gap-2;
   @apply no-underline border-1 border-solid border-transparent;
@@ -258,14 +254,6 @@
   @apply text-gray-700 dark:text-gray-200;
 }
 
-.nova-link-button-icon-right {
-  @apply size-5 transition [.nova-link-button:hover_&]:translate-x-1;
-}
-
-.nova-link-button-icon-left {
-  @apply size-5 transition [.nova-link-button:hover_&]:-translate-x-1;
-}
-
 .nova-pagination {
   @apply flex gap-2 justify-between flex-row items-stretch pt-0 pb-6 px-1 min-w-full;
 }
@@ -280,19 +268,6 @@
   @apply transition;
   @apply [&[rel="prev"]]:flex-row-reverse;
   @apply [&[rel="next"]]:flex-row;
-}
-
-.nova-pagination-link-icon {
-  @apply min-w-5 min-h-5 block;
-  @apply transition;
-}
-
-.nova-pagination-link-icon-right {
-  @apply [.nova-pagination-link:hover_&]:translate-x-1;
-}
-
-.nova-pagination-link-icon-left {
-  @apply [.nova-pagination-link:hover_&]:-translate-x-1;
 }
 
 .nova-mobile-table-of-contents {
