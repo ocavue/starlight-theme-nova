@@ -53,10 +53,14 @@ export default function starlightThemeNova(
 
         const newConfig = {
           customCss: [
+            // Ensure Tailwind is loaded before any user CSS, so that the
+            // Tailwind specific directives like `@source` in user CSS will take
+            // effect.
             useTailwind
               ? 'starlight-theme-nova/tailwind.css'
               : 'starlight-theme-nova/tailwind.gen.css',
             ...(config.customCss || []),
+
             'starlight-theme-nova/styles.css',
           ],
           components: {
