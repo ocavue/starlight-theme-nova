@@ -26,7 +26,6 @@
     "src"
   ],
   "scripts": {
-    "dev": "unocss -w",
     "build": "pnpm run build:tailwindcss",
     "build:tailwindcss": "tailwindcss -i ./lib/tailwind.css -o ./lib/tailwind.gen.css"
   },
@@ -62,11 +61,8 @@
     "@tailwindcss/cli": "^4.1.17",
     "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^20.17.30",
-    "@unocss/cli": "^66.5.5",
     "astro": "^5.15.4",
     "tailwindcss": "^4.1.17",
-    "typescript": "^5.9.3",
-    "unocss": "^66.5.5",
-    "unocss-preset-animations": "^1.3.0"
+    "typescript": "^5.9.3"
   }
 }
