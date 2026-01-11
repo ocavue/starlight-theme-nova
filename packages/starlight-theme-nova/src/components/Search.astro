@@ -7,7 +7,7 @@ const pagefindTranslations = {
   ...Object.fromEntries(
     Object.entries(Astro.locals.t.all())
       .filter(([key]) => key.startsWith('pagefind.'))
-      .map(([key, value]) => [key.replace('pagefind.', ''), value])
+      .map(([key, value]) => [key.replace('pagefind.', ''), value]),
   ),
 }
 
@@ -89,10 +89,10 @@ if (project.trailingSlash === 'never')
     constructor() {
       super()
       const openBtn = this.querySelector<HTMLButtonElement>(
-        'button[data-open-modal]'
+        'button[data-open-modal]',
       )!
       const closeBtn = this.querySelector<HTMLButtonElement>(
-        'button[data-close-modal]'
+        'button[data-close-modal]',
       )!
       const dialog = this.querySelector('dialog')!
       const dialogFrame = this.querySelector('.dialog-frame')!

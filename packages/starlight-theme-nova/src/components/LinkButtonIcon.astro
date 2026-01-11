@@ -9,14 +9,12 @@ interface Props {
 }
 
 const { icon } = Astro.props
-
-
 ---
 
 {
-  (icon === 'right-arrow') ? (
+  icon === 'right-arrow' ? (
     <ArrowRightIcon class="nova-link-button-icon-right block" />
-  ) : (icon === 'left-arrow') ? (
+  ) : icon === 'left-arrow' ? (
     <ArrowLeftIcon class="nova-link-button-icon-left block" />
   ) : (
     <Icon name={icon} size="1.25rem" />

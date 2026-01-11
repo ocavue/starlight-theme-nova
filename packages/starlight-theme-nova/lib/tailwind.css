@@ -172,7 +172,6 @@
   @apply md:border-solid md:border-[var(--sl-color-gray-5)] md:border-1;
 }
 
-
 .nova-mobile-menu-footer {
   @apply flex print:hidden items-center gap-2 justify-end py-4;
 }
@@ -182,7 +181,6 @@
   @apply transition active:scale-90;
 }
 
- 
 .nova-code-title {
   @apply border-b-1 border-solid px-4 py-2 border-b-[var(--sl-color-gray-5)] font-mono text-[var(--sl-color-gray-3)] text-sm bg-[var(--sl-color-bg)] hidden [div[data-nova-code-container][data-nova-code-title]_&]:block;
 }
@@ -205,7 +203,6 @@
 .nova-theme-select {
   @apply size-8 overflow-visible;
 }
-
 
 .nova-icon-button {
   @apply flex p-2 hover:bg-gray-400/30 rounded-md size-8 text-[var(--sl-color-text)];
@@ -267,7 +264,7 @@
 }
 
 .nova-link-button-icon-left {
-  @apply  size-5 transition [.nova-link-button:hover_&]:-translate-x-1;
+  @apply size-5 transition [.nova-link-button:hover_&]:-translate-x-1;
 }
 
 .nova-pagination {
