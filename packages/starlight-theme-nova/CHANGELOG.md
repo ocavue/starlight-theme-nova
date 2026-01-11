@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.2
+
+### Patch Changes
+
+- 56dc52a: Fix dark mode.
+
 ## 0.11.1
 
 ### Patch Changes
