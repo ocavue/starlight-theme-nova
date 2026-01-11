@@ -27,11 +27,14 @@ const {
 >
   <a
     class:list={[
-      'nova-link-button group not-content',
+      'not-content',
+      'group me-2 mt-2 mb-2 inline-flex items-center justify-between gap-2 rounded-xl border border-solid border-transparent px-6 py-3 font-medium no-underline transition active:scale-97',
       {
-        'nova-link-button-primary': variant === 'primary',
-        'nova-link-button-secondary': variant === 'secondary',
-        'nova-link-button-minimal': variant === 'minimal',
+        'bg-black text-white shadow-sm hover:bg-gray-800 hover:shadow-md dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300':
+          variant === 'primary',
+        'border-(--sl-color-gray-5) bg-white text-gray-700 shadow-sm hover:bg-gray-50 hover:shadow-md dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700':
+          variant === 'secondary',
+        'text-gray-700 dark:text-gray-200': variant === 'minimal',
       },
       className,
     ]}

@@ -10,8 +10,22 @@ interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
 const { title, description, class: className, ...attributes } = Astro.props
 ---
 
-<div class:list={['nova-link-card', 'not-content', 'group', className]}>
-  <a class="nova-link-card-link" {...attributes}>
+<div
+  class:list={[
+    'not-content',
+    'group relative flex flex-col gap-2 rounded-xl border border-solid border-(--sl-color-gray-5) bg-white px-5 py-4 text-gray-700 shadow-sm transition hover:bg-gray-50 hover:shadow-md active:scale-99 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700',
+    className,
+  ]}
+>
+  <a
+    class:list={[
+      'inline-flex items-center justify-between text-lg font-semibold text-gray-700 no-underline dark:text-gray-200',
+
+      /* a11y fix for https://github.com/withastro/starlight/issues/487 */
+      "before:absolute before:inset-0 before:content-['']",
+    ]}
+    {...attributes}
+  >
     <span set:html={title} />
     <ArrowRightIcon class="ml-2 size-5 transition group-hover:translate-x-1" />
   </a>

@@ -35,7 +35,8 @@ export function transformerContainer(): ShikiTransformer {
           type: 'element',
           tagName: 'div',
           properties: {
-            class: 'nova-code-title',
+            class:
+              'hidden border-b border-solid border-b-(--sl-color-gray-5) bg-(--sl-color-bg) px-4 py-2 font-mono text-sm text-(--sl-color-gray-3) [div[data-nova-code-container][data-nova-code-title]_&]:block',
           },
           children: [
             {
@@ -53,7 +54,8 @@ export function transformerContainer(): ShikiTransformer {
           properties: {
             [CODE_PROPERTY_CONTAINER]: '',
             [CODE_PROPERTY_TITLE]: title || undefined,
-            class: 'nova-code-container not-content',
+            class:
+              'nova-code-container not-content relative overflow-hidden [&_pre]:relative [&_.nova-code-copy-button]:opacity-0 [&:hover_.nova-code-copy-button]:opacity-100 border border-solid border-(--sl-color-gray-5) rounded-md',
           },
           children: [
             ...children,
@@ -65,7 +67,8 @@ export function transformerContainer(): ShikiTransformer {
                 'data-code': this.source,
                 title: 'Copy code',
                 'aria-label': 'Copy code',
-                class: 'nova-code-copy-button',
+                class:
+                  'absolute top-2 right-2 m-0 size-6 rounded border border-solid border-(--sl-color-gray-5) bg-gray-100/30 p-1 text-black backdrop-blur-sm hover:bg-gray-200/50 dark:bg-gray-600/30 dark:text-white hover:dark:bg-gray-500/50 transition active:scale-90',
               },
               children: [],
             },
