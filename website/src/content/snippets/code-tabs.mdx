@@ -11,4 +11,29 @@ import { CodeTabItem, CodeTabs } from 'starlight-theme-nova/components'
     lang="ts"
     code={`function (): void {\n  console.log('Hello, TS!')\n}`}
   />
+  <CodeTabItem
+    label="styles/global.css"
+    lang="css"
+    code={`.my-class {\n  background-color: red;\n}`}
+  />
+  <CodeTabItem
+    label="package.json"
+    lang="json"
+    code={JSON.stringify(
+      {
+        name: 'my-project',
+        version: '1.0.0',
+        description: 'My project',
+        main: 'index.js',
+        scripts: {
+          dev: 'astro dev',
+          build: 'astro build',
+        },
+        author: 'John Doe',
+        license: 'MIT',
+      },
+      null,
+      2,
+    )}
+  />
 </CodeTabs>

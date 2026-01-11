@@ -36,13 +36,17 @@ const processedHtml = processCodeTabs(originalHtml)
       .tablist-wrapper {
         [role='tab'] {
           font-family: var(--sl-font-system-mono);
-          padding-top: 0.5rem;
-          padding-bottom: 0.25rem;
+          padding-top: 0.6rem;
+          padding-bottom: 0.6rem;
           padding-left: 0.75rem;
           padding-right: 0.75rem;
           font-size: 0.875rem;
           white-space: nowrap;
         }
+      }
+
+      starlight-tabs {
+        margin-top: 0rem;
       }
 
       div[role='tabpanel'] {
