@@ -3,7 +3,6 @@
 
 @source "../src/**/*.ts";
 @source "../src/**/*.astro";
-@plugin '@egoist/tailwindcss-icons';
 
 :root,
 ::backdrop {

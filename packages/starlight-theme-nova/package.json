@@ -54,7 +54,6 @@
   },
   "devDependencies": {
     "@astrojs/starlight": "^0.36.2",
-    "@egoist/tailwindcss-icons": "^1.9.0",
     "@iconify-json/bxl": "^1.2.2",
     "@iconify-json/logos": "^1.2.10",
     "@iconify-json/lucide": "^1.2.72",
