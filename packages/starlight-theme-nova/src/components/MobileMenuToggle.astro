@@ -4,12 +4,12 @@ import XIcon from '../icons/lucide-x.svg'
 ---
 
 <nova-mobile-menu-toggle
-  class="print:hidden nova-icon-button"
+  class="nova-icon-button print:hidden"
   aria-label={Astro.locals.t('menuButton.accessibleLabel')}
   aria-controls="starlight__sidebar"
 >
   <div
-    class="[body[data-mobile-menu-expanded]_&]:rotate-90 transition-transform"
+    class="transition-transform [body[data-mobile-menu-expanded]_&]:rotate-90"
   >
     <MenuIcon class="block [body[data-mobile-menu-expanded]_&]:hidden" />
     <XIcon class="hidden [body[data-mobile-menu-expanded]_&]:block" />
