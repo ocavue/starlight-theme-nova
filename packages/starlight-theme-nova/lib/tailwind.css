@@ -3,6 +3,8 @@
 @source '../src/**/*.ts';
 @source '../src/**/*.astro';
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme {
   /* 
    Match Starlight breakpoints 
@@ -10,6 +12,15 @@
   */
   --breakpoint-md: 50rem;
   --breakpoint-lg: 72rem;
+}
+
+@layer utilities {
+  /* Wire up Starlight theme to use Tailwind config. */
+  :root {
+    /* Use Tailwind-configured font families. */
+    --sl-font: var(--font-sans);
+    --sl-font-mono: var(--font-mono);
+  }
 }
 
 :root,
