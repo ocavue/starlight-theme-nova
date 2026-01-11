@@ -940,6 +940,16 @@
       opacity: 100%;
     }
   }
+  .\[\[rel\=\'next\'\]\]\:flex-row {
+    &:is([rel='next']) {
+      flex-direction: row;
+    }
+  }
+  .\[\[rel\=\'prev\'\]\]\:flex-row-reverse {
+    &:is([rel='prev']) {
+      flex-direction: row-reverse;
+    }
+  }
   .\[body\[data-mobile-menu-expanded\]_\&\]\:block {
     body[data-mobile-menu-expanded] & {
       display: block;
