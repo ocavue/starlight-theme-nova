@@ -277,6 +277,23 @@
   .box-border {
     box-sizing: border-box;
   }
+  .nova-scroll-container {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: red;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-corner {
+      display: none;
+    }
+    scrollbar-width: thin;
+  }
   .block {
     display: block;
   }
@@ -319,6 +336,9 @@
   }
   .min-h-5 {
     min-height: calc(var(--spacing) * 5);
+  }
+  .min-h-max {
+    min-height: max-content;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -455,6 +475,9 @@
   }
   .px-\(--sl-nav-pad-x\) {
     padding-inline: var(--sl-nav-pad-x);
+  }
+  .px-\(--sl-sidebar-pad-x\) {
+    padding-inline: var(--sl-sidebar-pad-x);
   }
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
