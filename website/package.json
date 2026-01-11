@@ -13,12 +13,12 @@
     "postinstall": "astro sync"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.36.2",
-    "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.15.4",
+    "@astrojs/starlight": "^0.37.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.8",
     "sharp": "^0.34.5",
     "starlight-theme-nova": "workspace:*",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "astro-minify-html-swc": "^0.1.10"
