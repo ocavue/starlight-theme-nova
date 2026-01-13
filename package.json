@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
-    "@ocavue/eslint-config": "^3.9.1",
+    "@ocavue/eslint-config": "^3.9.2",
     "@ocavue/tsconfig": "^0.6.2",
     "@types/node": "^20.17.30",
     "eslint": "^9.39.2",
