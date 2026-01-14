@@ -15,7 +15,7 @@
   "dependencies": {
     "@astrojs/starlight": "^0.37.2",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.16.8",
+    "astro": "^5.16.9",
     "sharp": "^0.34.5",
     "starlight-theme-nova": "workspace:*",
     "tailwindcss": "^4.1.18"
