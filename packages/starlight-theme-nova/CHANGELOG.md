@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.5
+
+### Patch Changes
+
+- a76a357: Fix an issue that link underline in the markdown content is not applied.
+
 ## 0.11.4
 
 ### Patch Changes
