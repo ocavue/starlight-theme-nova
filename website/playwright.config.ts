@@ -42,7 +42,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'pnpm run build && pnpm run preview',
+    command: process.env.CI ? 'pnpm run preview' : 'pnpm run build && pnpm run preview',
     url: 'http://localhost:4321',
     reuseExistingServer: !process.env.CI,
   },
