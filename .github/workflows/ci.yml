@@ -73,16 +73,19 @@ jobs:
         if: steps.test.outcome == 'failure'
         run: pnpm run test:update
 
-      - name: Commit and push snapshot changes
+      - name: Configure git
         if: steps.test.outcome == 'failure' && github.ref != 'refs/heads/master'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Commit and push snapshot changes
+        if: steps.test.outcome == 'failure' && github.ref != 'refs/heads/master'
+        run: |
           # Commit and push one file at a time
           for file in $(git status --porcelain | awk '{print $2}'); do
             git add "$file"
-            git commit -m "chore: update snapshot $file"
+            git commit -m "chore: update snapshot $file [skip ci]"
             git pull --rebase
             git push
           done
