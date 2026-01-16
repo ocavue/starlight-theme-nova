@@ -15,14 +15,8 @@ const paths = [
   '/zh-cn/',
 ]
 
-const pages = paths.map((path) => {
-  return {
-    path,
-    name: path === '/' ? 'home' : slugify(path),
-  }
-})
-
-for (const { path, name } of pages) {
+for (const path of paths) {
+  const name = path === '/' ? 'home' : slugify(path)
   test(`screenshot ${name}`, async ({ page }) => {
     await page.goto(path)
     await page.waitForLoadState('networkidle')
