@@ -1,33 +1,31 @@
-@layer nova {
-  .sl-markdown-content {
-    /* Style the Markdown heading links. */
-    :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *)) > a {
-      color: var(--sl-color-white);
-      text-decoration: none;
+.sl-markdown-content {
+  /* Style the Markdown heading links. */
+  :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *)) > a {
+    color: var(--sl-color-white);
+    text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    code:not(:where(.not-content *)) {
-      border-radius: 0.25rem;
-      border-style: solid;
-      border-width: 1px;
-      border-color: var(--sl-color-border-inline-code);
-      padding: 0.125rem 0.25rem;
-    }
-
-    a:not(:where(.not-content *)) {
-      text-underline-offset: 0.25em;
+    &:hover {
       text-decoration: underline;
     }
   }
 
-  /* <code> inside asides */
-  @supports (border-color: color-mix(in srgb, var(--sl-color-asides-text-accent) 12%, transparent)) {
-    .sl-markdown-content .starlight-aside code:not(:where(.not-content *)) {
-      border-color: color-mix(in srgb, var(--sl-color-asides-text-accent) 12%, transparent);
-    }
+  code:not(:where(.not-content *)) {
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--sl-color-border-inline-code);
+    padding: 0.125rem 0.25rem;
+  }
+
+  a:not(:where(.not-content *)) {
+    text-underline-offset: 0.25em;
+    text-decoration: underline;
+  }
+}
+
+/* <code> inside asides */
+@supports (border-color: color-mix(in srgb, var(--sl-color-asides-text-accent) 12%, transparent)) {
+  .sl-markdown-content .starlight-aside code:not(:where(.not-content *)) {
+    border-color: color-mix(in srgb, var(--sl-color-asides-text-accent) 12%, transparent);
   }
 }
