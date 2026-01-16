@@ -7,7 +7,7 @@
   "description": "Root package for the Starlight Nova theme monorepo",
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
-    "build": "pnpm -r run build",
+    "build": "turbo run build",
     "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
     "lint:eslint": "eslint --cache .",
     "lint:prettier": "prettier --cache --check .",
