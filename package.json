@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
     "build": "turbo run build",
-    "preview": "pnpm run build && pnpm --filter website run preview",
+    "preview": "pnpm run build && pnpm --filter ./website run preview",
     "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
     "lint:eslint": "eslint --cache .",
     "lint:prettier": "prettier --cache --check .",
@@ -18,9 +18,9 @@
     "build:tailwindcss": "pnpm --filter ./packages/starlight-theme-nova run build",
     "prepublishOnly": "pnpm run build",
     "typecheck": "tsc -b",
-    "test": "pnpm --filter website run test",
-    "test:update": "pnpm --filter website run test:update",
-    "test:install": "pnpm --filter website exec playwright install chromium",
+    "test": "pnpm --filter ./website run test",
+    "test:update": "pnpm --filter ./website run test:update",
+    "test:install": "pnpm --filter ./website exec playwright install chromium",
     "change": "changeset",
     "ci:publish": "pnpm run build && pnpm publish --access public -r --no-git-checks --tag latest",
     "ci:version": "changeset version && pnpm install --no-frozen-lockfile"
