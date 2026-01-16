@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
     "build": "turbo run build",
+    "preview": "turbo run preview",
     "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
     "lint:eslint": "eslint --cache .",
     "lint:prettier": "prettier --cache --check .",
