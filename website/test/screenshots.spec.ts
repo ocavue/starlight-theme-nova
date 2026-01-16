@@ -1,6 +1,9 @@
 import { expect, test } from '@playwright/test'
+import GithubSlugger from 'github-slugger'
 
-const pages = [
+const slugger = new GithubSlugger()
+
+const paths = [
   '/',
   '/guide/markdown/',
   '/components/aside/',
@@ -14,9 +17,14 @@ const pages = [
   '/zh-cn/',
 ]
 
-for (const path of pages) {
-  const name = path === '/' ? 'home' : path.slice(1, -1).replace(/\//g, '-')
+const pages = paths.map((path) => {
+  return {
+    path,
+    name: path === '/' ? 'home' : slugger.slug(path),
+  }
+})
 
+for (const { path, name } of pages) {
   test(`screenshot ${name}`, async ({ page }) => {
     await page.goto(path)
     await page.waitForLoadState('networkidle')

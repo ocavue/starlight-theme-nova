@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
-    "astro-minify-html-swc": "^0.1.10"
+    "astro-minify-html-swc": "^0.1.10",
+    "github-slugger": "^2.0.0"
   }
 }

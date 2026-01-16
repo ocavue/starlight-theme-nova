@@ -11,6 +11,8 @@ export default defineConfig({
     baseURL: 'http://localhost:4321',
     trace: 'on-first-retry',
   },
+  snapshotPathTemplate:
+    '{snapshotDir}/{testFileDir}/{testFileName}-snapshots/{platform}/{projectName}/{arg}{ext}',
   projects: [
     {
       name: 'desktop-light',
