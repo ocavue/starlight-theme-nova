@@ -10,7 +10,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "postinstall": "astro sync"
+    "postinstall": "astro sync",
+    "test": "playwright test",
+    "test:update": "playwright test --update-snapshots"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.2",
@@ -21,6 +23,8 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@sindresorhus/slugify": "^3.0.0",
     "astro-minify-html-swc": "^0.1.10"
   }
 }

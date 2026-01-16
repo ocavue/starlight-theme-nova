@@ -9,6 +9,9 @@ on:
     branches:
       - master
 
+env:
+  DO_NOT_TRACK: 1
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -46,3 +49,57 @@ jobs:
       - name: Publish snapshot packages
         if: ${{ github.event_name == 'pull_request' }}
         run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova ./packages/shiki-twoslash-renderer
+
+  screenshot:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: ./.github/actions/setup
+
+      - name: Install Playwright Browsers
+        run: pnpm run test:install
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Run screenshot tests
+        id: test
+        continue-on-error: true
+        run: pnpm run test
+
+      - name: Upload Playwright report
+        if: steps.test.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.os }}
+          path: website/playwright-report/
+
+      - name: Update snapshots if tests failed
+        if: steps.test.outcome == 'failure'
+        run: pnpm run test:update
+
+      - name: Configure git
+        if: steps.test.outcome == 'failure' && github.ref != 'refs/heads/master'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push snapshot changes
+        if: steps.test.outcome == 'failure' && github.ref != 'refs/heads/master'
+        run: |
+          git add --all
+          git commit -m "chore: [skip ci] update snapshots"
+          git pull --rebase
+          git push
+
+      - name: Fail if snapshots changed
+        if: steps.test.outcome == 'failure'
+        run: exit 1

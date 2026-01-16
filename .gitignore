@@ -11,3 +11,8 @@ node_modules
 temp
 .astro
 .eslintcache
+.turbo
+
+# Playwright
+test-results/
+playwright-report/
