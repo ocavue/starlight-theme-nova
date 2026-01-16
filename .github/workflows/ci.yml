@@ -85,7 +85,7 @@ jobs:
           # Commit and push one file at a time
           for file in $(git status --porcelain | awk '{print $2}'); do
             git add "$file"
-            git commit -m "chore: update snapshot $file [skip ci]"
+            git commit -m "chore: [skip ci] update snapshot $file"
             git pull --rebase
             git push
           done
