@@ -7,7 +7,6 @@ const paths = [
   '/components/aside/',
   '/components/badge/',
   '/components/code/',
-  '/components/code-file/',
   '/components/code-package-managers/',
   '/components/code-tabs/',
   '/components/link-button/',

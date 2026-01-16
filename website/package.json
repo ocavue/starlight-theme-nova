@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "postinstall": "astro sync",
-    "test": "playwright test",
+    "test": "playwright test --max-failures 3",
     "test:update": "playwright test --update-snapshots"
   },
   "dependencies": {

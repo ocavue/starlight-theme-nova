@@ -19,6 +19,7 @@
 
   a:not(:where(.not-content *)) {
     text-underline-offset: 0.25em;
+    text-decoration: underline;
   }
 }
 
