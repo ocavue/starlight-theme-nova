@@ -46,3 +46,55 @@ jobs:
       - name: Publish snapshot packages
         if: ${{ github.event_name == 'pull_request' }}
         run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova ./packages/shiki-twoslash-renderer
+
+  screenshot:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: ./.github/actions/setup
+
+      - name: Install Playwright Browsers
+        run: pnpm run test:install
+
+      - name: Run screenshot tests
+        id: test
+        continue-on-error: true
+        run: pnpm run test
+
+      - name: Update snapshots if tests failed
+        if: steps.test.outcome == 'failure'
+        run: pnpm run test:update
+
+      - name: Check for snapshot changes
+        if: steps.test.outcome == 'failure'
+        id: check-changes
+        run: |
+          git add website/tests/screenshots.spec.ts-snapshots/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+          git reset HEAD 2>/dev/null || true
+
+      - name: Commit and push snapshot changes
+        if: steps.test.outcome == 'failure' && steps.check-changes.outputs.has_changes == 'true' && github.ref != 'refs/heads/master'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add website/tests/screenshots.spec.ts-snapshots/
+          git commit -m "chore: update screenshot snapshots [${{ matrix.os }}]"
+          git pull --rebase
+          git push
+
+      - name: Fail if snapshots changed
+        if: steps.test.outcome == 'failure'
+        run: exit 1

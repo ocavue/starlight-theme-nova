@@ -17,6 +17,9 @@
     "build:tailwindcss": "pnpm --filter ./packages/starlight-theme-nova run build",
     "prepublishOnly": "pnpm run build",
     "typecheck": "tsc -b",
+    "test": "pnpm --filter starlight-theme-nova-website run test",
+    "test:update": "pnpm --filter starlight-theme-nova-website run test:update",
+    "test:install": "pnpm --filter starlight-theme-nova-website exec playwright install chromium",
     "change": "changeset",
     "ci:publish": "pnpm run build && pnpm publish --access public -r --no-git-checks --tag latest",
     "ci:version": "changeset version && pnpm install --no-frozen-lockfile"
