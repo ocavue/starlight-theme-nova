@@ -1,7 +1,5 @@
 import { expect, test } from '@playwright/test'
-import GithubSlugger from 'github-slugger'
-
-const slugger = new GithubSlugger()
+import slugify from '@sindresorhus/slugify'
 
 const paths = [
   '/',
@@ -20,7 +18,7 @@ const paths = [
 const pages = paths.map((path) => {
   return {
     path,
-    name: path === '/' ? 'home' : slugger.slug(path),
+    name: path === '/' ? 'home' : slugify(path),
   }
 })
 
