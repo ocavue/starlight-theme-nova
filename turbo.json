@@ -5,11 +5,6 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", "lib/**/*.gen.*"]
-    },
-    "preview": {
-      "dependsOn": ["build"],
-      "cache": false,
-      "persistent": true
     }
   }
 }
