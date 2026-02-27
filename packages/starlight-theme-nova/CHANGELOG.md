@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.6
+
+### Patch Changes
+
+- 4e57a17: Update dependency `shiki` to v4.
+
 ## 0.11.5
 
 ### Patch Changes
