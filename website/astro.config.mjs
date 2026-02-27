@@ -1,8 +1,8 @@
 // @ts-check
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'astro/config'
 import minify from 'astro-minify-html-swc'
+import { defineConfig } from 'astro/config'
 import starlightThemeNova from 'starlight-theme-nova'
 
 // https://astro.build/config

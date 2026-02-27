@@ -116,6 +116,6 @@ async function checkHasTailwindcss(
     }
     return false
   }
-  let name = awaited.name || ''
+  const name = awaited.name || ''
   return name.includes('tailwind')
 }
