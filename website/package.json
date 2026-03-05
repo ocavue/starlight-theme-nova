@@ -18,7 +18,7 @@
     "@astrojs/starlight": "^0.37.6",
     "astro": "^5.18.0",
     "sharp": "^0.34.5",
-    "starlight-theme-nova": "workspace:*"
+    "starlight-theme-nova": "*"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
