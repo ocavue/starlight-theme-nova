@@ -11,6 +11,7 @@ const paths = [
   '/components/code-tabs/',
   '/components/link-button/',
   '/components/link-card/',
+  '/components/steps/',
   '/zh-cn/',
 ]
 
