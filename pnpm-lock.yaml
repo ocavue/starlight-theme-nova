@@ -108,9 +108,6 @@ importers:
       '@astrojs/starlight':
         specifier: ^0.37.6
         version: 0.37.6(astro@5.18.0(@types/node@20.17.57)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.36.0)(typescript@5.9.3))
-      '@tailwindcss/vite':
-        specifier: ^4.2.1
-        version: 4.2.1(vite@6.4.1(@types/node@20.17.57)(jiti@2.6.1)(lightningcss@1.31.1))
       astro:
         specifier: ^5.18.0
         version: 5.18.0(@types/node@20.17.57)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.36.0)(typescript@5.9.3)
@@ -120,9 +117,6 @@ importers:
       starlight-theme-nova:
         specifier: workspace:*
         version: link:../packages/starlight-theme-nova
-      tailwindcss:
-        specifier: ^4.2.1
-        version: 4.2.1
     devDependencies:
       '@playwright/test':
         specifier: ^1.58.2
