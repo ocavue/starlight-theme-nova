@@ -16,11 +16,9 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.6",
-    "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.18.0",
     "sharp": "^0.34.5",
-    "starlight-theme-nova": "workspace:*",
-    "tailwindcss": "^4.2.1"
+    "starlight-theme-nova": "*"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
