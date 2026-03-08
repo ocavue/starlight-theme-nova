@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.7
+
+### Patch Changes
+
+- e472644: Fix list style.
+
 ## 0.11.6
 
 ### Patch Changes
