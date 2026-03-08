@@ -9,6 +9,38 @@
     }
   }
 
+  ul:not(:where(.not-content *)):not(.sl-steps) {
+    padding-inline-start: 1.6em;
+
+    & > li:not(.task-list-item):not(:where(.not-content *)) {
+      list-style-type: disc;
+      list-style-position: outside;
+      padding-inline-start: 0.3em;
+    }
+
+    & > li.task-list-item:not(:where(.not-content *)) {
+      list-style-type: none;
+      padding-inline-start: 0.3em;
+      position: relative;
+
+      > input[type='checkbox'] {
+        position: absolute;
+        left: -1.1em;
+        top: 0.6em;
+      }
+    }
+  }
+
+  ol:not(:where(.not-content *)):not(.sl-steps) {
+    padding-inline-start: 1.6em;
+
+    & > li:not(:where(.not-content *)) {
+      list-style-type: decimal;
+      list-style-position: outside;
+      padding-inline-start: 0.3em;
+    }
+  }
+
   code:not(:where(.not-content *)) {
     border-radius: 0.25rem;
     border-style: solid;
