@@ -51,12 +51,12 @@
     }
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.37.7",
+    "@astrojs/starlight": "^0.38.1",
     "@ocavue/tsconfig": "^0.7.0",
     "@tailwindcss/cli": "^4.2.1",
     "@tailwindcss/vite": "^4.2.1",
     "@types/node": "^20.17.30",
-    "astro": "^5.18.0",
+    "astro": "^6.0.4",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   }
