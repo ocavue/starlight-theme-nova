@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@aria-ui/core": "^0.1.0",
-    "@pagefind/default-ui": "^1.4.0",
+    "@pagefind/default-ui": "^1.5.0",
     "@shikijs/transformers": "^4.0.2",
     "@shikijs/twoslash": "^4.0.2",
     "@shikijs/types": "^4.0.2",
