@@ -30,7 +30,7 @@
     "build:tailwindcss": "tailwindcss -i ./lib/tailwind.build.css -o ./lib/tailwind.gen.css"
   },
   "dependencies": {
-    "@aria-ui/core": "^0.0.22",
+    "@aria-ui/core": "^0.1.0",
     "@pagefind/default-ui": "^1.4.0",
     "@shikijs/transformers": "^4.0.2",
     "@shikijs/twoslash": "^4.0.2",
@@ -40,7 +40,7 @@
     "hast-util-is-element": "^3.0.0",
     "rehype": "^13.0.2",
     "remark-custom-header-id": "^1.0.0",
-    "shiki-twoslash-renderer": "^0.2.1"
+    "shiki-twoslash-renderer": "^0.3.2"
   },
   "peerDependencies": {
     "@astrojs/starlight": "*"
