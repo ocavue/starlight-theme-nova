@@ -75,8 +75,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       shiki-twoslash-renderer:
-        specifier: ^0.3.0
-        version: 0.3.0(typescript@5.9.3)
+        specifier: ^0.3.1
+        version: 0.3.1(typescript@5.9.3)
     devDependencies:
       '@astrojs/starlight':
         specifier: ^0.38.1
@@ -3292,8 +3292,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki-twoslash-renderer@0.3.0:
-    resolution: {integrity: sha512-2PeFStV1EZgvf9UpT4LIpUAg820K20KNVCarj/8spcUyXQ00wFHB00inWJC4I9NiL2Z+Y4sKjn+LodJvk2e7rg==}
+  shiki-twoslash-renderer@0.3.1:
+    resolution: {integrity: sha512-dUX8ZQKj/ZfjeO3uZ1mIwI/6w+gyIRPS7QFosLinwWZQoKUUZHAhx70EhEB5FfPFPd2I+rLidf6K83zANzOa5A==}
 
   shiki@3.23.0:
     resolution: {integrity: sha512-55Dj73uq9ZXL5zyeRPzHQsK7Nbyt6Y10k5s7OjuFZGMhpp4r/rsLBH0o/0fstIzX1Lep9VxefWljK/SKCzygIA==}
@@ -7885,7 +7885,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki-twoslash-renderer@0.3.0(typescript@5.9.3):
+  shiki-twoslash-renderer@0.3.1(typescript@5.9.3):
     dependencies:
       '@aria-ui/core': 0.1.0
       '@aria-ui/elements': 0.1.1
