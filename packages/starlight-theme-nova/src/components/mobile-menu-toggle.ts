@@ -12,9 +12,12 @@ function setupMobileMenuToggle(host: HostElement) {
   const toggleExpanded = () => setExpanded(!getExpanded())
 
   useEffect(host, () => {
-    const expanded: boolean  = getExpanded()
+    const expanded: boolean = getExpanded()
     host.setAttribute('aria-controls', expanded ? 'true' : 'false')
-    document.body.toggleAttribute('data-mobile-menu-expanded', expanded || false )
+    document.body.toggleAttribute(
+      'data-mobile-menu-expanded',
+      expanded || false,
+    )
   })
 
   useEventListener(host, 'click', toggleExpanded)
