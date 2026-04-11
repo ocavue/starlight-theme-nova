@@ -21,7 +21,7 @@
     "starlight-theme-nova": "*"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "^1.58.2",
     "@sindresorhus/slugify": "^3.0.0",
     "astro-minify-html-swc": "^0.1.11"
   }
