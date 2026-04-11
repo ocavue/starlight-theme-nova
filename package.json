@@ -30,12 +30,12 @@
     "@ocavue/eslint-config": "^4.5.3",
     "@ocavue/tsconfig": "^0.7.1",
     "@types/node": "^20.17.30",
-    "eslint": "^10.0.3",
+    "eslint": "^10.2.0",
     "pkg-pr-new": "^0.0.65",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "turbo": "^2.8.16",
+    "turbo": "^2.9.6",
     "typescript": "^5.9.3"
   }
 }
