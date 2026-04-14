@@ -58,6 +58,6 @@
     "@types/node": "^20.17.30",
     "astro": "^6.1.5",
     "tailwindcss": "^4.2.2",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   }
 }
