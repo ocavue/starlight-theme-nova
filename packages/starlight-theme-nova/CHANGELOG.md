@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.11.9
+
+### Patch Changes
+
+- 3051c74: Update dependencies.
+
 ## 0.11.8
 
 ### Patch Changes
