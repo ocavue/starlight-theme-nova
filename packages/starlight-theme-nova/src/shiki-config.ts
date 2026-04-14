@@ -27,6 +27,11 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
       ? transformerTwoslash({
           renderer: createRenderer(),
           explicitTrigger: true,
+          // twoslashOptions: {
+          //   compilerOptions: {
+          //     noUncheckedSideEffectImports: false,
+          //   },
+          // },
         })
       : undefined,
   ].filter((x) => !!x)
