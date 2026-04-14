@@ -45,8 +45,8 @@ importers:
   packages/starlight-theme-nova:
     dependencies:
       '@aria-ui/core':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.2.0
+        version: 0.2.0
       '@pagefind/default-ui':
         specifier: ^1.5.0
         version: 1.5.0
@@ -144,9 +144,6 @@ packages:
 
   '@altano/repository-tools@2.0.1':
     resolution: {integrity: sha512-YE/52CkFtb+YtHPgbWPai7oo5N9AKnMuP5LM+i2AG7G1H2jdYBCO1iDnkDE3dZ3C1MIgckaF+d5PNRulgt0bdw==}
-
-  '@aria-ui/core@0.1.0':
-    resolution: {integrity: sha512-uKxomB53dAF2OkNav72ewlExtbTMItOwU+X1sMsN/ORc4xEeNTUy3BI3klCJ7XKY2/aAp+D0r8/F7XfabZ6NGQ==}
 
   '@aria-ui/core@0.2.0':
     resolution: {integrity: sha512-TjgmdWBk1PCV3a0xco0ivcrKnyblCq49pxl9LwJRUsy+8UMBIBHQNmvAlLdaaJw19ulUKgeLzbzBhfcYhnxLeQ==}
@@ -1606,17 +1603,11 @@ packages:
   '@zag-js/dismissable@1.40.0':
     resolution: {integrity: sha512-bBkFvPg/zbYn31ZgEfx8not6s2Ekx7zU2sO8tGXb8rYPnHBfGDYEzVQansUStJn0Atzw+y7XR7B3G3u5AFQJKw==}
 
-  '@zag-js/dom-query@1.39.1':
-    resolution: {integrity: sha512-k01aXeUWLyJfB61CODaXj4PLhYmVpnVMFrC+3nk/XCn1MW7my8L/8KVg0m4W8n+X9MhpaLWsZDmK/dwED/3qSw==}
-
   '@zag-js/dom-query@1.40.0':
     resolution: {integrity: sha512-4J3EO2gHpZ1VZiGLuMlH6G1Tsp4gKB8PPt2yKeNQWYGEXyrHUXrvMhRUzv7Z4/2I1s1tnxlFG4F8ovB3kTpz/Q==}
 
   '@zag-js/interact-outside@1.40.0':
     resolution: {integrity: sha512-Fws+O4uD9vS0I5KVcf3U2tNjLKvqlv+RExFbTywckDLOCJ145M/pMQWTr1FHil04jk5PFyM1iGfsbom8tozHpQ==}
-
-  '@zag-js/types@1.39.1':
-    resolution: {integrity: sha512-w3vVpgxmdJvMDvv19DXTtFI6kJL6TXw//U0Z1BAc3rnDA9orcB9Ryw4uMNvIzFA607CgssyJcWDaQ/M3yAcbJw==}
 
   '@zag-js/types@1.40.0':
     resolution: {integrity: sha512-LVvxEyqFv/u9SEe5xdivvG2vYb9cCmbkD+5r6s+IGljpDLaRgv4BYyxEh40ri1ai070tL08ZKmoLfx2/xfvY/A==}
@@ -3860,13 +3851,6 @@ snapshots:
 
   '@altano/repository-tools@2.0.1': {}
 
-  '@aria-ui/core@0.1.0':
-    dependencies:
-      '@ocavue/utils': 1.6.0
-      '@zag-js/dom-query': 1.39.1
-      alien-signals: 3.1.2
-      server-dom-shim: 1.1.0
-
   '@aria-ui/core@0.2.0':
     dependencies:
       '@ocavue/utils': 1.6.0
@@ -5537,10 +5521,6 @@ snapshots:
       '@zag-js/interact-outside': 1.40.0
       '@zag-js/utils': 1.40.0
 
-  '@zag-js/dom-query@1.39.1':
-    dependencies:
-      '@zag-js/types': 1.39.1
-
   '@zag-js/dom-query@1.40.0':
     dependencies:
       '@zag-js/types': 1.40.0
@@ -5549,10 +5529,6 @@ snapshots:
     dependencies:
       '@zag-js/dom-query': 1.40.0
       '@zag-js/utils': 1.40.0
-
-  '@zag-js/types@1.39.1':
-    dependencies:
-      csstype: 3.2.3
 
   '@zag-js/types@1.40.0':
     dependencies:
