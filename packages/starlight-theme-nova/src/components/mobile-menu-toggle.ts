@@ -1,10 +1,6 @@
 import type { HostElement } from '@aria-ui/core'
-import {
-  createSignal,
-  defineCustomElement,
-  useEffect,
-  useEventListener,
-} from '@aria-ui/core'
+import { createSignal, defineCustomElement, useEffect } from '@aria-ui/core'
+import { useEventListener } from '@aria-ui/utils'
 
 function setupMobileMenuToggle(host: HostElement) {
   const { get: getExpanded, set: setExpanded } = createSignal(false)

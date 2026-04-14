@@ -23,13 +23,20 @@ export function createShikiConfig(options: { twoslash: boolean }): ShikiConfig {
     transformerRemoveNotationEscape(),
 
     transformerContainer(),
-    options.twoslash
-      ? transformerTwoslash({
-          renderer: createRenderer(),
-          explicitTrigger: true,
-        })
-      : undefined,
-  ].filter((x) => !!x)
+    ...(options.twoslash
+      ? [
+          transformerTwoslash({
+            renderer: createRenderer(),
+            explicitTrigger: true,
+            twoslashOptions: {
+              compilerOptions: {
+                noUncheckedSideEffectImports: false,
+              },
+            },
+          }),
+        ]
+      : []),
+  ]
 
   return {
     themes: {
