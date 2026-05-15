@@ -66,8 +66,8 @@ importers:
         specifier: ^3.0.4
         version: 3.0.4
       astro-theme-toggle:
-        specifier: ^0.8.0
-        version: 0.8.0
+        specifier: ^0.8.1
+        version: 0.8.1
       hast-util-is-element:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1602,8 +1602,8 @@ packages:
   astro-minify-html-swc@0.1.11:
     resolution: {integrity: sha512-4M7x2g1SATucjOrdpSEwqXBSwKF8ZykbWmSTg+Pb1CEWOYdW1cn4/JSLpyuL0GGkwQnhRTyQwVwf4q0FxwoUWg==}
 
-  astro-theme-toggle@0.8.0:
-    resolution: {integrity: sha512-7ngEKDfCLKoVbxX4yxrggtBr8i6W8eT0un0TpNKHUeOG/Pq2g7BrjH+etP/l/XQYYSWQmeOIAI02LvLXDMvOWw==}
+  astro-theme-toggle@0.8.1:
+    resolution: {integrity: sha512-cUQDnMpRrGwWQ0C6dj1x3y3e3ULlikvoc6Tb6FkIQkL1Ropyd6jQ/IZ9GdhSogWEVpNodPckOKeItIh89EDwkg==}
 
   astro@6.1.6:
     resolution: {integrity: sha512-pRsz+kYriwCV/AUcY/I9OVKtVHuYFs2DtCszAxprXded/kTE53nMwxfnK0Nf6FPfaX9vcUiLnigcSIhuFoKntA==}
@@ -5318,7 +5318,7 @@ snapshots:
       '@swc/html': 1.15.18
       fast-glob: 3.3.3
 
-  astro-theme-toggle@0.8.0: {}
+  astro-theme-toggle@0.8.1: {}
 
   astro@6.1.6(@types/node@20.19.37)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(typescript@5.9.3):
     dependencies:
