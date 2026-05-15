@@ -31,7 +31,7 @@
     "@ocavue/tsconfig": "^0.7.1",
     "@types/node": "^20.17.30",
     "eslint": "^10.2.0",
-    "pkg-pr-new": "^0.0.66",
+    "pkg-pr-new": "^0.0.72",
     "prettier": "^3.8.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
