@@ -29,7 +29,7 @@
     "@changesets/cli": "^2.31.0",
     "@ocavue/eslint-config": "^4.5.7",
     "@ocavue/tsconfig": "^0.7.1",
-    "@types/node": "^20.17.30",
+    "@types/node": "^22.0.0",
     "eslint": "^10.3.0",
     "pkg-pr-new": "^0.0.72",
     "prettier": "^3.8.3",
