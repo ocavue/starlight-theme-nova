@@ -68,14 +68,14 @@ export default defineConfig({
           translations: {
             'zh-CN': '向导',
           },
-          autogenerate: { directory: 'guide' },
+          items: [{ autogenerate: { directory: 'guide' } }],
         },
         {
           label: 'Components',
           translations: {
             'zh-CN': '组件',
           },
-          autogenerate: { directory: 'components' },
+          items: [{ autogenerate: { directory: 'components' } }],
         },
       ],
     }),
