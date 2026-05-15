@@ -26,7 +26,7 @@
     "ci:version": "changeset version && pnpm install --no-frozen-lockfile"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.30.0",
+    "@changesets/cli": "^2.31.0",
     "@ocavue/eslint-config": "^4.5.7",
     "@ocavue/tsconfig": "^0.7.1",
     "@types/node": "^20.17.30",
@@ -35,7 +35,7 @@
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "turbo": "^2.9.6",
+    "turbo": "^2.9.14",
     "typescript": "^5.9.3"
   }
 }

@@ -54,11 +54,11 @@
   "devDependencies": {
     "@astrojs/starlight": "^0.39.2",
     "@ocavue/tsconfig": "^0.7.1",
-    "@tailwindcss/cli": "^4.2.2",
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/cli": "^4.3.0",
+    "@tailwindcss/vite": "^4.3.0",
     "@types/node": "^20.17.30",
     "astro": "^6.3.3",
-    "tailwindcss": "^4.2.2",
+    "tailwindcss": "^4.3.0",
     "typescript": "^5.9.3"
   }
 }
