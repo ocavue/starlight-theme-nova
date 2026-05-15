@@ -1,4 +1,4 @@
-/*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.0 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -244,12 +244,6 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .start {
-    inset-inline-start: var(--spacing);
-  }
-  .end {
-    inset-inline-end: var(--spacing);
-  }
   .top-\(--sl-nav-height\) {
     top: var(--sl-nav-height);
   }
@@ -364,6 +358,10 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .nova-scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sl-color-gray-5) transparent;
   }
   .flex-col {
     flex-direction: column;
@@ -603,10 +601,6 @@
     transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .nova-scroll-container {
-    scrollbar-width: thin;
-    scrollbar-color: var(--sl-color-gray-5) transparent;
   }
   .\*\*\:text-lg {
     :is(& *) {
