@@ -15,9 +15,9 @@
     "test:update": "playwright test --update-snapshots"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.39.2",
-    "astro": "^6.3.7",
-    "sharp": "^0.34.5",
+    "@astrojs/starlight": "^0.40.0",
+    "astro": "^6.4.6",
+    "sharp": "^0.35.1",
     "starlight-theme-nova": "*"
   },
   "devDependencies": {
