@@ -50,6 +50,9 @@ importers:
       '@aria-ui/utils':
         specifier: ^0.1.6
         version: 0.1.6
+      '@astrojs/markdown-satteri':
+        specifier: ^0.3.2
+        version: 0.3.2
       '@pagefind/default-ui':
         specifier: ^1.5.2
         version: 1.5.2
@@ -74,9 +77,9 @@ importers:
       rehype:
         specifier: ^13.0.2
         version: 13.0.2
-      remark-custom-header-id:
-        specifier: ^1.0.0
-        version: 1.0.0
+      satteri-custom-header-id:
+        specifier: ^0.1.0
+        version: 0.1.0(satteri@0.9.1)
       shiki-twoslash-renderer:
         specifier: ^0.3.5
         version: 0.3.5(typescript@6.0.3)
@@ -3419,10 +3422,6 @@ packages:
   rehype@13.0.2:
     resolution: {integrity: sha512-j31mdaRFrwFRUIlxGeuPXXKWQxet52RBQRvCmzl5eCefn/KGbomK5GMHNMsOJf55fgo3qw5tST5neDuarDYR2A==}
 
-  remark-custom-header-id@1.0.0:
-    resolution: {integrity: sha512-xs1MAgCg1HoiIfqSVV5BPydB4/sc1tT8OHDoqt8Lnf1JHPMUDVumY2Szm/P9MIxIzOT9+tu4IYJTql0vCzldoA==}
-    engines: {node: '>=18'}
-
   remark-directive@4.0.0:
     resolution: {integrity: sha512-7sxn4RfF1o3izevPV1DheyGDD6X4c9hrGpfdUpm7uC++dqrnJxIZVkk7CoKqcLm0VUMAuOol7Mno3m6g8cfMuA==}
 
@@ -3489,6 +3488,14 @@ packages:
 
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
+
+  satteri-custom-header-id@0.1.0:
+    resolution: {integrity: sha512-pqMwdh7B39suLmznT/8wMYWO//zTKwG7JU6TCwHIuAeOSnjxgEsMwj2h/gP7nEK/eIe40SXgFiC6QHcEBsPm5A==}
+    peerDependencies:
+      satteri: ^0.9.0
+    peerDependenciesMeta:
+      satteri:
+        optional: true
 
   satteri@0.9.1:
     resolution: {integrity: sha512-0oIBjwDxWvz8ePRSBxv8vEdZ0GI25/UcSq11y4651tJztUAmZlIdPjFx8luqBAM22g8YKVr5R17KaaZ2kIfLrw==}
@@ -7820,11 +7827,6 @@ snapshots:
       rehype-stringify: 10.0.1
       unified: 11.0.5
 
-  remark-custom-header-id@1.0.0:
-    dependencies:
-      '@types/unist': 3.0.3
-      unist-util-visit: 5.1.0
-
   remark-directive@4.0.0:
     dependencies:
       '@types/mdast': 4.0.4
@@ -7977,6 +7979,10 @@ snapshots:
   sass-formatter@0.7.9:
     dependencies:
       suf-log: 2.5.3
+
+  satteri-custom-header-id@0.1.0(satteri@0.9.1):
+    optionalDependencies:
+      satteri: 0.9.1
 
   satteri@0.9.1:
     dependencies:

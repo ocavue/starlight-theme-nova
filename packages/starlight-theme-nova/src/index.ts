@@ -1,10 +1,11 @@
+import { isSatteriProcessor } from '@astrojs/markdown-satteri'
 import type {
   StarlightConfig,
   StarlightPlugin,
   StarlightUserConfig,
 } from '@astrojs/starlight/types'
 import type { AstroConfig } from 'astro'
-import remarkCustomHeaderId from 'remark-custom-header-id'
+import { satteriCustomHeaderId } from 'satteri-custom-header-id'
 
 import { createShikiConfig } from './shiki-config'
 import type { ThemeNovaOptions } from './user-options'
@@ -74,11 +75,10 @@ export default function starlightThemeNova(
         addIntegration({
           name: 'starlight-theme-nova-integration',
           hooks: {
-            'astro:config:setup': ({ updateConfig }) => {
+            'astro:config:setup': ({ config, updateConfig }) => {
               updateConfig({
                 markdown: {
                   shikiConfig: createShikiConfig({ twoslash: true }),
-                  remarkPlugins: [remarkCustomHeaderId],
                 },
                 vite: {
                   plugins: [
@@ -89,6 +89,11 @@ export default function starlightThemeNova(
                   ],
                 },
               })
+
+              const processor = config.markdown.processor
+              if (processor && isSatteriProcessor(processor)) {
+                processor.options.hastPlugins.unshift(satteriCustomHeaderId())
+              }
             },
           },
         })
