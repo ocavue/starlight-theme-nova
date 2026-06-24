@@ -32,6 +32,7 @@
   "dependencies": {
     "@aria-ui/core": "^0.2.1",
     "@aria-ui/utils": "^0.1.6",
+    "@astrojs/markdown-satteri": "^0.3.2",
     "@pagefind/default-ui": "^1.5.2",
     "@shikijs/transformers": "^4.1.0",
     "@shikijs/twoslash": "^4.1.0",
@@ -40,7 +41,7 @@
     "astro-theme-toggle": "^0.8.1",
     "hast-util-is-element": "^3.0.0",
     "rehype": "^13.0.2",
-    "remark-custom-header-id": "^1.0.0",
+    "satteri-custom-header-id": "^0.1.0",
     "shiki-twoslash-renderer": "^0.3.5"
   },
   "peerDependencies": {
@@ -52,12 +53,12 @@
     }
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.39.2",
+    "@astrojs/starlight": "^0.41.0",
     "@ocavue/tsconfig": "^0.7.1",
     "@tailwindcss/cli": "^4.3.0",
     "@tailwindcss/vite": "^4.3.0",
-    "@types/node": "^22.0.0",
-    "astro": "^6.3.7",
+    "@types/node": "^24.0.0",
+    "astro": "^7.0.2",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
   }

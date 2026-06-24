@@ -81,7 +81,11 @@ export function transformerContainer(): ShikiTransformer {
   }
 }
 
-// A simple function to make typescript happy
+// Shiki only emits elements and text here, but Sätteri augments the `hast`
+// module so `RootContent` also includes flow-only nodes (e.g. `mdxjsEsm`).
+// Narrow back to `ElementContent`, dropping the `doctype` that can't be a child.
 function normalizeContent(children: RootContent[]): ElementContent[] {
-  return children.filter((child) => child.type !== 'doctype')
+  return children.filter(
+    (child): child is ElementContent => child.type !== 'doctype',
+  )
 }
