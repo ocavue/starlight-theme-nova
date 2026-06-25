@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.12.0
+
+### Minor Changes
+
+- a59a445: Require Astro 7 and Starlight 0.41.
+
 ## 0.11.11
 
 ### Patch Changes
