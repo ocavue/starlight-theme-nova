@@ -18,9 +18,9 @@ export function transformerContainer(): ShikiTransformer {
         throw new Error(`[${name}] Expected at least one child`)
       }
 
-      const pre = node.children.find((child) => isElement(child, 'pre'))
+      const hasPre = node.children.some((child) => isElement(child, 'pre'))
 
-      if (!pre) {
+      if (!hasPre) {
         throw new Error(
           `[${name}] Expected a <pre> element in the root node but got ${JSON.stringify(node)}`,
         )
