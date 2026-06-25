@@ -84,7 +84,7 @@ export default function starlightThemeNova(
                   plugins: [
                     vitePluginUserConfig({
                       nav: options.nav,
-                      rootHref: astroConfig.root.toString(),
+                      rootHref: astroConfig.root.href,
                     }),
                   ],
                 },

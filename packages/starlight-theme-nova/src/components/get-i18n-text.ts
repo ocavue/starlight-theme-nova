@@ -12,7 +12,7 @@ export function getI18nText(
   const { lang, locale } = route
 
   // Try `lang` first, which is a BCP-47 language tag
-  if (value[lang]) {
+  if (Object.hasOwn(value, lang)) {
     return value[lang]
   }
 
@@ -36,7 +36,7 @@ export function getI18nText(
 
   // Fallback to the `locale`, which is a base path at which a language is
   // served. This is not of the same format as the `lang` BCP-47 language tag.
-  if (locale && value[locale]) {
+  if (locale && Object.hasOwn(value, locale)) {
     console.warn(message)
     return value[locale]
   }

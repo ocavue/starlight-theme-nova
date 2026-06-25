@@ -11,26 +11,31 @@ export function vitePluginUserConfig(
   config: ConfigSerialized,
 ): NonNullable<ViteUserConfig['plugins']>[number] {
   /** Map of virtual module names to their code contents as strings. */
-  const modules = {
-    'virtual:starlight-theme-nova/user-config': `export default ${JSON.stringify(config)}`,
-  } satisfies Record<string, string>
+  const modules = new Map<string, string>()
 
   /** Mapping names prefixed with `\0` to their original form. */
-  const resolutionMap = Object.fromEntries(
-    (Object.keys(modules) as (keyof typeof modules)[]).map((key) => [
-      resolveVirtualModuleId(key),
-      key,
-    ]),
-  )
+  const resolutionMap = new Map<string, string>()
+
+  for (const [key, value] of [
+    [
+      'virtual:starlight-theme-nova/user-config',
+      `export default ${JSON.stringify(config)}`,
+    ],
+  ]) {
+    modules.set(key, value)
+    resolutionMap.set(resolveVirtualModuleId(key), key)
+  }
 
   return {
     name: 'vite-plugin-starlight-theme-nova-user-config',
     resolveId(id): string | void {
-      if (id in modules) return resolveVirtualModuleId(id)
+      if (modules.has(id)) {
+        return resolveVirtualModuleId(id)
+      }
     },
     load(id): string | void {
-      const resolution = resolutionMap[id]
-      if (resolution) return modules[resolution]
+      const resolution = resolutionMap.get(id)
+      if (resolution) return modules.get(resolution)
     },
   }
 }
