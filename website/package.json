@@ -15,14 +15,14 @@
     "test:update": "playwright test --update-snapshots"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.41.0",
-    "astro": "^7.0.2",
+    "@astrojs/starlight": "^0.41.2",
+    "astro": "^7.0.5",
     "sharp": "^0.35.2",
     "starlight-theme-nova": "*"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
     "@sindresorhus/slugify": "^3.0.0",
-    "astro-minify-html-swc": "^0.1.11"
+    "astro-minify-html-swc": "^0.1.12"
   }
 }
