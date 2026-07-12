@@ -50,6 +50,9 @@ importers:
       '@aria-ui/utils':
         specifier: ^0.1.6
         version: 0.1.6
+      '@astrojs/internal-helpers':
+        specifier: ^0.10.0
+        version: 0.10.0
       '@astrojs/markdown-satteri':
         specifier: ^0.3.2
         version: 0.3.2
@@ -80,6 +83,9 @@ importers:
       satteri-custom-header-id:
         specifier: ^0.1.0
         version: 0.1.0(satteri@0.9.1)
+      shiki:
+        specifier: ^4.0.0
+        version: 4.0.2
       shiki-twoslash-renderer:
         specifier: ^0.3.5
         version: 0.3.5(typescript@6.0.3)
@@ -121,7 +127,7 @@ importers:
         specifier: ^0.35.2
         version: 0.35.2
       starlight-theme-nova:
-        specifier: '*'
+        specifier: workspace:*
         version: link:../packages/starlight-theme-nova
     devDependencies:
       '@playwright/test':

@@ -1,12 +1,15 @@
 ---
 import type { ComponentProps } from 'astro/types'
-import { Code as CodeComponent } from 'astro:components'
+import type { Code as CodeComponent } from 'astro:components'
+import { renderCodeHtml } from '../code-html'
 import { createShikiConfig } from '../shiki-config'
 
 type Props = ComponentProps<typeof CodeComponent>
 
 // For unknown reasons, enabling twoslash breaks the build, thus twoslash is disabled here.
 const shikiConfig = createShikiConfig({ twoslash: false })
+
+const html = await renderCodeHtml({ ...shikiConfig, ...Astro.props })
 ---
 
-<CodeComponent {...shikiConfig} {...Astro.props} />
+<Fragment set:html={html} />
