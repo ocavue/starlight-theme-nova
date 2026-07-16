@@ -7,3 +7,6 @@ allowBuilds:
   esbuild: false
 
 linkWorkspacePackages: deep
+
+minimumReleaseAgeExclude:
+  - '@ocavue/eslint-config@4.12.1'
