@@ -5,10 +5,8 @@ packages:
 allowBuilds:
   '@parcel/watcher': false
   esbuild: false
-  sharp: false
 
 linkWorkspacePackages: deep
 
 minimumReleaseAgeExclude:
-  - '@astrojs/starlight@0.41.0 || 0.41.2'
-  - astro@7.0.2 || 7.0.5
+  - '@ocavue/eslint-config@4.12.1'
