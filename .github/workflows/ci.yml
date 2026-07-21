@@ -50,6 +50,29 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova ./packages/shiki-twoslash-renderer
 
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+        node-version: [22, 24, 26]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - uses: ./.github/actions/setup
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Run screenshot tests
+        id: test
+        continue-on-error: true
+        run: pnpm run test
+
   screenshot:
     strategy:
       fail-fast: false
