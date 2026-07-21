@@ -101,7 +101,12 @@ jobs:
         run: pnpm --filter ./packages/starlight-theme-nova run build
 
       - name: Prepare standalone website
-        run: node scripts/prepare-e2e.mjs "$E2E_DIR"
+        run: |
+          rsync -a --exclude node_modules --exclude dist --exclude .astro website/ "$E2E_DIR/"
+          jq '.dependencies["starlight-theme-nova"] = "file:./starlight-theme-nova.tgz"' "$E2E_DIR/package.json" > "$E2E_DIR/package.json.tmp"
+          mv "$E2E_DIR/package.json.tmp" "$E2E_DIR/package.json"
+          jq 'del(.references)' "$E2E_DIR/tsconfig.json" > "$E2E_DIR/tsconfig.json.tmp"
+          mv "$E2E_DIR/tsconfig.json.tmp" "$E2E_DIR/tsconfig.json"
 
       - name: Pack theme
         run: cd packages/starlight-theme-nova && pnpm pack --out "$E2E_DIR/starlight-theme-nova.tgz"

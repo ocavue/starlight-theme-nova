@@ -1,10 +1,5 @@
 {
   "extends": "@ocavue/tsconfig/es/root.json",
-  "include": [
-    "${configDir}/*",
-    "${configDir}/**/*.json",
-    "${configDir}/scripts/*"
-  ],
   "references": [
     { "path": "./website/tsconfig.json" },
     { "path": "./packages/starlight-theme-nova/tsconfig.json" }
