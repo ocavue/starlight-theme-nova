@@ -89,10 +89,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Print versions
-        run: |
-          node --version
-          npm --version
+      - name: Print node version
+        run: node --version
+
+      - name: Print npm version
+        run: npm --version
 
       - name: Set e2e directory
         run: echo "E2E_DIR=$RUNNER_TEMP/e2e-website" >> "$GITHUB_ENV"
