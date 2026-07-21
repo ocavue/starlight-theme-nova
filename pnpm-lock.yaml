@@ -124,6 +124,9 @@ importers:
         specifier: '*'
         version: link:../packages/starlight-theme-nova
     devDependencies:
+      '@ocavue/tsconfig':
+        specifier: ^0.7.1
+        version: 0.7.1
       '@playwright/test':
         specifier: ^1.61.1
         version: 1.61.1

@@ -73,6 +73,50 @@ jobs:
         continue-on-error: true
         run: pnpm run test
 
+  e2e:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+        node-version: [22, 24, 26]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - uses: ./.github/actions/setup
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Print versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Set e2e directory
+        run: echo "E2E_DIR=$RUNNER_TEMP/e2e-website" >> "$GITHUB_ENV"
+
+      - name: Build theme package
+        run: pnpm --filter ./packages/starlight-theme-nova run build
+
+      - name: Prepare standalone website
+        run: node scripts/prepare-e2e.mjs "$E2E_DIR"
+
+      - name: Pack theme
+        run: cd packages/starlight-theme-nova && pnpm pack --out "$E2E_DIR/starlight-theme-nova.tgz"
+
+      - name: Install standalone website
+        run: cd "$E2E_DIR" && npm install
+
+      - name: Build standalone website
+        run: cd "$E2E_DIR" && npm run build
+
+      - name: Verify build output
+        run: |
+          cd "$E2E_DIR"
+          test -f dist/index.html
+          test -f dist/components/aside/index.html
+
   screenshot:
     strategy:
       fail-fast: false
