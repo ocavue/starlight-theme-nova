@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@11.7.0",
   "description": "The website for the Starlight Nova theme",
   "scripts": {
     "dev": "astro dev",
@@ -16,13 +17,13 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",
-    "astro": "^7.0.9",
+    "astro": "^7.1.1",
     "sharp": "^0.35.3",
     "starlight-theme-nova": "*"
   },
   "devDependencies": {
     "@ocavue/tsconfig": "^0.7.1",
-    "@playwright/test": "^1.61.1",
+    "@playwright/test": "^1.0.0",
     "@sindresorhus/slugify": "^3.0.0",
     "astro-minify-html-swc": "^0.1.12"
   }
