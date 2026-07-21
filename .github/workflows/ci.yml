@@ -113,7 +113,7 @@ jobs:
         run: cd "$E2E_DIR" && pnpm --version
 
       - name: Install standalone website
-        run: cd "$E2E_DIR" && pnpm install --allow-build
+        run: cd "$E2E_DIR" && pnpm install --dangerously-allow-all-builds
 
       - name: Build standalone website
         run: cd "$E2E_DIR" && pnpm run build
