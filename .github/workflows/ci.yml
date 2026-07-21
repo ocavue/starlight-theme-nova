@@ -48,7 +48,7 @@ jobs:
 
       - name: Publish snapshot packages
         if: ${{ github.event_name == 'pull_request' }}
-        run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova ./packages/shiki-twoslash-renderer
+        run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova
 
   test:
     strategy:
@@ -65,13 +65,64 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Install Playwright Browsers
+        run: pnpm run test:install
+
       - name: Build
         run: pnpm run build
 
       - name: Run screenshot tests
-        id: test
-        continue-on-error: true
         run: pnpm run test
+
+  e2e:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+        node-version: [22, 24, 26]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - uses: ./.github/actions/setup
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Set e2e directory
+        run: echo "E2E_DIR=$RUNNER_TEMP/e2e-website" >> "$GITHUB_ENV"
+
+      - name: Build theme package
+        run: pnpm --filter ./packages/starlight-theme-nova run build
+
+      - name: Prepare standalone website
+        run: |
+          rsync -a --exclude node_modules --exclude dist --exclude .astro website/ "$E2E_DIR/"
+          jq '.dependencies["starlight-theme-nova"] = "file:./starlight-theme-nova.tgz"' "$E2E_DIR/package.json" > "$E2E_DIR/package.json.tmp"
+          mv "$E2E_DIR/package.json.tmp" "$E2E_DIR/package.json"
+          jq 'del(.references)' "$E2E_DIR/tsconfig.json" > "$E2E_DIR/tsconfig.json.tmp"
+          mv "$E2E_DIR/tsconfig.json.tmp" "$E2E_DIR/tsconfig.json"
+
+      - name: Pack theme
+        run: cd packages/starlight-theme-nova && pnpm pack --out "$E2E_DIR/starlight-theme-nova.tgz"
+
+      - name: Print node version
+        run: cd "$E2E_DIR" && node --version
+
+      - name: Print pnpm version
+        run: cd "$E2E_DIR" && pnpm --version
+
+      - name: Install standalone website
+        run: cd "$E2E_DIR" && pnpm install --dangerously-allow-all-builds
+
+      - name: Build standalone website
+        run: cd "$E2E_DIR" && pnpm run build
+
+      - name: Verify build output
+        run: |
+          cd "$E2E_DIR"
+          test -f dist/index.html
+          test -f dist/components/aside/index.html
 
   screenshot:
     strategy:
