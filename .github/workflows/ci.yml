@@ -65,12 +65,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Install Playwright Browsers
+        run: pnpm run test:install
+
       - name: Build
         run: pnpm run build
 
       - name: Run screenshot tests
-        id: test
-        continue-on-error: true
         run: pnpm run test
 
   e2e:
