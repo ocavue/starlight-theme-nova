@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@11.7.0",
+  "packageManager": "pnpm@11.15.1",
   "description": "The website for the Starlight Nova theme",
   "scripts": {
     "dev": "astro dev",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@ocavue/tsconfig": "^0.7.1",
-    "@playwright/test": "^1.0.0",
+    "@playwright/test": "^1.61.0",
     "@sindresorhus/slugify": "^3.0.0",
     "astro-minify-html-swc": "^0.1.12"
   }
