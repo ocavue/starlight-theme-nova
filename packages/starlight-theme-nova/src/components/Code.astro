@@ -1,12 +1,14 @@
 ---
 import type { ComponentProps } from 'astro/types'
 import { Code as CodeComponent } from 'astro:components'
-import { createShikiConfig } from '../shiki-config'
+import { createBaseShikiConfig } from '../shiki-config-base'
 
 type Props = ComponentProps<typeof CodeComponent>
 
-// For unknown reasons, enabling twoslash breaks the build, thus twoslash is disabled here.
-const shikiConfig = createShikiConfig({ twoslash: false })
+// Twoslash must stay out of this component's import graph: component chunks
+// are bundled into ESM prerender chunks, and the CommonJS `typescript` package
+// pulled in by twoslash crashes there (`__filename` is not defined in ESM).
+const shikiConfig = createBaseShikiConfig()
 ---
 
 <CodeComponent {...shikiConfig} {...Astro.props} />
