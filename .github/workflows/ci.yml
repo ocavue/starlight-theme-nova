@@ -109,11 +109,11 @@ jobs:
       - name: Print node version
         run: cd "$E2E_DIR" && node --version
 
-      - name: Print npm version
+      - name: Print pnpm version
         run: cd "$E2E_DIR" && pnpm --version
 
       - name: Install standalone website
-        run: cd "$E2E_DIR" && pnpm install
+        run: cd "$E2E_DIR" && pnpm install --allow-build
 
       - name: Build standalone website
         run: cd "$E2E_DIR" && pnpm run build
