@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.12.2
+
+### Patch Changes
+
+- 1b4e140: Fix a `__filename is not defined in ES module scope` build error when the theme is installed with pnpm.
+
 ## 0.12.1
 
 ### Patch Changes
