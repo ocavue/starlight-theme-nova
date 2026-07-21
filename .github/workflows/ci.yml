@@ -89,12 +89,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Print node version
-        run: node --version
-
-      - name: Print npm version
-        run: npm --version
-
       - name: Set e2e directory
         run: echo "E2E_DIR=$RUNNER_TEMP/e2e-website" >> "$GITHUB_ENV"
 
@@ -112,11 +106,17 @@ jobs:
       - name: Pack theme
         run: cd packages/starlight-theme-nova && pnpm pack --out "$E2E_DIR/starlight-theme-nova.tgz"
 
+      - name: Print node version
+        run: cd "$E2E_DIR" && node --version
+
+      - name: Print npm version
+        run: cd "$E2E_DIR" && pnpm --version
+
       - name: Install standalone website
-        run: cd "$E2E_DIR" && npm install
+        run: cd "$E2E_DIR" && pnpm install
 
       - name: Build standalone website
-        run: cd "$E2E_DIR" && npm run build
+        run: cd "$E2E_DIR" && pnpm run build
 
       - name: Verify build output
         run: |
