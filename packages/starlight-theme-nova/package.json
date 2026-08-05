@@ -34,9 +34,9 @@
     "@aria-ui/utils": "^0.1.7",
     "@astrojs/markdown-satteri": "^0.3.4",
     "@pagefind/default-ui": "^1.5.2",
-    "@shikijs/transformers": "^4.3.1",
-    "@shikijs/twoslash": "^4.3.1",
-    "@shikijs/types": "^4.3.1",
+    "@shikijs/transformers": "^4.4.1",
+    "@shikijs/twoslash": "^4.4.1",
+    "@shikijs/types": "^4.4.1",
     "@types/hast": "^3.0.5",
     "astro-theme-toggle": "^0.8.1",
     "hast-util-is-element": "^3.0.0",
@@ -53,7 +53,7 @@
     }
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.41.3",
+    "@astrojs/starlight": "^0.41.6",
     "@ocavue/tsconfig": "^0.7.1",
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",

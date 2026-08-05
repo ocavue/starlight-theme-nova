@@ -6,14 +6,20 @@ function resolveVirtualModuleId<T extends string>(id: T): `\0${T}` {
   return `\0${id}`
 }
 
-/** Vite plugin that exposes user config via virtual modules. */
+/**
+ * Vite plugin that exposes user config via virtual modules.
+ */
 export function vitePluginUserConfig(
   config: ConfigSerialized,
 ): NonNullable<ViteUserConfig['plugins']>[number] {
-  /** Map of virtual module names to their code contents as strings. */
+  /**
+   * Map of virtual module names to their code contents as strings.
+   */
   const modules = new Map<string, string>()
 
-  /** Mapping names prefixed with `\0` to their original form. */
+  /**
+   * Mapping names prefixed with `\0` to their original form.
+   */
   const resolutionMap = new Map<string, string>()
 
   for (const [key, value] of [
