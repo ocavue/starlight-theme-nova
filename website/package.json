@@ -18,13 +18,13 @@
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",
     "astro": "^7.1.1",
-    "sharp": "^0.35.3",
+    "sharp": "^0.35.4",
     "starlight-theme-nova": "*"
   },
   "devDependencies": {
     "@ocavue/tsconfig": "^0.7.1",
     "@playwright/test": "^1.62.0",
-    "@sindresorhus/slugify": "^3.0.0",
+    "@sindresorhus/slugify": "^3.0.1",
     "astro-minify-html-swc": "^0.1.12"
   }
 }
