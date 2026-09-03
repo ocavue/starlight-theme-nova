@@ -1,5 +1,5 @@
 ---
-"starlight-theme-nova": patch
+'starlight-theme-nova': patch
 ---
 
 Update dependencies.
