@@ -9,4 +9,5 @@ allowBuilds:
 linkWorkspacePackages: deep
 
 minimumReleaseAgeExclude:
-  - '@ocavue/eslint-config@4.12.1'
+  - '@astrojs/starlight@0.42.0'
+  - astro@7.3.0
