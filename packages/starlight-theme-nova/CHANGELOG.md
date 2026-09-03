@@ -1,5 +1,11 @@
 # starlight-theme-nova
 
+## 0.12.3
+
+### Patch Changes
+
+- 8bae64e: Update dependencies.
+
 ## 0.12.2
 
 ### Patch Changes
