@@ -10,5 +10,5 @@ linkWorkspacePackages: deep
 
 minimumReleaseAgeExclude:
   - '@astrojs/starlight@0.42.0'
-  - astro@7.3.0
   - satteri-custom-header-id@0.1.1
+  - astro@7.3.1
