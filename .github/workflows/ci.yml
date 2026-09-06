@@ -48,7 +48,6 @@ jobs:
 
       - name: Publish snapshot packages
         if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository }}
-        continue-on-error: true
         run: ./node_modules/.bin/pkg-pr-new publish --pnpm ./packages/starlight-theme-nova
 
   test:
@@ -126,9 +125,6 @@ jobs:
           test -f dist/components/aside/index.html
 
   screenshot:
-    # Snapshot updates need push access to the PR head branch; skip on fork PRs
-    # (the `test` job still runs screenshots for coverage).
-    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
     strategy:
       fail-fast: false
       matrix:
@@ -137,6 +133,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          repository: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name || github.repository }}
           ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
