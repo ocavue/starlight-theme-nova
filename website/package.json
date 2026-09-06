@@ -3,7 +3,6 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@11.25.0",
   "description": "The website for the Starlight Nova theme",
   "scripts": {
     "dev": "astro dev",
