@@ -7,7 +7,5 @@
   "access": "restricted",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "starlight-theme-nova-website"
-  ]
+  "ignore": ["starlight-theme-nova-website"]
 }
